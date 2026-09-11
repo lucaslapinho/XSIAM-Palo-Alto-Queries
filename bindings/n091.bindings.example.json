@@ -1,0 +1,29 @@
+{
+  "query_id": "N091",
+  "source_sha256": "d1a30f6dc2c810c96e75504bf1cd640f4e3b03684e66cfa022ebb2d5f57de4ff",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "ENDPOINT_HEALTH_INVENTORY": null,
+    "HEALTH_AGENT_VERSION": null,
+    "HEALTH_CONNECTIVITY": null,
+    "HEALTH_CONTENT_VERSION": null,
+    "HEALTH_ENDPOINT_ID": null,
+    "HEALTH_ENDPOINT_NAME": null,
+    "HEALTH_GROUP_NAMES": null,
+    "HEALTH_LAST_SEEN": null,
+    "HEALTH_PROTECTION_STATE": null,
+    "HEALTH_SNAPSHOT_TIME": null
+  },
+  "contracts": {
+    "ENDPOINT_HEALTH_INVENTORY": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "HEALTH_AGENT_VERSION": "STRING: installed agent version as reported.",
+    "HEALTH_CONNECTIVITY": "STRING: raw documented connectivity state.",
+    "HEALTH_CONTENT_VERSION": "STRING: content update version.",
+    "HEALTH_ENDPOINT_ID": "STRING: stable agent/endpoint identity.",
+    "HEALTH_ENDPOINT_NAME": "STRING: display hostname.",
+    "HEALTH_GROUP_NAMES": "ARRAY of STRING: current group context, not used as a join key.",
+    "HEALTH_LAST_SEEN": "DATETIME: documented inventory/heartbeat last-seen semantics.",
+    "HEALTH_PROTECTION_STATE": "STRING: raw operational/protection state.",
+    "HEALTH_SNAPSHOT_TIME": "DATETIME: report freshness, not last traffic time."
+  }
+}

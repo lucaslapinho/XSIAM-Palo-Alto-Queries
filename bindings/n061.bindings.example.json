@@ -1,0 +1,29 @@
+{
+  "query_id": "N061",
+  "source_sha256": "478aad3ffb3270d01e0a0b5294b9df6544413014140a3c49d187cac6c8c5fc03",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "IDENTIFIED_WEB_CONNECTION_STARTS": null,
+    "MAX_RELATIVE_SPREAD": null,
+    "MIN_GAP_SECONDS": null,
+    "MIN_INTERVALS": null,
+    "WEB_CONNECTION_ID": null,
+    "WEB_DESTINATION": null,
+    "WEB_ENDPOINT_ID": null,
+    "WEB_IDENTIFIED_FLAG": null,
+    "WEB_PROCESS_INSTANCE": null,
+    "WEB_START_TIME": null
+  },
+  "contracts": {
+    "IDENTIFIED_WEB_CONNECTION_STARTS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "MAX_RELATIVE_SPREAD": "Numeric literal between 0 and 1: allowed (max_gap-min_gap)/mean_gap; tune using legitimate traffic.",
+    "MIN_GAP_SECONDS": "Positive numeric literal: minimum average gap of interest.",
+    "MIN_INTERVALS": "INTEGER literal at least 5: minimum observed inter-arrival gaps.",
+    "WEB_CONNECTION_ID": "STRING: unique connection key within endpoint/process/window; establish lifetime before binding.",
+    "WEB_DESTINATION": "STRING: normalized identified web destination/domain; not a port-only application label.",
+    "WEB_ENDPOINT_ID": "STRING: stable endpoint identity.",
+    "WEB_IDENTIFIED_FLAG": "BOOLEAN: true only from protocol/application evidence, not from port 80/443 alone.",
+    "WEB_PROCESS_INSTANCE": "STRING: stable owning process instance.",
+    "WEB_START_TIME": "DATETIME: one connection/session start, not periodic traffic-statistics timestamps."
+  }
+}

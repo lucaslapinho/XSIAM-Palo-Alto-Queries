@@ -1,0 +1,31 @@
+{
+  "query_id": "N067",
+  "source_sha256": "b5fab48e78c5f968b37a842722657d3da79afcd5c5c5c8bb17eae127e8e1e042",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "FILE_MUTATION_EVENTS": null,
+    "MIN_MODIFIED_FILES": null,
+    "MUTATION_ENDPOINT": null,
+    "MUTATION_FILE_KEY": null,
+    "MUTATION_NEW_PATH": null,
+    "MUTATION_OLD_PATH": null,
+    "MUTATION_OPERATION": null,
+    "MUTATION_PROCESS": null,
+    "MUTATION_SUCCESS": null,
+    "MUTATION_TIME": null,
+    "MUTATION_USER": null
+  },
+  "contracts": {
+    "FILE_MUTATION_EVENTS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "MIN_MODIFIED_FILES": "INTEGER literal greater than 1: per-process five-minute distinct-file threshold tuned to workload.",
+    "MUTATION_ENDPOINT": "STRING: stable endpoint.",
+    "MUTATION_FILE_KEY": "STRING: stable file identity when available; otherwise documented normalized-path identity with rename limits.",
+    "MUTATION_NEW_PATH": "STRING nullable: resulting path.",
+    "MUTATION_OLD_PATH": "STRING nullable: pre-rename path.",
+    "MUTATION_OPERATION": "STRING: normalized write/rename/delete; exclude reads and opens.",
+    "MUTATION_PROCESS": "STRING: responsible process instance, not PID alone.",
+    "MUTATION_SUCCESS": "BOOLEAN: actual operation success; absent success semantics cannot be treated as true.",
+    "MUTATION_TIME": "DATETIME: actual mutation time.",
+    "MUTATION_USER": "STRING nullable: responsible identity."
+  }
+}

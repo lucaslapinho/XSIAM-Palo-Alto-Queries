@@ -1,0 +1,81 @@
+{
+  "query_id": "N027",
+  "source_sha256": "56bd0279874fd5594d4ade8ded4372b37a756c31c7f416c47e972904bc91ddbd",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_HOST": null,
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_KIND": null,
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_OUTCOME": null,
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_PROCESS": null,
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_ROOT": null,
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_TEXT": null,
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_TIME": null,
+    "OFFICE_DESCENDANT_ACTIVITY_DATASET": null,
+    "VERIFIED_DIRECT_PARENT_IMAGE": null
+  },
+  "contracts": {
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_HOST": {
+      "type": "STRING scalar expression",
+      "description": "Stable endpoint ID in the same namespace as the anchor Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_KIND": {
+      "type": "STRING scalar expression",
+      "description": "Explicit normalized activity kind derived from verified event type/subtype, not a name-only inference Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_OUTCOME": {
+      "type": "STRING scalar expression",
+      "description": "Actual operation outcome; UNKNOWN when absent, never success by default Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_PROCESS": {
+      "type": "STRING scalar expression",
+      "description": "Process instance actually producing the activity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_ROOT": {
+      "type": "STRING scalar expression",
+      "description": "Root process instance for this bounded ancestry relation. Must relate the selected cmd process and its descendants to the same root with a documented maximum depth and stable IDs. A native actor or causality-owner field may only be used if that exact relationship is verified; otherwise bind a reviewed ancestry bridge/view. Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_TEXT": {
+      "type": "STRING scalar expression",
+      "description": "Activity detail: actual command, downloaded object/URL or file path as appropriate; retain the original event reference Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "OFFICE_DESCENDANT_ACTIVITY_CTX_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "Original observed activity time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "OFFICE_DESCENDANT_ACTIVITY_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for OFFICE_DESCENDANT_ACTIVITY. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "VERIFIED_DIRECT_PARENT_IMAGE": {
+      "type": "STRING scalar expression",
+      "description": "Immediate parent image from verified process relationship evidence, not an assumed actor/causality owner",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    }
+  }
+}

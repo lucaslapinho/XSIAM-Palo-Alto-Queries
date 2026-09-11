@@ -1,0 +1,35 @@
+{
+  "query_id": "N100",
+  "source_sha256": "1bd288b05897d8ec60ec01ac73cc4d77ccde2d7ea92cc8259221bd0b088700dc",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "CLUSTER_TO_REVIEW": null,
+    "KUBERNETES_AUDIT_DATASET": null,
+    "KUBERNETES_CLUSTER_ID": null,
+    "KUBERNETES_EVENT_JSON": null,
+    "KUBERNETES_EVENT_TIME": null,
+    "KUBERNETES_WORKLOAD_IDENTITY_HISTORY": null,
+    "WORKLOAD_CLUSTER": null,
+    "WORKLOAD_KIND": null,
+    "WORKLOAD_NAME": null,
+    "WORKLOAD_NODE_NAME": null,
+    "WORKLOAD_OBJECT_UID": null,
+    "WORKLOAD_VALID_FROM": null,
+    "WORKLOAD_VALID_UNTIL": null
+  },
+  "contracts": {
+    "CLUSTER_TO_REVIEW": "Quoted STRING literal: one stable collected cluster identity.",
+    "KUBERNETES_AUDIT_DATASET": "Dataset identifier: verified Kubernetes audit source; one audit event/stage per row.",
+    "KUBERNETES_CLUSTER_ID": "STRING expression: stable cluster identity supplied by trusted collection metadata, not object namespace alone.",
+    "KUBERNETES_EVENT_JSON": "STRING expression: one original Kubernetes audit Event JSON object. Request/response bodies depend on the audit policy.",
+    "KUBERNETES_EVENT_TIME": "DATETIME expression: parsed audit stageTimestamp or requestReceivedTimestamp with the chosen semantics retained.",
+    "KUBERNETES_WORKLOAD_IDENTITY_HISTORY": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "WORKLOAD_CLUSTER": "STRING: same stable cluster key.",
+    "WORKLOAD_KIND": "STRING: resolved workload kind.",
+    "WORKLOAD_NAME": "STRING: resolved workload display name.",
+    "WORKLOAD_NODE_NAME": "STRING nullable: node observed for this workload/pod at that time.",
+    "WORKLOAD_OBJECT_UID": "STRING: audited object UID; pre-resolve ownerReferences only with time-valid resource UID evidence.",
+    "WORKLOAD_VALID_FROM": "DATETIME: inventory validity start inclusive.",
+    "WORKLOAD_VALID_UNTIL": "DATETIME: validity end exclusive."
+  }
+}

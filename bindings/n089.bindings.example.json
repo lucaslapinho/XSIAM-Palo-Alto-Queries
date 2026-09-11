@@ -1,0 +1,39 @@
+{
+  "query_id": "N089",
+  "source_sha256": "9be1f5c1dcc075878b55eddaea5c0f2a0e905fc8f0b1ef4092d4e49df0dc6c4d",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "FAILURE_CODE": null,
+    "FAILURE_EVENT_ID": null,
+    "FAILURE_PRINCIPAL_ID": null,
+    "FAILURE_PROVIDER": null,
+    "FAILURE_RECORD_KEY": null,
+    "FAILURE_SOURCE_IP": null,
+    "FAILURE_TIME": null,
+    "LOCKOUT_CALLER_HOST": null,
+    "LOCKOUT_EVENT_ID": null,
+    "LOCKOUT_PRINCIPAL_ID": null,
+    "LOCKOUT_PROVIDER": null,
+    "LOCKOUT_RECORD_KEY": null,
+    "LOCKOUT_TIME": null,
+    "WINDOWS_AUTH_FAILURES": null,
+    "WINDOWS_LOCKOUT_EVENTS": null
+  },
+  "contracts": {
+    "FAILURE_CODE": "STRING nullable: original status/substatus/failure code.",
+    "FAILURE_EVENT_ID": "INTEGER: 4625 or 4771 only.",
+    "FAILURE_PRINCIPAL_ID": "STRING: verified target identity compatible with lockout SID; unresolved names must not be coerced into a match.",
+    "FAILURE_PROVIDER": "STRING: event provider.",
+    "FAILURE_RECORD_KEY": "STRING: stable per-event record key.",
+    "FAILURE_SOURCE_IP": "STRING nullable: requester address.",
+    "FAILURE_TIME": "DATETIME: 4625/4771 source time.",
+    "LOCKOUT_CALLER_HOST": "STRING nullable: CallerComputerName, not necessarily an IP.",
+    "LOCKOUT_EVENT_ID": "INTEGER: Windows Security event ID.",
+    "LOCKOUT_PRINCIPAL_ID": "STRING: verified domain-qualified target SID; never subject SID.",
+    "LOCKOUT_PROVIDER": "STRING: event provider name.",
+    "LOCKOUT_RECORD_KEY": "STRING: collision-resistant provider/host/record key.",
+    "LOCKOUT_TIME": "DATETIME: source 4740 timestamp.",
+    "WINDOWS_AUTH_FAILURES": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "WINDOWS_LOCKOUT_EVENTS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below."
+  }
+}

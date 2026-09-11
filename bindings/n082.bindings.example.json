@@ -1,0 +1,97 @@
+{
+  "query_id": "N082",
+  "source_sha256": "9c629fa0b0bf8fd775b26d3b7a9096243403ac83357975f8a5098ece99b0ea8b",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "PROCESS_RELATIONSHIPS_ACCOUNT": null,
+    "PROCESS_RELATIONSHIPS_CAUSALITY_ID": null,
+    "PROCESS_RELATIONSHIPS_COMMAND_LINE": null,
+    "PROCESS_RELATIONSHIPS_DATASET": null,
+    "PROCESS_RELATIONSHIPS_EVENT_TIME": null,
+    "PROCESS_RELATIONSHIPS_HOST_ID": null,
+    "PROCESS_RELATIONSHIPS_IMAGE": null,
+    "PROCESS_RELATIONSHIPS_PARENT_ID": null,
+    "PROCESS_RELATIONSHIPS_PROCESS_ID": null,
+    "SELECTED_ENDPOINT_ID": null,
+    "SELECTED_PROCESS_INSTANCE": null
+  },
+  "contracts": {
+    "PROCESS_RELATIONSHIPS_ACCOUNT": {
+      "type": "STRING scalar expression",
+      "description": "Started account Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PROCESS_RELATIONSHIPS_CAUSALITY_ID": {
+      "type": "STRING scalar expression",
+      "description": "Causality group identifier with documented scope; null when unavailable Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PROCESS_RELATIONSHIPS_COMMAND_LINE": {
+      "type": "STRING scalar expression",
+      "description": "Started command line Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PROCESS_RELATIONSHIPS_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for PROCESS_RELATIONSHIPS. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PROCESS_RELATIONSHIPS_EVENT_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "Process start time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PROCESS_RELATIONSHIPS_HOST_ID": {
+      "type": "STRING scalar expression",
+      "description": "Stable endpoint identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PROCESS_RELATIONSHIPS_IMAGE": {
+      "type": "STRING scalar expression",
+      "description": "Started image path Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PROCESS_RELATIONSHIPS_PARENT_ID": {
+      "type": "STRING scalar expression",
+      "description": "Verified immediate-parent instance key Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PROCESS_RELATIONSHIPS_PROCESS_ID": {
+      "type": "STRING scalar expression",
+      "description": "Stable process-instance key, never PID alone Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "SELECTED_ENDPOINT_ID": {
+      "type": "STRING literal",
+      "description": "Quoted stable endpoint ID; no empty/all-host fallback",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "SELECTED_PROCESS_INSTANCE": {
+      "type": "STRING literal",
+      "description": "Quoted stable process-instance ID; numeric PID alone is not accepted",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    }
+  }
+}

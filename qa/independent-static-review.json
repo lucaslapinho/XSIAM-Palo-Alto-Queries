@@ -1,0 +1,1945 @@
+{
+  "scope": "Independent static review only. One row per file consolidates supporting review records. Full-query C/E NOT RUN.",
+  "queries": [
+    {
+      "id": "N021",
+      "file": "queries/threat-hunting/powershell/n021-threat-hunting-powershell-encoded-command-launch-candidates.xql",
+      "file_sha256": "ada4b9747999bafa948873ddcab5fc47ebd2d3758b962e46b74b11da4fbad87f",
+      "review": "second-batch-review.json",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "supporting_review_count": 3,
+      "supporting_reviews": [
+        {
+          "review": "second-batch-review.json",
+          "static_status": "PASS",
+          "file_sha256": "ada4b9747999bafa948873ddcab5fc47ebd2d3758b962e46b74b11da4fbad87f"
+        },
+        {
+          "review": "second-batch-schema-review.json",
+          "static_status": "PASS",
+          "file_sha256": "ada4b9747999bafa948873ddcab5fc47ebd2d3758b962e46b74b11da4fbad87f"
+        },
+        {
+          "review": "second-batch-command-review.json",
+          "static_status": "PASS_WITH_LIMITATIONS",
+          "file_sha256": "ada4b9747999bafa948873ddcab5fc47ebd2d3758b962e46b74b11da4fbad87f"
+        }
+      ]
+    },
+    {
+      "id": "N022",
+      "file": "queries/threat-hunting/account-discovery/n022-threat-hunting-domain-account-discovery-net-user-query-attempts.xql",
+      "file_sha256": "83d6a112591d93f116e1fd0fdd40ad790ea1792a2393dc791a7193b16a593689",
+      "review": "second-batch-review.json",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "supporting_review_count": 3,
+      "supporting_reviews": [
+        {
+          "review": "second-batch-review.json",
+          "static_status": "PASS",
+          "file_sha256": "83d6a112591d93f116e1fd0fdd40ad790ea1792a2393dc791a7193b16a593689"
+        },
+        {
+          "review": "second-batch-schema-review.json",
+          "static_status": "PASS",
+          "file_sha256": "83d6a112591d93f116e1fd0fdd40ad790ea1792a2393dc791a7193b16a593689"
+        },
+        {
+          "review": "second-batch-command-review.json",
+          "static_status": "PASS_WITH_LIMITATIONS",
+          "file_sha256": "83d6a112591d93f116e1fd0fdd40ad790ea1792a2393dc791a7193b16a593689"
+        }
+      ]
+    },
+    {
+      "id": "N023",
+      "file": "queries/investigation/network-activity/n023-investigation-port-3389-network-activity-rdp-candidates.xql",
+      "file_sha256": "aa7d574b69118d8130dab0ce86c020c99832c351c0109bafa63387617cd89239",
+      "review": "second-batch-review.json",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "supporting_review_count": 2,
+      "supporting_reviews": [
+        {
+          "review": "second-batch-review.json",
+          "static_status": "PASS",
+          "file_sha256": "aa7d574b69118d8130dab0ce86c020c99832c351c0109bafa63387617cd89239"
+        },
+        {
+          "review": "second-batch-schema-review.json",
+          "static_status": "PASS",
+          "file_sha256": "aa7d574b69118d8130dab0ce86c020c99832c351c0109bafa63387617cd89239"
+        }
+      ]
+    },
+    {
+      "id": "N024",
+      "file": "queries/investigation/network-activity/n024-investigation-selected-endpoint-network-event-timeline.xql",
+      "file_sha256": "5bdd43acf73bccc3557833b433ddf38541af67781eb4d487803bf033e97040c9",
+      "review": "second-batch-review.json",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "supporting_review_count": 2,
+      "supporting_reviews": [
+        {
+          "review": "second-batch-review.json",
+          "static_status": "PASS",
+          "file_sha256": "5bdd43acf73bccc3557833b433ddf38541af67781eb4d487803bf033e97040c9"
+        },
+        {
+          "review": "second-batch-schema-review.json",
+          "static_status": "PASS",
+          "file_sha256": "5bdd43acf73bccc3557833b433ddf38541af67781eb4d487803bf033e97040c9"
+        }
+      ]
+    },
+    {
+      "id": "N025",
+      "file": "queries/dashboard/network-activity/n025-dashboard-outbound-destination-ports-network-event-volume-by-endpoint.xql",
+      "file_sha256": "de49ceac82b21b75d7200f6305ec7db6ff5f97a28949f85b4fa79c7711eb7d19",
+      "review": "second-batch-review.json",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "supporting_review_count": 2,
+      "supporting_reviews": [
+        {
+          "review": "second-batch-review.json",
+          "static_status": "PASS",
+          "file_sha256": "de49ceac82b21b75d7200f6305ec7db6ff5f97a28949f85b4fa79c7711eb7d19"
+        },
+        {
+          "review": "second-batch-schema-review.json",
+          "static_status": "PASS",
+          "file_sha256": "de49ceac82b21b75d7200f6305ec7db6ff5f97a28949f85b4fa79c7711eb7d19"
+        }
+      ]
+    },
+    {
+      "id": "N026",
+      "file": "queries/investigation/process-activity/n026-investigation-selected-endpoint-process-start-timeline.xql",
+      "file_sha256": "33fa138f25e419b784996945048ce637cb5bf249bdde5b3751f590f132354ff6",
+      "review": "second-batch-review.json",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "supporting_review_count": 2,
+      "supporting_reviews": [
+        {
+          "review": "second-batch-review.json",
+          "static_status": "PASS",
+          "file_sha256": "33fa138f25e419b784996945048ce637cb5bf249bdde5b3751f590f132354ff6"
+        },
+        {
+          "review": "second-batch-schema-review.json",
+          "static_status": "PASS",
+          "file_sha256": "33fa138f25e419b784996945048ce637cb5bf249bdde5b3751f590f132354ff6"
+        }
+      ]
+    },
+    {
+      "id": "N027",
+      "file": "queries/threat-hunting/execution/n027-threat-hunting-office-command-shells-and-subsequent-activity.xql",
+      "file_sha256": "56bd0279874fd5594d4ade8ded4372b37a756c31c7f416c47e972904bc91ddbd",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Verified immediate-parent binding and bounded descendant bridge; source event subtype explicit."
+      ],
+      "limitations": [
+        "Office-launched shells can be authorized. Descendant events outside the ten-minute window or retained ancestry depth are excluded.",
+        "One anchor can have many context rows; cross-endpoint or reused numeric PID matches are disallowed.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N028",
+      "file": "queries/threat-hunting/execution/n028-threat-hunting-wmi-child-processes-with-request-origin.xql",
+      "file_sha256": "81b387bd1675477e2f6499e99476cfe2ea87b6e3c0493b71ea8ed42b11880003",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Stable endpoint/process join; trace window masks out-of-window origin rather than converting absent evidence into a source."
+      ],
+      "limitations": [
+        "The WMI trace must expose a verifiable child-instance correlation; client process IDs alone are insufficient.",
+        "A one-to-many trace join may yield multiple rows per child; out-of-window context is nulled rather than used as attribution.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N029",
+      "file": "queries/threat-hunting/proxy-execution/n029-threat-hunting-mshta-url-or-script-references-and-follow-on-activity.xql",
+      "file_sha256": "73e0612382ca733a1aacc09e718d2f9f05d15b21c34bfd8391bbfe58a2410f85",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Retains anchor and separate downstream evidence; URL/script reference is a lead."
+      ],
+      "limitations": [
+        "Quoted, unused or malformed references can match. Alternative obfuscation and missing command lines can be missed.",
+        "The source bridge must not equate host co-occurrence with mshta ancestry.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N030",
+      "file": "queries/threat-hunting/proxy-execution/n030-threat-hunting-rundll32-module-paths-and-unusual-argument-candidates.xql",
+      "file_sha256": "621acd7ef46dc37533d2dceb7171b58c77fc54a3c0d85b14aa98622b33b4b1a4",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Module-load predicate bound explicitly; temporal path context kept separate from command-pattern lead."
+      ],
+      "limitations": [
+        "Module replay/population and event subtype require binding. A module loaded by a process started before the window is not covered.",
+        "Command-only candidates can have no observed module; they remain attempts rather than completed proxy execution.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N031",
+      "file": "queries/threat-hunting/persistence/n031-threat-hunting-scheduled-task-configuration-change-review.xql",
+      "file_sha256": "ee4496c2f22b1a0352e968787d6bef50c82faddda1361141d22fac9097cae49e",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Task XML fields and exact configuration key; compares current approval snapshot, not historical approval."
+      ],
+      "limitations": [
+        "Bind Security-audit provider/channel and task event versions; the TASK_AUDIT source must exclude unrelated providers reusing IDs.",
+        "The approved dataset must be a complete current snapshot for the evaluation scope; null config identity is UNASSESSED. Historical approval needs a separate effective-interval comparison.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N032",
+      "file": "queries/threat-hunting/persistence/n032-threat-hunting-new-services-in-profile-or-temporary-paths.xql",
+      "file_sha256": "e28f55b68f9b1fc678de5983b3c43dae21acdb263f9b55bc619169ea815cdade",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Provider-scoped installation event and same-endpoint/path start correlation; legitimate service use remains possible."
+      ],
+      "limitations": [
+        "Service configuration parsing must resolve quoted paths, arguments and variables without treating DLL arguments as the executable.",
+        "First observed is bounded by collected one-day data and a one-hour post-install interval; paths do not establish ACL writability.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N033",
+      "file": "queries/threat-hunting/persistence/n033-threat-hunting-run-key-and-startup-artifact-mutations.xql",
+      "file_sha256": "89d25c87652f79bcf78a7544da6933996927de15dbe7740d0ce7bc250cedc362",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Actual successful mutations, separate Run and Startup source contracts, no execution inference."
+      ],
+      "limitations": [
+        "Bind operation results and resolve hives/user paths and redirected startup directories. Reads are excluded.",
+        "Executable targets from shortcuts require collected/parsing evidence; null targets are retained as unknown.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N034",
+      "file": "queries/threat-hunting/persistence/n034-threat-hunting-permanent-wmi-subscription-registrations.xql",
+      "file_sha256": "5b69b7fc933d37648bc1e531361be433516a49a58b08f5a33ebdc339f1c860d7",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Corrected effective state intervals; retains registration anchors and collapses version fan-out without admitting future state."
+      ],
+      "limitations": [
+        "Object-state intervals must be uniquely keyed and nonoverlapping. Only state effective at the event time enriches a record; grouped value sets collapse invalid-version null join fan-out. Identical event projections can coalesce because no universal event UID is assumed.",
+        "Preexisting objects and deleted consumers can leave unresolved references; retain nulls rather than claim absence.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N035",
+      "file": "queries/threat-hunting/identity/n035-threat-hunting-privileged-group-membership-additions.xql",
+      "file_sha256": "cb80766c3d7c6f838b96a468119112f4ff6f809ed1b309a589a58812eab39bd3",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Corrected issuer-machine scope on both actor and member SID resolution; privileged groups host-scoped."
+      ],
+      "limitations": [
+        "Local SID reuse must be scoped to its host; reference rows must be unique and valid for the event.",
+        "An approved-change reference is context, not proof that every addition in a window was authorized.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N036",
+      "file": "queries/threat-hunting/identity/n036-threat-hunting-new-domain-accounts-and-early-lifecycle-activity.xql",
+      "file_sha256": "c0f0bf0de657bdf646cf570aa38e65efe1974d42285ef80f35b0f25ffe6bd587",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Creation anchors retained; disjoint first successful authentication and group-addition branches in 24-hour window."
+      ],
+      "limitations": [
+        "4720 on a member/workstation can create a local account and must not pass the domain-account binding.",
+        "A three-day scan supplies event context; creation near the scan end has incomplete future follow-up. Group additions are privilege context only after target-group review.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N037",
+      "file": "queries/threat-hunting/persistence/n037-threat-hunting-configured-ssh-authorized-keys-file-changes.xql",
+      "file_sha256": "187deddd360c07619f52d22b067aebd04c597b94189e7f8b827ad45e3709be7b",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Corrected time-valid AuthorizedKeys configuration, case-preserving paths and approval-window aggregation."
+      ],
+      "limitations": [
+        "The path inventory must resolve actual AuthorizedKeysFile settings and symlink/rename behavior at event time.",
+        "Window overlap is not proof that a particular writer or key was approved. No key contents or secrets are required in this output.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N038",
+      "file": "queries/threat-hunting/credential-access/n038-threat-hunting-lsass-memory-capable-access-and-dump-file-candidates.xql",
+      "file_sha256": "55cff2aeea0ea6a4182cacda6da403f3c59ab2b1c809342a4638ee1701ecee01",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Memory-capable access and dump-file follow-on classified separately; accessor baseline nullable."
+      ],
+      "limitations": [
+        "ProcessAccess/handle capability does not prove that memory was read or dumped. Security tools can perform the same access.",
+        "The source must carry rights, target identity and outcome. Suppressing approved accessors requires a reviewed complete baseline; unknown accessors remain visible.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N039",
+      "file": "queries/threat-hunting/credential-access/n039-threat-hunting-sam-hive-save-attempts-and-related-artifacts.xql",
+      "file_sha256": "e09dce19bfe1e798cd24d07842a236348b441e00075c0859254cca83a732a830",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Operation/hive/target parsed from retained command alias; command attempt does not imply successful export."
+      ],
+      "limitations": [
+        "Binding the output-artifact kind requires exact destination-path and writer correlation; an arbitrary .hiv file is not enough.",
+        "An attempted save can fail. SYSTEM activity in the same operation is supporting context, not proof of credential recovery.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N040",
+      "file": "queries/threat-hunting/credential-access/n040-threat-hunting-domain-controller-database-and-snapshot-activity.xql",
+      "file_sha256": "eea4e8628cc18d092b4c4bb6dc0c4c27712048a5482b54b9bb03d1319035df8c",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Actual DC database/volume lookup; tool-name activity retained as candidate rather than proof of database theft."
+      ],
+      "limitations": [
+        "Actual database path/DC inventory and file-read or raw-read telemetry are required. Ordinary file-create telemetry is not a substitute for reads.",
+        "A raw volume read can target unrelated bytes; utility starts can be legitimate backup/recovery.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N041",
+      "file": "queries/threat-hunting/credential-access/n041-threat-hunting-unexpected-replication-rights-use-with-source-context.xql",
+      "file_sha256": "531fe2bbb44b233e39c266e94e2a4995e7ecad0969ce246eb1e799042fb8a58d",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Control-access rights and qualified subject/logon origin; DRS context is corroborating evidence, not proof of exfiltration."
+      ],
+      "limitations": [
+        "Suitable 4662 auditing/SACLs are required. Rights usage is not proof of completed credential replication.",
+        "One session/source may have many DRS records; unknown source/DC status remains unknown, and expected-principal exclusions require a complete approved baseline.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N042",
+      "file": "queries/threat-hunting/credential-access/n042-threat-hunting-service-ticket-bursts-and-rare-requesters.xql",
+      "file_sha256": "2cc73e5c342b7117b84053f1736d2c317f2006693ac3f459e9a6226c7a60df85",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Frozen comparable prior baseline contract and explicit unassessed state; fixed ten-minute grouping."
+      ],
+      "limitations": [
+        "Use disjoint baseline/current intervals and version-aware 4769 field maps. AES is retained; RC4 is not a required condition.",
+        "Fixed bins split boundary-spanning bursts. Null/incomplete baselines yield BASELINE_UNASSESSED, not automatic rarity.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N043",
+      "file": "queries/threat-hunting/credential-access/n043-threat-hunting-no-preauthentication-accounts-and-tgt-request-activity.xql",
+      "file_sha256": "20e5d734d135b919f98c6b5bebb9bf64508a75b1b6dad7cfe6e53a72a727ea76",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Effective preauthentication state at event time, successful no-preauth TGT scope and frozen prior baseline."
+      ],
+      "limitations": [
+        "Historical creation flags do not establish current preauthentication state; validity intervals must not overlap for a SID/domain.",
+        "Unusual request activity is not proof that an AS-REP was cracked. Missing baseline yields UNASSESSED.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N044",
+      "source_proposal": "TH-019",
+      "file": "queries/threat-hunting/credential-access/n044-password-spraying-across-accounts-schema-binding-template.xql",
+      "file_sha256": "668f08150735d8f99326cce3075d5124eb94fbc81cd72e3e775bffd650110ead",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Source/provider-scoped deduplication precedes 15-minute source/account fan-out aggregation; wrong-secret outcomes and average retry thresholds are explicit.",
+      "limitations": [
+        "Counts spray-shaped activity, not observed password reuse; NAT and slow/distributed attempts remain limitations.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N045",
+      "source_proposal": "TH-020",
+      "file": "queries/threat-hunting/credential-access/n045-browser-credential-store-read-access-schema-binding-template.xql",
+      "file_sha256": "c0d8e50bf44c686ce2a75ad0b9bf7dcdc48719a1df77b2a2b21be6c0db192b5e",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Successful content-read events join exact credential-store paths with effective inventory intervals; case-sensitive comparison now honors the platform normalization contract.",
+      "limitations": [
+        "Browser/security/backup reads remain possible; no decryption or credential theft is established.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N046",
+      "source_proposal": "TH-022",
+      "file": "queries/threat-hunting/discovery/n046-privileged-domain-group-discovery-schema-binding-template.xql",
+      "file_sha256": "f2a9837adada087269c0dd41c656b78a85728a4d8f0cfb53a242a95e8cafaa56",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Actual group-read operations join domain-qualified authoritative SIDs and time-valid privilege inventory; localized display names do not define privilege.",
+      "limitations": [
+        "Command attempts and directory outcomes depend on the source mapping; unresolvable target SIDs remain uncovered.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N047",
+      "source_proposal": "TH-023",
+      "file": "queries/threat-hunting/discovery/n047-internal-service-scanning-fan-out-candidates-schema-binding-template.xql",
+      "file_sha256": "15238613ddfddcb4f4d30e77b06f072badbff2489035d6215a198860c758b50e",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Endpoint outgoing TCP/UDP rows use validated internal-scope binding, five-minute bins and distinct target/port fan-out; rows and connections are not conflated.",
+      "limitations": [
+        "Numeric 6/17 comparison remains compiler-unverified because retained tenant Schema showed ENUM while documentation describes INTEGER. Fixed bins, authorized scanners and slow scans require context.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N048",
+      "source_proposal": "TH-024",
+      "file": "queries/threat-hunting/discovery/n048-network-share-enumeration-requests-schema-binding-template.xql",
+      "file_sha256": "4e3e02aa1a1501c27a70cf340d457818f8f37122153805a5a5a3e91d9d9b0495",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "An explicit server share-list operation or tokenized command attempt is required; bare computer/domain listing and SMB file access are excluded by the operation contract.",
+      "limitations": [
+        "A command start does not prove successful enumeration; separate command/protocol records can represent one activity.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N049",
+      "source_proposal": "TH-025",
+      "file": "queries/threat-hunting/discovery/n049-security-tool-discovery-requests-schema-binding-template.xql",
+      "file_sha256": "624d95c4feec1f2c71353cd46d40d1946cba47e0d55d4a2718a4542d711f36a5",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Read-oriented exact security-product selectors join target namespaces and effective inventory intervals; generic tool execution and writes are excluded.",
+      "limitations": [
+        "A target shared by products can produce multiple context rows. Inventory and target canonicalization must be validated.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N050",
+      "source_proposal": "TH-026",
+      "file": "queries/threat-hunting/lateral-movement/n050-rdp-from-sources-absent-in-a-verified-baseline-schema-binding-template.xql",
+      "file_sha256": "7df500538bf9578989466a20d6a0decc5f6b736086592b87eb9b07bc5a86bcc2",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Current-day successful RemoteInteractive events are compared with the disjoint preceding 30-day target/source baseline and an affirmative completeness register; final comparisons use seconds.",
+      "limitations": [
+        "This is unobserved-in-covered-baseline behavior, not first-ever access. Source clocks, NAT and retention/coverage remain binding prerequisites.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true,
+        "coverage_seconds_fix": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N051",
+      "source_proposal": "TH-027",
+      "file": "queries/threat-hunting/lateral-movement/n051-successful-rdp-fan-out-across-servers-schema-binding-template.xql",
+      "file_sha256": "08a01e789b36bb2f7b8e96fa8af018242602dd2313951d03efd7db7d65f94f2d",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Unique source authentication events join time-valid server role inventory, then count distinct servers by source/account/15-minute bin.",
+      "limitations": [
+        "Successful logon events are not unique user sessions. Reconnect and jump-host activity can be legitimate.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N052",
+      "source_proposal": "TH-028",
+      "file": "queries/threat-hunting/lateral-movement/n052-rdp-session-followed-by-powershell-behavior-schema-binding-template.xql",
+      "file_sha256": "67e5ff7e13ab4d6bb0077f8c3969009a8ae4a895b885bcc3662bc88e7429933a",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Successful type-10 logons join process starts by validated host/boot/logon key within 1800 seconds; explicit lowercase normalization precedes the Windows basename allowlist.",
+      "limitations": [
+        "Session mapping and tested whole-command behavior grammar are mandatory; multiple starts and reconnect logons can produce multiple pairs.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true,
+        "windows_image_explicit_case_fold": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N053",
+      "source_proposal": "TH-029",
+      "file": "queries/threat-hunting/lateral-movement/n053-smb-file-write-followed-by-service-execution-schema-binding-template.xql",
+      "file_sha256": "a5d2e4c4d56d465df3b82ef480cae66b871ee1015614ed5a4e5f19ef60ba912d",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "The template requires completed SMB write, successful same-path service installation and actual service-associated process start, with two ten-minute transitions.",
+      "limitations": [
+        "A candidate sequence does not prove unchanged file bytes or malicious deployment; multiple qualifying writes/install/start pairs remain.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N054",
+      "source_proposal": "TH-030",
+      "file": "queries/threat-hunting/lateral-movement/n054-winrm-session-and-descendant-process-review-schema-binding-template.xql",
+      "file_sha256": "60315677157f02cf7b4bc8f491be8a9818bd2d44c43d294bcb18274be0ee04e2",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Successful authenticated WinRM shell and verified provider ancestry form a bounded descendant-start workflow; mere provider names or transport ports are insufficient.",
+      "limitations": [
+        "If a provider serves concurrent shells and evidence cannot uniquely attribute descendants, binding fails acceptance and execution must remain withheld.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N055",
+      "source_proposal": "TH-031",
+      "file": "queries/threat-hunting/lateral-movement/n055-ssh-accepted-access-and-session-command-review-schema-binding-template.xql",
+      "file_sha256": "a9a91d67092d236ccdd9e234ec6d28a134a7dfed401dd07a4b3320f6f12eb0ed",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Accepted SSH authentication left-joins actual exec audit by stable host/boot/session identity and one-hour interval, retaining authentications without matching commands.",
+      "limitations": [
+        "No linked exec does not mean no execution; effective command user may differ from authenticated account.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N056",
+      "source_proposal": "TH-032",
+      "file": "queries/threat-hunting/defense-impairment/n056-security-tool-disablement-requests-schema-binding-template.xql",
+      "file_sha256": "569c95263bf83f87e021175dc565d82c0d90ca88d195a4b37eedf782668d2b72",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Explicit security-control stop/delete/uninstall/disable requests join exact endpoint-specific security targets at event time and retain reported result.",
+      "limitations": [
+        "A request or process launch does not establish effective disablement; current product state is a separate pivot.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N057",
+      "source_proposal": "TH-033",
+      "file": "queries/threat-hunting/defense-impairment/n057-windows-event-log-clearing-records-schema-binding-template.xql",
+      "file_sha256": "f7f1d9573157a4e6126b2fa45e03eff046d130f85565930d1b461a0dd908372b",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Confirmed Windows clearing records require a provider/channel/EventID allowlist and actual cleared channel, with distinct UserData subject mapping for Security 1102.",
+      "limitations": [
+        "The source allowlist defines channel coverage; clearing events do not establish retention or complete earlier history.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N058",
+      "source_proposal": "TH-034",
+      "file": "queries/threat-hunting/defense-impairment/n058-cloudtrail-stoplogging-requests-and-observed-trail-state-schema-binding-template.xql",
+      "file_sha256": "22ccfe9ab9c291a517a3b26e74d602b902af2d286f9ad04330719354e66df5ef",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "AWS StopLogging requests retain API errors and left-join same-account canonical trail ARN snapshots only within the subsequent 15 minutes.",
+      "limitations": [
+        "Each later state is an observation rather than attribution to the request. One stopped trail does not establish loss of all cloud logging.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N059",
+      "source_proposal": "TH-035",
+      "file": "queries/threat-hunting/defense-impairment/n059-prevention-policy-enforcement-loss-across-snapshots-schema-binding-template.xql",
+      "file_sha256": "f65c05af44329a166a7b476642622a6d8d5b5589a80f8205f871c452975a4923",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Controlled before/after snapshot references join endpoint and atomic control/scope; only true-to-false effective enforcement transitions qualify.",
+      "limitations": [
+        "Snapshots must explicitly resolve precedence/exclusions and include both states. Control-plane state is not proof of endpoint application.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N060",
+      "file": "queries/threat-hunting/dns/n060-threat-hunting-high-cardinality-dns-name-candidates.xql",
+      "file_sha256": "552d35e5b15a5a47e3badd51142eae0175056d2ce9aa1d85208dec7a4cc7b288",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "DNS name cardinality and length are workload heuristics; the mean is over source rows and is affected by duplicate/aggregate semantics. Registrable-domain mapping requires a validated public suffix implementation.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N061",
+      "file": "queries/threat-hunting/network-periodicity/n061-threat-hunting-periodic-identified-web-connection-candidates.xql",
+      "file_sha256": "478aad3ffb3270d01e0a0b5294b9df6544413014140a3c49d187cac6c8c5fc03",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Measures independent connection-start intervals, not periodic statistics or messages inside persistent sessions. Connection-key uniqueness, simultaneous timestamps and source precision must be validated.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N062",
+      "file": "queries/threat-hunting/tool-transfer/n062-threat-hunting-inbound-transfers-with-attributed-output-files.xql",
+      "file_sha256": "a096030d6c34b07706b286c2360388f3668f671c03ff11e9646e07bd829668c9",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [
+        "Changed global case folding to case-preserving comparisons with explicit OS normalization contracts.",
+        "Replaced truncated minute upper bound with a 600-second bound; direct timestamp ordering retained."
+      ],
+      "limitations": [
+        "Same-process/path/time matching can yield multiple candidate file observations when a path is reused. Operation identity or independent content evidence is needed for causal attribution; a matching path is not proof of subsequent execution.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N063",
+      "file": "queries/cyber-hygiene/software-approval/n063-cyber-hygiene-remote-desktop-observations-without-a-matching-scoped-approval.xql",
+      "file_sha256": "a29fb432ac142cffe80b39962f3f6cc682ba4f5ad95545ab99457770a3891af9",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [
+        "Unknown product version now binds to null, and null/empty version is excluded."
+      ],
+      "limitations": [
+        "An unmatched approval is a policy-review candidate until the complete, authoritative, time-valid approval set is established. Unknown version is null and excluded; inventory is not execution.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N064",
+      "file": "queries/threat-hunting/data-staging/n064-threat-hunting-large-archive-creation-with-observed-input-context.xql",
+      "file_sha256": "a34e26a99ba19eb7e57129931d35730df82c711aa455f5f9e4cf5987b21b714b",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [
+        "Added independent archive-operation identity to aggregation and output correlation.",
+        "Added explicit output_time >= last_input and 1800-second upper bound.",
+        "Preserved filesystem case semantics."
+      ],
+      "limitations": [
+        "Requires independently linked archive-operation identifiers for both inputs and completed output. The retained aggregate is not available from archiver command lines alone; datetime min/max acceptance remains a compiler check.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N065",
+      "file": "queries/threat-hunting/cloud-transfers/n065-threat-hunting-successful-uploads-to-externally-owned-cloud-storage.xql",
+      "file_sha256": "0ac2c9a2ae40eeda637f7345d15cf9889a528ff29acd57adb0eb05235da6afc3",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Requires measured uploaded bytes, confirmed external ownership and a successful write. Multipart and object-level records need nonoverlapping counting semantics; upload is not proof of unauthorized exfiltration.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N066",
+      "file": "queries/threat-hunting/recovery-controls/n066-threat-hunting-recovery-tampering-requests-and-observed-state-changes.xql",
+      "file_sha256": "c6a4b80b67cc329499c1c58ba90fe16ac69ec8c498d60ceefe2ce3328c37c7cd",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [
+        "Replaced whole-minute upper bound with 1800 seconds."
+      ],
+      "limitations": [
+        "Request outcome and corroborating resource state are distinct. Missing linked state remains unknown; operation/resource attribution and maintenance context require source evidence.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N067",
+      "file": "queries/threat-hunting/file-activity/n067-threat-hunting-mass-file-mutation-candidates-by-process.xql",
+      "file_sha256": "b5fab48e78c5f968b37a842722657d3da79afcd5c5c5c8bb17eae127e8e1e042",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Distinct successful file mutations are a review heuristic. Fixed bins split activity and path-based identities can double-count rename operations; encryption is not established.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N068",
+      "file": "queries/threat-hunting/service-availability/n068-threat-hunting-observed-stops-of-critical-services.xql",
+      "file_sha256": "69030eb1d049e4093a8dd15256b94f1c1e495bb4c952d286c8cc52577c737f26",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Actual running-to-stopped transitions are joined to event-time criticality. Planned maintenance, crashes and dependency effects are not distinguished automatically.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N069",
+      "file": "queries/threat-hunting/resource-abuse/n069-threat-hunting-sustained-cpu-use-with-attributed-mining-communication.xql",
+      "file_sha256": "d400f6e0350c4b810523f28dff1eb587e9e185b097f6fdf52ee29379493423b5",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [
+        "Added first-to-last sample span, lag-based largest-gap measurement and parameter contracts for cadence/coverage.",
+        "Restricted protocol flag to actual mining protocol/content classification; indicator-only evidence is insufficient."
+      ],
+      "limitations": [
+        "Source-normalized CPU samples must cover the configured span at a verified cadence and within the allowed gap; instantaneous CPU or metric row counts do not prove continuous usage. Protocol/content classification is required. GPU-only mining and unobserved sampling intervals remain outside the claim.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N070",
+      "file": "queries/threat-hunting/cloud-privileges/n070-threat-hunting-aws-attachments-of-reviewed-high-privilege-policies.xql",
+      "file_sha256": "6a5ce6da6ddaed7b269eedb6878b6c48d18fb6a2d98ede0a44565da3fcd8323d",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [
+        "Preserved case-sensitive managed-policy ARN resource identifiers."
+      ],
+      "limitations": [
+        "No logged API error is an audit outcome convention; attachment does not prove unrestricted permissions. Time-valid policy review, SCPs, boundaries and beneficiary identity remain essential.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N071",
+      "file": "queries/threat-hunting/cloud-credentials/n071-threat-hunting-aws-access-key-creation-and-first-observed-use.xql",
+      "file_sha256": "af3f2146451257dae0f8865081bb2cb930ec2c4d5e59dd2dc71a9f82af0380cd",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [
+        "Replaced truncated whole-hour upper bound with 86400 seconds."
+      ],
+      "limitations": [
+        "First use is only first observed inside the collected bounded window. The owning credential account must be used for cross-account calls. Explicit fields omit secrets, but system/raw columns may remain available in the UI.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N072",
+      "file": "queries/threat-hunting/kubernetes-access/n072-threat-hunting-kubernetes-pod-exec-and-attach-audit-responses.xql",
+      "file_sha256": "87a0afb6b376fb4d15e7d97192c82f75827be56dd85c1166fb4332426fd48b7d",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Response stages, including switching-protocol responses, are retained as API observations. Multiple stages are not unique sessions; request URI may contain sensitive command arguments.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N073",
+      "file": "queries/threat-hunting/kubernetes-rbac/n073-threat-hunting-kubernetes-bindings-to-reviewed-privileged-roles.xql",
+      "file_sha256": "5f075100cfcf82314fd4a1929ed3d566cef097200d7049bdf4b27d08889f0660",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [
+        "Corrected audit policy level to RequestResponse."
+      ],
+      "limitations": [
+        "Requires RequestResponse audit-body coverage and a reviewed role definition valid at the event. Subjects and effective per-subject permissions are follow-up pivots; request patches alone are insufficient.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N074",
+      "file": "queries/threat-hunting/kubernetes-workloads/n074-threat-hunting-admitted-containers-with-privileged-or-host-access-settings.xql",
+      "file_sha256": "ba7809be6a6c2061291b14b8f14a5b56f69ddb869f3367d911de6fa545b18cf6",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Admitted container settings are not proof that a container ran. Resolve mutation, OS defaults and actual hostPath mounts for normal, init and ephemeral containers.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N075",
+      "source_proposal": "OP-002",
+      "file": "queries/investigation/rdp-authentication/n075-successful-remoteinteractive-logon-records-schema-binding-template.xql",
+      "file_sha256": "fc4d4cf1e3f3a55086776966ad9b59cb7b5b525463671800032f64c0747eb1ec",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Destination provider/channel/4624/type-10 scope and collision-free source-event deduplication support a successful RemoteInteractive event view.",
+      "limitations": [
+        "The output grain is an event, not a unique interactive session; target identity and NAT context are retained without invented attribution.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N076",
+      "source_proposal": "OP-003",
+      "file": "queries/investigation/rdp-authentication/n076-failed-rdp-authentication-evidence-review-schema-binding-template.xql",
+      "file_sha256": "87d740a466f52c406a5afb9d21ea36d059644dcee48889df46ea0b5bbe08b148",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Security 4625 is RDP-attributed only by type 10 or same-target provider transaction correlation within two minutes; generic type 3 is not enough.",
+      "limitations": [
+        "Missing provider evidence excludes non-type-10 failures, so NLA failure coverage can remain incomplete; source-pair multiplicity is disclosed.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N077",
+      "source_proposal": "OP-004",
+      "file": "queries/investigation/rdp-network-activity/n077-classified-rdp-traffic-on-standard-and-nonstandard-ports-schema-binding-template.xql",
+      "file_sha256": "59c17b93f6e764a29fc1d56fe72a59d3619ec01cddbe23c0fa382064de89cb32",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Verified RDP application classification selects any valid destination port, and a stable endpoint/process-instance left join supplies optional client-start context.",
+      "limitations": [
+        "Classifier evidence is independent of authentication; starts before the query window may be absent. Native process fields now have explicit evidence entries.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true,
+        "native_field_evidence_added": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N078",
+      "source_proposal": "OP-006",
+      "file": "queries/investigation/network-activity/n078-exact-ip-investigation-across-address-roles-schema-binding-template.xql",
+      "file_sha256": "fa1193145dc9ce97feb9be24c805d222af7e22b8b5c753ecf9fd79672370f47b",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Canonical exact-IP matching covers source, destination, translated, DNS-answer and trusted-proxy-client roles with separate match flags and provenance.",
+      "limitations": [
+        "A bound common-schema view must preserve actual roles and independently available sources; IP reuse/NAT does not identify one user or host.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N079",
+      "source_proposal": "OP-007",
+      "file": "queries/investigation/dns-and-web/n079-domain-dns-and-web-observation-lookup-schema-binding-template.xql",
+      "file_sha256": "1a86029dceb826f96baa7ea0d08a450edc3d4192d20a65589345dc6f3bc48122",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "The bound source preserves DNS-question, DNS-response and web-request facts; a label-boundary regex operates on validated normalized A-label domains.",
+      "limitations": [
+        "IDN normalization, DNS answers and web collection remain separate evidence requirements; DNS never proves subsequent access.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N080",
+      "source_proposal": "OP-009",
+      "file": "queries/investigation/firewall/n080-firewall-blocks-and-resets-by-initiating-host-schema-binding-template.xql",
+      "file_sha256": "e279391d0c419f26218288d5030ddfa026b6d9ca9a54d3413663a0f595c7313c",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "Device-scoped unique firewall records use verified deny/drop/reset semantics and effective source-IP ownership before grouping; BLOCK and RESET remain distinct.",
+      "limitations": [
+        "Counts are source log records, not unique sessions; ambiguous NAT ownership and source repeat counters require validation.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N081",
+      "source_proposal": "OP-010",
+      "file": "queries/investigation/critical-assets/n081-external-permitted-traffic-outside-critical-server-access-paths-schema-binding-template.xql",
+      "file_sha256": "41cc510299e105cbeee5e94111b48909d46c13a759d042c5c476fdb14a2adaba",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "review_notes": "External-zone and critical-server inventories establish scope; permitted traffic is compared with complete time-valid access paths using consistent post-DNAT address/port boundaries.",
+      "limitations": [
+        "Completeness must be affirmatively established. Exact-IP materialization of large ranges can be impractical; wildcard strings do not satisfy this path contract.",
+        "PASS covers evidence-scoped static template structure and semantics only. Schema binding, editor compilation, execution, result correctness and performance remain unvalidated."
+      ],
+      "checks": {
+        "assignment_id": true,
+        "record_file_hash": true,
+        "record_body_hash": true,
+        "spec_body_equal": true,
+        "wrapper_metadata": true,
+        "mandatory_markers_once": true,
+        "all_templates_marked": true,
+        "bindings_documented": true,
+        "binding_evidence": true,
+        "case_sensitive": true,
+        "bounded_lookback_output": true,
+        "no_runtime_claims": true,
+        "four_acceptance_case_kinds": true,
+        "references_https": true
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N082",
+      "file": "queries/investigation/process-relationships/n082-investigation-selected-process-with-direct-parent-and-children.xql",
+      "file_sha256": "9c629fa0b0bf8fd775b26d3b7a9096243403ac83357975f8a5098ece99b0ea8b",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Stable process instance and endpoint relationships; direct parent/child retained rather than claimed recursive tree."
+      ],
+      "limitations": [
+        "Parent and selected starts predating the seven-day scan may be absent; process lifetime/current state is not inferred.",
+        "Stable process IDs and verified parent linkage must use a common host/boot namespace; validate process-provider replay/duplicate behavior.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N083",
+      "file": "queries/investigation/file-identity/n083-investigation-selected-sha-256-process-and-file-prevalence.xql",
+      "file_sha256": "e12d6e1fb1de4d58e8387826bfe5b0d9404f662e656b50fa2f2be3375c1dcd65",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Documented process/file SHA-256 observations kept by family; unchanged sentinel fails to match valid hashes."
+      ],
+      "limitations": [
+        "File events are hash-bearing observations, not a complete installed/current-file inventory; operations may repeat.",
+        "Counts are retained rows per family. First/last are observation bounds, not first-ever use; array contexts can be large.",
+        "FILE symbolic acceptance and all projected field population remain tenant-unverified.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N084",
+      "file": "queries/investigation/file-activity/n084-investigation-file-creation-write-rename-and-deletion-timeline.xql",
+      "file_sha256": "5b7a657bf766080bb80f67636eed5ff230b4c6e2a7c8cafd077d6a435913aed0",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Corrected case-preserving path comparison and selective Windows normalization; operations/results explicit."
+      ],
+      "limitations": [
+        "Global case-sensitive comparison preserves Linux path distinctions. Case-insensitive Windows namespaces require explicit identical normalization in old_path, new_path and the selected path; never fold case for a case-sensitive directory.",
+        "File reads are not included; deletion may legitimately lack hash/current path. Unknown outcomes remain original values.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N085",
+      "file": "queries/investigation/executable-baselines/n085-investigation-executable-hashes-newly-observed-against-a-prior-baseline.xql",
+      "file_sha256": "722625aff8f37a46c8148e8a9b39ac9819c1222ccb0320957d2b78b481079bcf",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Disjoint 24-hour current and 29-day prior scope; first-observed claim bounded to retained comparable telemetry."
+      ],
+      "limitations": [
+        "Thirty-day comparable telemetry coverage is a required interpretation prerequisite; collection gaps and new endpoints create false novelty.",
+        "A current-time relative baseline is intended for a live investigation, not a historical replay without a fixed evaluation anchor.",
+        "Legitimate versions, staged deployments, portable tools and hash changes can be new; approval/rollout context must be investigated.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N086",
+      "file": "queries/asset-visibility/software-inventory/n086-asset-visibility-all-reported-software-versions-and-asset-groups.xql",
+      "file_sha256": "1a8c26b902666c0ec5ec495f02c614a094a9ccc64eb80a10c973119369646073",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "checks": [
+        "Exact latest snapshot binding handles empty-report interpretation and intentional software/group fan-out."
+      ],
+      "limitations": [
+        "Endpoints with an empty latest snapshot have zero application rows by design; use the supplied snapshot-state inventory to distinguish empty from absent collection.",
+        "One software row can expand across multiple group memberships. Snapshot/group applicability and identity joins must be validated; installed reports do not prove execution.",
+        "No tenant compilation or execution. Validate nulls, access, retention and source collection before interpreting empty results.",
+        "A terminal limit bounds displayed output, not upstream scans or join multiplicity."
+      ],
+      "compiler": "NOT RUN",
+      "execution": "NOT RUN",
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N087",
+      "file": "queries/asset-visibility/local-privileges/n087-asset-visibility-latest-local-administrators-membership-snapshot.xql",
+      "file_sha256": "ab47ed33fb38c2927ce09044194ddd25a140c4a05eee2f2aa0b1c03662a43de7",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Latest complete direct-membership snapshot in seven days; an explicit empty snapshot must be represented. Domain controllers and nested effective membership are outside this view.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N088",
+      "file": "queries/investigation/authentication/n088-investigation-selected-identity-authentication-timeline.xql",
+      "file_sha256": "0a1d240a28487cff6bc58d9962e890c5a9978875ab681f7f6de02d91344a37f4",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Principal keys must include provider/tenant authority and preserve its identity semantics. Rows are source observations and not deduplicated unique sessions.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N089",
+      "file": "queries/investigation/account-lockouts/n089-investigation-account-lockouts-with-preceding-authentication-failures.xql",
+      "file_sha256": "9be1f5c1dcc075878b55eddaea5c0f2a0e905fc8f0b1ef4092d4e49df0dc6c4d",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [
+        "Replaced truncated whole-minute upper bound with 1800 seconds."
+      ],
+      "limitations": [
+        "Preceding target-identity failures are context rather than the established cause of a lockout. Outer lookback boundaries and source clock differences can remove preceding events.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N090",
+      "file": "queries/investigation/privileged-access/n090-investigation-privileged-access-to-time-qualified-critical-assets.xql",
+      "file_sha256": "c603f2cb17e0967b8734f1cb6c620d822b78633d95809aec504563cbd916cf55",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Event-time effective entitlement and criticality must both match the stable asset. Multiple legitimate roles may yield multiple rows; current privileges cannot be applied retrospectively.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N091",
+      "file": "queries/asset-visibility/agent-health/n091-asset-visibility-latest-agent-version-and-reported-health.xql",
+      "file_sha256": "d1a30f6dc2c810c96e75504bf1cd640f4e3b03684e66cfa022ebb2d5f57de4ff",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Equal newest timestamps retain all tied reports; the query does not compute a conflict flag. Inventory heartbeat and operational state do not establish recent process/network activity.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N092",
+      "file": "queries/cyber-hygiene/collection-coverage/n092-cyber-hygiene-expected-endpoints-with-missing-recent-process-or-network-telemetry.xql",
+      "file_sha256": "11e376eb8c3d12e7a265ca71503856bfb8047567220f38717e6422e15e4e01f0",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Tests the latest observation across the union of process and network categories; it does not independently require both streams. A fresh event in either category prevents an inactivity result. Expected-state inventory must be current and independent of activity retention; documented numeric categories still require tenant enum acceptance.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N093",
+      "file": "queries/security-operations/domain-controllers/n093-security-operations-domain-controller-operational-event-timeline.xql",
+      "file_sha256": "212dc7c8335178b030e395f40dd993138d1c524484f17ed0e88ae1c728fd2843",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Approved provider/channel/event selections and historical domain-controller roles are required bindings; no universal DC health event-ID list is assumed.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N094",
+      "file": "queries/security-operations/cortex-audit/n094-security-operations-cortex-management-audit-timeline.xql",
+      "file_sha256": "44c69d7cfd21a2f39219475debbeb8e67074b9c61a47d10f8b438c86ec71fffa",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Tenant Schema observation establishes seven projected field names/types only. Categories and results are preserved without claiming successful change or complete audit coverage.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N095",
+      "file": "queries/security-operations/cortex-audit/n095-security-operations-cortex-role-and-api-credential-lifecycle-audit.xql",
+      "file_sha256": "abfc8c2085a91b545ae1d3fb9c50816e3275e7265c7dd1cf1a6f85e5b14e56ca",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Bound category and action sets must select valid intended lifecycle combinations. Preserve non-secret target IDs only; audit semantics and lifecycle coverage remain tenant-specific.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N096",
+      "file": "queries/security-operations/response-audit/n096-security-operations-cortex-response-requests-and-terminal-outcomes.xql",
+      "file_sha256": "b7447d279be783adecfbb418a7ed1a58b62efe51d8833403591ba27dc5674d69",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [
+        "Replaced truncated whole-hour upper bound with 86400 seconds."
+      ],
+      "limitations": [
+        "The action identifier must be a stable operation correlation key scoped to the correct endpoint. Unmatched requests are not failures; multiple terminal rows remain visible and completion is not success.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N097",
+      "file": "queries/security-operations/collection-health/n097-security-operations-collector-error-and-warning-audit-records.xql",
+      "file_sha256": "8f67556ee5c43a9a639fa552f0191b461360fdc5978c5ae9e47bac0454e5e234",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Official XSIAM example supports the dataset and projected fields; tenant capitalization, source coverage and exact compiler acceptance remain unverified. Historical errors do not establish present health.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N098",
+      "file": "queries/security-operations/ingestion-health/n098-security-operations-data-source-freshness-and-interval-volume.xql",
+      "file_sha256": "edd80c2f8cfd1348998f6bc2415900ea85a5f94d4eb568071585a027f75eef58",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Metrics are source/interval aggregates. last_seen is last collection time; volume and freshness require schedule-aware interpretation. Synthetic zero intervals do not inventory never-observed sources.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N099",
+      "file": "queries/investigation/aws-audit/n099-investigation-selected-aws-account-api-audit-timeline.xql",
+      "file_sha256": "db43070ee1085870b2c92a7a8508283152a9f3f4e588e329476474a85477501f",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Collected CloudTrail API events cover only configured accounts, regions and management/data event types. AWS service source context is not automatically an endpoint IP.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    },
+    {
+      "id": "N100",
+      "file": "queries/investigation/kubernetes-audit/n100-investigation-kubernetes-audit-timeline-with-time-valid-workload-context.xql",
+      "file_sha256": "1bd288b05897d8ec60ec01ac73cc4d77ccde2d7ea92cc8259221bd0b088700dc",
+      "static_status": "PASS",
+      "required_fixes": [],
+      "resolved_findings": [],
+      "limitations": [
+        "Enrichment requires stable cluster/object UID and a unique applicable historical row. Missing UID remains unmatched; same names on recreated objects cannot justify attribution.",
+        "Static PASS concerns the retained conceptual logic, bindings, projections and stated scope only. Complete-query compilation and execution were NOT RUN.",
+        "Binding templates are not executable until every placeholder is resolved and type/population assumptions are validated. Null/empty identifier normalization, source clocks, inner-query lookback and inventory validity completeness must be established.",
+        "Integer/enum representation, datetime aggregation/lag/null behavior and timestamp boundary precision require the actual Cortex compiler and source fixtures. A final row limit does not bound upstream work."
+      ],
+      "validation": {
+        "S": "PASS",
+        "S_scope": "Independent manual static review of complete body and metadata plus structural hash/binding readback.",
+        "D": "NOT RUN",
+        "D_scope": "Selected primary references and retained tenant Schema evidence checked; no complete-query documentation certification.",
+        "C": "NOT RUN",
+        "E": "NOT RUN"
+      },
+      "supporting_review_count": 1
+    }
+  ]
+}

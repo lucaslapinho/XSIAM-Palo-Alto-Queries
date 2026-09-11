@@ -1,0 +1,137 @@
+{
+  "query_id": "N045",
+  "source_sha256": "c0d8e50bf44c686ce2a75ad0b9bf7dcdc48719a1df77b2a2b21be6c0db192b5e",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "BROWSER_STORE_INVENTORY": null,
+    "FILE_ACCESS_DATASET": null,
+    "READ_ACCOUNT": null,
+    "READ_CANONICAL_PATH": null,
+    "READ_ENDPOINT": null,
+    "READ_EVENT_UID": null,
+    "READ_OPERATION": null,
+    "READ_OUTCOME": null,
+    "READ_PROCESS_IMAGE": null,
+    "READ_PROCESS_INSTANCE": null,
+    "READ_TIME": null,
+    "STORE_BROWSER": null,
+    "STORE_ENDPOINT": null,
+    "STORE_PATH": null,
+    "STORE_VALID_FROM": null,
+    "STORE_VALID_TO": null
+  },
+  "contracts": {
+    "BROWSER_STORE_INVENTORY": {
+      "type": "DATASET_IDENTIFIER",
+      "kind": "DATASET",
+      "binding_contract": "Versioned credential-store path inventory per endpoint and browser/profile; include only validated browser storage locations.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FILE_ACCESS_DATASET": {
+      "type": "DATASET_IDENTIFIER",
+      "kind": "DATASET",
+      "binding_contract": "Audited file READ/access telemetry with result and process attribution; file-write-only events cannot satisfy this binding.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "READ_ACCOUNT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Reader principal. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "READ_CANONICAL_PATH": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Canonical absolute file path under a known browser profile; honor platform path case semantics. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder. Windows case-insensitive path components require the same reviewed canonical form; Unix case-sensitive paths must remain distinct.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "READ_ENDPOINT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Stable host ID. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "READ_EVENT_UID": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Unique file access event key. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "READ_OPERATION": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Normalize actual read-content operations to read; open/query/write remain distinct. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "READ_OUTCOME": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Normalize confirmed successful read operation to success; unknown remains null. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "READ_PROCESS_IMAGE": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Observed reader image path. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "READ_PROCESS_INSTANCE": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Host/boot-scoped process instance key. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "READ_TIME": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "File operation source time.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "STORE_BROWSER": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Browser product/version/profile context. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "STORE_ENDPOINT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Stable endpoint key matching file telemetry. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "STORE_PATH": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Canonical full credential-store path, same path normalization as file telemetry. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder. Windows case-insensitive path components require the same reviewed canonical form; Unix case-sensitive paths must remain distinct.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "STORE_VALID_FROM": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Inventory validity start.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "STORE_VALID_TO": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Exclusive inventory validity end; use a verified explicit future boundary for current entries.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    }
+  }
+}

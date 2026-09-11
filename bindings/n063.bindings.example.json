@@ -1,0 +1,41 @@
+{
+  "query_id": "N063",
+  "source_sha256": "a29fb432ac142cffe80b39962f3f6cc682ba4f5ad95545ab99457770a3891af9",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "APPROVAL_OWNER": null,
+    "APPROVED_ENDPOINT": null,
+    "APPROVED_FROM": null,
+    "APPROVED_PRINCIPAL": null,
+    "APPROVED_PRODUCT": null,
+    "APPROVED_UNTIL": null,
+    "APPROVED_VERSION": null,
+    "REMOTE_DESKTOP_APPROVAL_HISTORY": null,
+    "REMOTE_DESKTOP_SOFTWARE_OBSERVATIONS": null,
+    "REMOTE_SOFTWARE_ENDPOINT": null,
+    "REMOTE_SOFTWARE_EVIDENCE_KIND": null,
+    "REMOTE_SOFTWARE_IDENTITY_VERIFIED": null,
+    "REMOTE_SOFTWARE_PRODUCT": null,
+    "REMOTE_SOFTWARE_TIME": null,
+    "REMOTE_SOFTWARE_USER": null,
+    "REMOTE_SOFTWARE_VERSION": null
+  },
+  "contracts": {
+    "APPROVAL_OWNER": "STRING: accountable approval owner.",
+    "APPROVED_ENDPOINT": "STRING: exact approved endpoint; expand group scope explicitly before binding.",
+    "APPROVED_FROM": "DATETIME: approval start inclusive.",
+    "APPROVED_PRINCIPAL": "STRING: approved principal, no implicit any-user wildcard.",
+    "APPROVED_PRODUCT": "STRING: same product identity namespace.",
+    "APPROVED_UNTIL": "DATETIME: approval expiry exclusive.",
+    "APPROVED_VERSION": "STRING: approved version; expand reviewed version ranges before binding.",
+    "REMOTE_DESKTOP_APPROVAL_HISTORY": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "REMOTE_DESKTOP_SOFTWARE_OBSERVATIONS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "REMOTE_SOFTWARE_ENDPOINT": "STRING: stable endpoint ID.",
+    "REMOTE_SOFTWARE_EVIDENCE_KIND": "STRING: process_start or fresh_inventory; never equate the two.",
+    "REMOTE_SOFTWARE_IDENTITY_VERIFIED": "BOOLEAN: true only after validated product identity.",
+    "REMOTE_SOFTWARE_PRODUCT": "STRING: verified desktop/support product identity from approved hashes/signers/artifacts, not a generic remote-access family.",
+    "REMOTE_SOFTWARE_TIME": "DATETIME: actual execution observation or freshness-qualified inventory snapshot.",
+    "REMOTE_SOFTWARE_USER": "STRING: stable user/service identity applicable to this observation.",
+    "REMOTE_SOFTWARE_VERSION": "STRING nullable: validated product version; unknown must be null, never a wildcard approval or sentinel string."
+  }
+}

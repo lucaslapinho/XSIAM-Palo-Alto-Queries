@@ -1,0 +1,121 @@
+{
+  "query_id": "N046",
+  "source_sha256": "f2a9837adada087269c0dd41c656b78a85728a4d8f0cfb53a242a95e8cafaa56",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "DIRECTORY_QUERY_DATASET": null,
+    "GROUP_QUERY_ACTOR": null,
+    "GROUP_QUERY_ENDPOINT": null,
+    "GROUP_QUERY_OPERATION": null,
+    "GROUP_QUERY_OUTCOME": null,
+    "GROUP_QUERY_SID": null,
+    "GROUP_QUERY_TEXT": null,
+    "GROUP_QUERY_TIME": null,
+    "PRIVILEGED_GROUP_INVENTORY": null,
+    "PRIV_GROUP_FROM": null,
+    "PRIV_GROUP_NAME": null,
+    "PRIV_GROUP_REALM": null,
+    "PRIV_GROUP_SID": null,
+    "PRIV_GROUP_TO": null
+  },
+  "contracts": {
+    "DIRECTORY_QUERY_DATASET": {
+      "type": "DATASET_IDENTIFIER",
+      "kind": "DATASET",
+      "binding_contract": "Verified directory group-query or tokenized read-oriented group-command telemetry, preserving resolved target group identity and operation.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "GROUP_QUERY_ACTOR": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Realm-qualified requester. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "GROUP_QUERY_ENDPOINT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Stable requesting endpoint. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "GROUP_QUERY_OPERATION": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Normalize actual group member/list/detail requests to group_read; mutations stay distinct. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "GROUP_QUERY_OUTCOME": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Observed result; do not force success for a process start. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "GROUP_QUERY_SID": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Authoritative target group SID resolved in its directory realm; not an English-name guess. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "GROUP_QUERY_TEXT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Original query/command for analyst context. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "GROUP_QUERY_TIME": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Source query time.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "PRIVILEGED_GROUP_INVENTORY": {
+      "type": "DATASET_IDENTIFIER",
+      "kind": "DATASET",
+      "binding_contract": "Authoritative privileged domain-group SID inventory with nonoverlapping validity intervals.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "PRIV_GROUP_FROM": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Inclusive validity start.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "PRIV_GROUP_NAME": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Localized display name for context. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "PRIV_GROUP_REALM": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Directory realm. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "PRIV_GROUP_SID": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Group SID, including domain identifier. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "PRIV_GROUP_TO": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Exclusive validity end.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    }
+  }
+}

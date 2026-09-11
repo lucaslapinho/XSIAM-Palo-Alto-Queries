@@ -1,0 +1,177 @@
+{
+  "query_id": "N033",
+  "source_sha256": "89d25c87652f79bcf78a7544da6933996927de15dbe7740d0ce7bc250cedc362",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "RUN_REGISTRY_ARTIFACT_NAME": null,
+    "RUN_REGISTRY_ARTIFACT_PATH": null,
+    "RUN_REGISTRY_DATASET": null,
+    "RUN_REGISTRY_EVENT_TIME": null,
+    "RUN_REGISTRY_EXECUTION_TARGET": null,
+    "RUN_REGISTRY_HOST_ID": null,
+    "RUN_REGISTRY_OPERATION": null,
+    "RUN_REGISTRY_SUCCESSFUL": null,
+    "RUN_REGISTRY_WRITER_PROCESS": null,
+    "RUN_REGISTRY_WRITER_USER": null,
+    "STARTUP_FILES_ARTIFACT_NAME": null,
+    "STARTUP_FILES_ARTIFACT_PATH": null,
+    "STARTUP_FILES_DATASET": null,
+    "STARTUP_FILES_EVENT_TIME": null,
+    "STARTUP_FILES_EXECUTION_TARGET": null,
+    "STARTUP_FILES_HOST_ID": null,
+    "STARTUP_FILES_IS_STARTUP_LOCATION": null,
+    "STARTUP_FILES_OPERATION": null,
+    "STARTUP_FILES_SUCCESSFUL": null,
+    "STARTUP_FILES_WRITER_PROCESS": null,
+    "STARTUP_FILES_WRITER_USER": null
+  },
+  "contracts": {
+    "RUN_REGISTRY_ARTIFACT_NAME": {
+      "type": "STRING scalar expression",
+      "description": "Registry value name Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "RUN_REGISTRY_ARTIFACT_PATH": {
+      "type": "STRING scalar expression",
+      "description": "Canonical registry key path, preserving hive and user scope Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "RUN_REGISTRY_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for RUN_REGISTRY. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "RUN_REGISTRY_EVENT_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "Registry operation time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "RUN_REGISTRY_EXECUTION_TARGET": {
+      "type": "STRING scalar expression",
+      "description": "Written value data, including configured command Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "RUN_REGISTRY_HOST_ID": {
+      "type": "STRING scalar expression",
+      "description": "Stable host identifier Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "RUN_REGISTRY_OPERATION": {
+      "type": "STRING scalar expression",
+      "description": "Normalized CREATE_VALUE, SET_VALUE or RENAME_VALUE; exclude reads Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "RUN_REGISTRY_SUCCESSFUL": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Verified successful mutation result Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "RUN_REGISTRY_WRITER_PROCESS": {
+      "type": "STRING scalar expression",
+      "description": "Actual writer process instance Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "RUN_REGISTRY_WRITER_USER": {
+      "type": "STRING scalar expression",
+      "description": "Actual effective writer identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "STARTUP_FILES_ARTIFACT_NAME": {
+      "type": "STRING scalar expression",
+      "description": "File name Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "STARTUP_FILES_ARTIFACT_PATH": {
+      "type": "STRING scalar expression",
+      "description": "Resolved configured startup directory plus artifact path; include custom redirected startup folders Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "STARTUP_FILES_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for STARTUP_FILES. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "STARTUP_FILES_EVENT_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "File operation time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "STARTUP_FILES_EXECUTION_TARGET": {
+      "type": "STRING scalar expression",
+      "description": "Verified executable target from shortcut/content if collected; null rather than inferring from a .lnk name Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "STARTUP_FILES_HOST_ID": {
+      "type": "STRING scalar expression",
+      "description": "Stable host identifier Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "STARTUP_FILES_IS_STARTUP_LOCATION": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Exact membership in current per-user/machine configured Startup paths, not a substring-only classification Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "STARTUP_FILES_OPERATION": {
+      "type": "STRING scalar expression",
+      "description": "Normalized CREATE, WRITE or RENAME including atomic replacement Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "STARTUP_FILES_SUCCESSFUL": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Verified successful mutation Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "STARTUP_FILES_WRITER_PROCESS": {
+      "type": "STRING scalar expression",
+      "description": "Actual writer process instance Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "STARTUP_FILES_WRITER_USER": {
+      "type": "STRING scalar expression",
+      "description": "Effective writer identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    }
+  }
+}

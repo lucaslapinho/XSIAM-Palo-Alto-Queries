@@ -1,0 +1,27 @@
+{
+  "query_id": "N070",
+  "source_sha256": "6a5ce6da6ddaed7b269eedb6878b6c48d18fb6a2d98ede0a44565da3fcd8323d",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "AWS_AUDIT_DATASET": null,
+    "AWS_EVENT_JSON": null,
+    "AWS_EVENT_TIME": null,
+    "PRIVILEGED_POLICY_ACCOUNT": null,
+    "PRIVILEGED_POLICY_ARN": null,
+    "PRIVILEGED_POLICY_FROM": null,
+    "PRIVILEGED_POLICY_REASON": null,
+    "PRIVILEGED_POLICY_UNTIL": null,
+    "REVIEWED_HIGH_PRIVILEGE_POLICY_HISTORY": null
+  },
+  "contracts": {
+    "AWS_AUDIT_DATASET": "Dataset identifier: verified AWS CloudTrail source; one CloudTrail event per row. Management/data-event selection and account/region scope must be established.",
+    "AWS_EVENT_JSON": "STRING expression: one original CloudTrail JSON event object. Do not bind an outer Records array or double-encode a JSON string.",
+    "AWS_EVENT_TIME": "DATETIME expression: correctly parsed CloudTrail eventTime, not a guessed timestamp unit.",
+    "PRIVILEGED_POLICY_ACCOUNT": "STRING: affected account for which the policy assessment applies.",
+    "PRIVILEGED_POLICY_ARN": "STRING: exact managed policy ARN reviewed as high privilege at event time.",
+    "PRIVILEGED_POLICY_FROM": "DATETIME: reviewed policy version applicability start.",
+    "PRIVILEGED_POLICY_REASON": "STRING: reviewed permissions/rationale and policy version; account SCP/boundary limitations must be described.",
+    "PRIVILEGED_POLICY_UNTIL": "DATETIME: applicability end exclusive.",
+    "REVIEWED_HIGH_PRIVILEGE_POLICY_HISTORY": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below."
+  }
+}

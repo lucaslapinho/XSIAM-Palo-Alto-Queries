@@ -1,0 +1,37 @@
+{
+  "query_id": "N062",
+  "source_sha256": "a096030d6c34b07706b286c2360388f3668f671c03ff11e9646e07bd829668c9",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "CONFIRMED_TRANSFER_EVENTS": null,
+    "FILE_CREATION_EVENTS": null,
+    "TRANSFER_DIRECTION": null,
+    "TRANSFER_ENDPOINT": null,
+    "TRANSFER_FILE_ENDPOINT": null,
+    "TRANSFER_FILE_PATH": null,
+    "TRANSFER_FILE_SHA256": null,
+    "TRANSFER_FILE_TIME": null,
+    "TRANSFER_OUTPUT_PATH": null,
+    "TRANSFER_PROCESS": null,
+    "TRANSFER_SUCCESS": null,
+    "TRANSFER_TIME": null,
+    "TRANSFER_URL": null,
+    "TRANSFER_WRITER_PROCESS": null
+  },
+  "contracts": {
+    "CONFIRMED_TRANSFER_EVENTS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "FILE_CREATION_EVENTS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "TRANSFER_DIRECTION": "STRING: normalized inbound/outbound; inbound means downloaded to endpoint.",
+    "TRANSFER_ENDPOINT": "STRING: endpoint identity.",
+    "TRANSFER_FILE_ENDPOINT": "STRING: matching endpoint identity.",
+    "TRANSFER_FILE_PATH": "STRING: same normalized path namespace as output_path; case rules must follow the source OS.",
+    "TRANSFER_FILE_SHA256": "STRING nullable: resulting content SHA-256; absence is not a mismatch.",
+    "TRANSFER_FILE_TIME": "DATETIME: observed file creation/write completion.",
+    "TRANSFER_OUTPUT_PATH": "STRING: normalized destination path when attributable to this operation.",
+    "TRANSFER_PROCESS": "STRING: owning process instance.",
+    "TRANSFER_SUCCESS": "BOOLEAN: transfer outcome, not process-start success.",
+    "TRANSFER_TIME": "DATETIME: transfer operation time.",
+    "TRANSFER_URL": "STRING: observed requested URL, scrubbed of tokens if necessary.",
+    "TRANSFER_WRITER_PROCESS": "STRING: exact responsible process instance."
+  }
+}

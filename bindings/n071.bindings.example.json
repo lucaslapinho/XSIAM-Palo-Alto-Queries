@@ -1,0 +1,27 @@
+{
+  "query_id": "N071",
+  "source_sha256": "af3f2146451257dae0f8865081bb2cb930ec2c4d5e59dd2dc71a9f82af0380cd",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "AWS_ACCESS_KEY_USE_EVENTS": null,
+    "AWS_AUDIT_DATASET": null,
+    "AWS_EVENT_JSON": null,
+    "AWS_EVENT_TIME": null,
+    "AWS_KEY_USE_ACCOUNT": null,
+    "AWS_KEY_USE_EVENT": null,
+    "AWS_KEY_USE_SOURCE": null,
+    "AWS_KEY_USE_TIME": null,
+    "AWS_USED_KEY_ID": null
+  },
+  "contracts": {
+    "AWS_ACCESS_KEY_USE_EVENTS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "AWS_AUDIT_DATASET": "Dataset identifier: verified AWS CloudTrail source; one CloudTrail event per row. Management/data-event selection and account/region scope must be established.",
+    "AWS_EVENT_JSON": "STRING expression: one original CloudTrail JSON event object. Do not bind an outer Records array or double-encode a JSON string.",
+    "AWS_EVENT_TIME": "DATETIME expression: correctly parsed CloudTrail eventTime, not a guessed timestamp unit.",
+    "AWS_KEY_USE_ACCOUNT": "STRING: owning identity account, compatible with the creation account; do not substitute recipient resource account for cross-account use.",
+    "AWS_KEY_USE_EVENT": "STRING: observed API event name.",
+    "AWS_KEY_USE_SOURCE": "STRING nullable: caller address or AWS service context.",
+    "AWS_KEY_USE_TIME": "DATETIME: attributed AWS API use time.",
+    "AWS_USED_KEY_ID": "STRING: userIdentity.accessKeyId of the caller; non-secret identifier."
+  }
+}

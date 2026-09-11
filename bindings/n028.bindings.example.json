@@ -1,0 +1,97 @@
+{
+  "query_id": "N028",
+  "source_sha256": "81b387bd1675477e2f6499e99476cfe2ea87b6e3c0493b71ea8ed42b11880003",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "WMI_DIRECT_PARENT_IMAGE": null,
+    "WMI_TRACE_DATASET": null,
+    "WMI_TRACE_W_ACCOUNT": null,
+    "WMI_TRACE_W_CHILD": null,
+    "WMI_TRACE_W_CLIENT": null,
+    "WMI_TRACE_W_EXPECTED": null,
+    "WMI_TRACE_W_HOST": null,
+    "WMI_TRACE_W_NAMESPACE": null,
+    "WMI_TRACE_W_OPERATION": null,
+    "WMI_TRACE_W_RESULT": null,
+    "WMI_TRACE_W_TIME": null
+  },
+  "contracts": {
+    "WMI_DIRECT_PARENT_IMAGE": {
+      "type": "STRING scalar expression",
+      "description": "Verified direct parent image for the started process",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "WMI_TRACE_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for WMI_TRACE. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "WMI_TRACE_W_ACCOUNT": {
+      "type": "STRING scalar expression",
+      "description": "Authenticated requesting account Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "WMI_TRACE_W_CHILD": {
+      "type": "STRING scalar expression",
+      "description": "Resulting child process instance after verified WMI/process correlation, not PID-only matching Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "WMI_TRACE_W_CLIENT": {
+      "type": "STRING scalar expression",
+      "description": "Observed client source host/address Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "WMI_TRACE_W_EXPECTED": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Comparison with a current scoped management baseline; null when baseline is unavailable Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "WMI_TRACE_W_HOST": {
+      "type": "STRING scalar expression",
+      "description": "Target endpoint ID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "WMI_TRACE_W_NAMESPACE": {
+      "type": "STRING scalar expression",
+      "description": "WMI namespace Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "WMI_TRACE_W_OPERATION": {
+      "type": "STRING scalar expression",
+      "description": "WMI operation/provider activity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "WMI_TRACE_W_RESULT": {
+      "type": "STRING scalar expression",
+      "description": "Operation result Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "WMI_TRACE_W_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "WMI operation time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "query_id": "N077",
+  "source_sha256": "59c17b93f6e764a29fc1d56fe72a59d3619ec01cddbe23c0fa382064de89cb32",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "RDP_APPLICATION_VALUES": null,
+    "RDP_CLIENT_ENDPOINT": null,
+    "RDP_FLOW_ACTION": null,
+    "RDP_FLOW_APPLICATION": null,
+    "RDP_FLOW_DEST_IP": null,
+    "RDP_FLOW_DEST_PORT": null,
+    "RDP_FLOW_PROCESS_INSTANCE": null,
+    "RDP_FLOW_PROTOCOL": null,
+    "RDP_FLOW_SOURCE_IP": null,
+    "RDP_FLOW_SOURCE_PORT": null,
+    "RDP_FLOW_TIME": null,
+    "RDP_FLOW_UID": null,
+    "RDP_NETWORK_CLASSIFICATION_DATASET": null
+  },
+  "contracts": {
+    "RDP_APPLICATION_VALUES": {
+      "type": "QUOTED_STRING_LIST",
+      "kind": "VALUE_OR_LITERAL",
+      "binding_contract": "Verified RDP application identifiers from the selected classifier/version; no invented App-ID spelling.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_CLIENT_ENDPOINT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Time-valid client endpoint attribution or null. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FLOW_ACTION": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Original network/firewall outcome classification, not authentication. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FLOW_APPLICATION": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Actual application classification. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FLOW_DEST_IP": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Server address at that boundary. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FLOW_DEST_PORT": {
+      "type": "INTEGER",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Observed server destination port.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FLOW_PROCESS_INSTANCE": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Network-to-initiating-process instance only if source or exact validated correlation provides it; otherwise null. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FLOW_PROTOCOL": {
+      "type": "INTEGER",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Canonical IP protocol number after typed source normalization.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FLOW_SOURCE_IP": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Canonical client address at the endpoint sensor boundary; translation must be validated. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FLOW_SOURCE_PORT": {
+      "type": "INTEGER",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Client source port at the same sensor boundary.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FLOW_TIME": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Network observation time.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FLOW_UID": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Unique network evidence record; no universal unique-session assumption. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_NETWORK_CLASSIFICATION_DATASET": {
+      "type": "DATASET_IDENTIFIER",
+      "kind": "DATASET",
+      "binding_contract": "Application-classified traffic with endpoint-observed canonical tuples; classification must come from verified App-ID/protocol telemetry, not a port guess.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    }
+  }
+}

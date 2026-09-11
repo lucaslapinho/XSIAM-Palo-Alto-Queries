@@ -1,0 +1,23 @@
+{
+  "query_id": "N092",
+  "source_sha256": "11e376eb8c3d12e7a265ca71503856bfb8047567220f38717e6422e15e4e01f0",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "EXPECTED_ACTIVE_ENDPOINTS": null,
+    "EXPECTED_ACTIVE_FLAG": null,
+    "EXPECTED_ENDPOINT_ID": null,
+    "EXPECTED_ENDPOINT_NAME": null,
+    "EXPECTED_HEARTBEAT_TIME": null,
+    "EXPECTED_MAINTENANCE_FLAG": null,
+    "STALE_MINUTES": null
+  },
+  "contracts": {
+    "EXPECTED_ACTIVE_ENDPOINTS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "EXPECTED_ACTIVE_FLAG": "BOOLEAN: true only for operational endpoints expected to send telemetry now.",
+    "EXPECTED_ENDPOINT_ID": "STRING: one current expected-active record per endpoint.",
+    "EXPECTED_ENDPOINT_NAME": "STRING: hostname.",
+    "EXPECTED_HEARTBEAT_TIME": "DATETIME nullable: independent heartbeat time, not the last process event.",
+    "EXPECTED_MAINTENANCE_FLAG": "BOOLEAN: explicit maintenance exemption, false for non-exempt endpoints.",
+    "STALE_MINUTES": "Positive numeric literal: owner-approved inactivity threshold in minutes; choose for endpoint lifecycle and expected usage."
+  }
+}

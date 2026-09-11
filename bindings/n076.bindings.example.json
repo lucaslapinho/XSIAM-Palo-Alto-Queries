@@ -1,0 +1,185 @@
+{
+  "query_id": "N076",
+  "source_sha256": "87d740a466f52c406a5afb9d21ea36d059644dcee48889df46ea0b5bbe08b148",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "AUTH_CHANNEL": null,
+    "AUTH_EVENT_ID": null,
+    "AUTH_EVENT_UID": null,
+    "AUTH_LOGON_KEY": null,
+    "AUTH_LOGON_TYPE": null,
+    "AUTH_PROVIDER": null,
+    "AUTH_SOURCE_IP": null,
+    "AUTH_TARGET_ACCOUNT_KEY": null,
+    "AUTH_TARGET_ENDPOINT": null,
+    "AUTH_TIME": null,
+    "FAIL_REASON": null,
+    "FAIL_STATUS": null,
+    "FAIL_SUBSTATUS": null,
+    "RDP_FAILURE_CORRELATION_KEY": null,
+    "RDP_FAIL_CORRELATION": null,
+    "RDP_FAIL_ENDPOINT": null,
+    "RDP_FAIL_EVENT_UID": null,
+    "RDP_FAIL_PROTOCOL": null,
+    "RDP_FAIL_RESULT": null,
+    "RDP_FAIL_TIME": null,
+    "RDP_PROVIDER_FAILURE_DATASET": null,
+    "WINDOWS_AUTH_DATASET": null
+  },
+  "contracts": {
+    "AUTH_CHANNEL": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Source channel name. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "AUTH_EVENT_ID": {
+      "type": "INTEGER",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Parsed numeric Windows EventID.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "AUTH_EVENT_UID": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Collision-free source event key including target/provider/channel/record generation; deduplicate only repeated delivery of the same event. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "AUTH_LOGON_KEY": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Target endpoint boot/LSA epoch plus TargetLogonId; never a Terminal Services session ID without proven mapping. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "AUTH_LOGON_TYPE": {
+      "type": "INTEGER",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Parsed numeric EventData.LogonType; null for absent/invalid.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "AUTH_PROVIDER": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Source provider name. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "AUTH_SOURCE_IP": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Canonical client IP; preserve IPv4/IPv6; map absent, dash and unresolved placeholders to null, document gateways/NAT. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "AUTH_TARGET_ACCOUNT_KEY": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Domain-qualified stable target account or SID; not the Subject account. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "AUTH_TARGET_ENDPOINT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Stable destination endpoint identity valid at event time. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "AUTH_TIME": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Source event time, UTC datetime; not collector receipt time.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FAIL_REASON": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Original failure reason. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FAIL_STATUS": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Original Windows failure Status code. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FAIL_SUBSTATUS": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Original SubStatus; preserve code not only localized reason. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FAILURE_CORRELATION_KEY": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Verified authentication-provider transaction/activity key mapping this failure to RDP/NLA; null when no such relation exists. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FAIL_CORRELATION": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Same verified activity/transaction namespace. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FAIL_ENDPOINT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Same destination endpoint as Security event. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FAIL_EVENT_UID": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Unique provider evidence ID. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FAIL_PROTOCOL": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "rdp only when provider semantics explicitly identify RDP authentication. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FAIL_RESULT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "failure for verified failed authentication. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_FAIL_TIME": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Provider authentication event time.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "RDP_PROVIDER_FAILURE_DATASET": {
+      "type": "DATASET_IDENTIFIER",
+      "kind": "DATASET",
+      "binding_contract": "RDP/NLA-specific authentication-provider failures with proven transaction linkage to Security failures; not generic Kerberos or network events.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "WINDOWS_AUTH_DATASET": {
+      "type": "DATASET_IDENTIFIER",
+      "kind": "DATASET",
+      "binding_contract": "Collected Windows Security authentication events with original provider/channel and lossless source-event identity.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    }
+  }
+}

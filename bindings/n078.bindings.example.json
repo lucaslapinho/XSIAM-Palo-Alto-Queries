@@ -1,0 +1,129 @@
+{
+  "query_id": "N078",
+  "source_sha256": "fa1193145dc9ce97feb9be24c805d222af7e22b8b5c753ecf9fd79672370f47b",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "IP_ACCOUNT": null,
+    "IP_DESTINATION": null,
+    "IP_DNS_ANSWER": null,
+    "IP_ENDPOINT": null,
+    "IP_EVENT_TIME": null,
+    "IP_EVENT_UID": null,
+    "IP_EVIDENCE_KIND": null,
+    "IP_NAT_DESTINATION": null,
+    "IP_NAT_SOURCE": null,
+    "IP_OBSERVATION_DATASET": null,
+    "IP_PROXY_CLIENT": null,
+    "IP_SAFE_DETAIL": null,
+    "IP_SOURCE": null,
+    "IP_SOURCE_SYSTEM": null,
+    "IP_TO_REVIEW": null
+  },
+  "contracts": {
+    "IP_ACCOUNT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Source-reported principal, nullable. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_DESTINATION": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Canonical original destination/remote IP. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_DNS_ANSWER": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Actual response answer IP; expand a response array into rows in the verified binding view, preserving event UID. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_ENDPOINT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Verified time-valid endpoint attribution, nullable. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_EVENT_TIME": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Original observation time.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_EVENT_UID": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Source-system-scoped event identifier. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_EVIDENCE_KIND": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "endpoint_network, firewall, authentication, proxy or dns_response according to actual source. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_NAT_DESTINATION": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Canonical post-NAT destination, null if not applicable. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_NAT_SOURCE": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Canonical post-NAT source, null if not applicable. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_OBSERVATION_DATASET": {
+      "type": "DATASET_IDENTIFIER",
+      "kind": "DATASET",
+      "binding_contract": "A verified common-schema dataset or view of selected endpoint/firewall/authentication/proxy/DNS observations; preserve source_system/evidence_kind and map only IP roles actually present.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_PROXY_CLIENT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Trusted forwarded client address only when verified proxy headers/source semantics support it; untrusted forwarded headers remain untrusted context. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_SAFE_DETAIL": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Safe event-specific context without unnecessary credentials. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_SOURCE": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Canonical original/source or local IP, with role retained in source contract. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_SOURCE_SYSTEM": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Original dataset/provider provenance. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "IP_TO_REVIEW": {
+      "type": "QUOTED_IP_STRING",
+      "kind": "VALUE_OR_LITERAL",
+      "binding_contract": "Canonical exact IPv4/IPv6 address to investigate; same normalization as all bound IP fields, never substring/wildcard.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    }
+  }
+}

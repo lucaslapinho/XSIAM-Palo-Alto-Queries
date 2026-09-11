@@ -1,0 +1,201 @@
+{
+  "query_id": "N043",
+  "source_sha256": "20e5d734d135b919f98c6b5bebb9bf64508a75b1b6dad7cfe6e53a72a727ea76",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "ASREP_DAILY_THRESHOLD": null,
+    "ASREP_REQUEST_BASELINE_BASELINE_COMPLETE": null,
+    "ASREP_REQUEST_BASELINE_B_DOMAIN": null,
+    "ASREP_REQUEST_BASELINE_B_SID": null,
+    "ASREP_REQUEST_BASELINE_DATASET": null,
+    "ASREP_REQUEST_BASELINE_EXPECTED_DAILY_PEAK": null,
+    "ASREP_REQUEST_BASELINE_KNOWN_SOURCE": null,
+    "ASREP_REQUEST_BASELINE_PRIOR_REQUESTS": null,
+    "PREAUTH_ACCOUNT_STATE_APPROVED_EXCEPTION": null,
+    "PREAUTH_ACCOUNT_STATE_A_DOMAIN": null,
+    "PREAUTH_ACCOUNT_STATE_A_SID": null,
+    "PREAUTH_ACCOUNT_STATE_DATASET": null,
+    "PREAUTH_ACCOUNT_STATE_DOES_NOT_REQUIRE_PREAUTH": null,
+    "PREAUTH_ACCOUNT_STATE_EFFECTIVE_FROM": null,
+    "PREAUTH_ACCOUNT_STATE_EFFECTIVE_UNTIL": null,
+    "TGT_REQUESTS_ACCOUNT_SID": null,
+    "TGT_REQUESTS_DATASET": null,
+    "TGT_REQUESTS_DOMAIN_ID": null,
+    "TGT_REQUESTS_ENCRYPTION_TYPE": null,
+    "TGT_REQUESTS_EVENT_ID": null,
+    "TGT_REQUESTS_EVENT_TIME": null,
+    "TGT_REQUESTS_PREAUTH_TYPE": null,
+    "TGT_REQUESTS_SOURCE_IP": null,
+    "TGT_REQUESTS_SUCCESS": null
+  },
+  "contracts": {
+    "ASREP_DAILY_THRESHOLD": {
+      "type": "INTEGER literal",
+      "description": "Positive daily request triage floor chosen after environment baseline review",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ASREP_REQUEST_BASELINE_BASELINE_COMPLETE": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Prior baseline coverage validated. Freeze a comparable snapshot ending at or before evaluation_time minus 86400 seconds, exclude all rolling-current-window observations, and require one row per SID/domain/source key Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ASREP_REQUEST_BASELINE_B_DOMAIN": {
+      "type": "STRING scalar expression",
+      "description": "Same domain identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ASREP_REQUEST_BASELINE_B_SID": {
+      "type": "STRING scalar expression",
+      "description": "Same account SID; exactly one frozen baseline row per SID/domain/source key, including explicit zero rows when source absence is established Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ASREP_REQUEST_BASELINE_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for ASREP_REQUEST_BASELINE. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ASREP_REQUEST_BASELINE_EXPECTED_DAILY_PEAK": {
+      "type": "INTEGER scalar expression",
+      "description": "Reviewed expected daily request count Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ASREP_REQUEST_BASELINE_KNOWN_SOURCE": {
+      "type": "STRING scalar expression",
+      "description": "Previously expected source address Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ASREP_REQUEST_BASELINE_PRIOR_REQUESTS": {
+      "type": "INTEGER scalar expression",
+      "description": "Prior covered successful no-preauth requests from this account/source Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PREAUTH_ACCOUNT_STATE_APPROVED_EXCEPTION": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Current approved non-preauthentication service exception; null means unassessed Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PREAUTH_ACCOUNT_STATE_A_DOMAIN": {
+      "type": "STRING scalar expression",
+      "description": "Same domain identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PREAUTH_ACCOUNT_STATE_A_SID": {
+      "type": "STRING scalar expression",
+      "description": "Same account SID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PREAUTH_ACCOUNT_STATE_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for PREAUTH_ACCOUNT_STATE. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PREAUTH_ACCOUNT_STATE_DOES_NOT_REQUIRE_PREAUTH": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Verified effective DONT_REQ_PREAUTH configuration, not failed-auth inference Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PREAUTH_ACCOUNT_STATE_EFFECTIVE_FROM": {
+      "type": "DATETIME scalar expression",
+      "description": "Start of configuration validity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PREAUTH_ACCOUNT_STATE_EFFECTIVE_UNTIL": {
+      "type": "DATETIME scalar expression",
+      "description": "End of configuration validity; use explicit future bound for currently open state Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TGT_REQUESTS_ACCOUNT_SID": {
+      "type": "STRING scalar expression",
+      "description": "Resolved target account SID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TGT_REQUESTS_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for TGT_REQUESTS. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TGT_REQUESTS_DOMAIN_ID": {
+      "type": "STRING scalar expression",
+      "description": "Authoritative domain identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TGT_REQUESTS_ENCRYPTION_TYPE": {
+      "type": "STRING scalar expression",
+      "description": "Original ticket encryption value Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TGT_REQUESTS_EVENT_ID": {
+      "type": "INTEGER scalar expression",
+      "description": "Provider-verified event ID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TGT_REQUESTS_EVENT_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "4768 request time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TGT_REQUESTS_PREAUTH_TYPE": {
+      "type": "INTEGER scalar expression",
+      "description": "Parsed PreAuthType with the event-version meaning Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TGT_REQUESTS_SOURCE_IP": {
+      "type": "STRING scalar expression",
+      "description": "Observed client address Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TGT_REQUESTS_SUCCESS": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Successful TGT issue outcome Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    }
+  }
+}

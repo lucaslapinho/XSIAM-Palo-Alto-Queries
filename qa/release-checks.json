@@ -1,0 +1,16 @@
+{
+  "artifacts": 80,
+  "candidates": 11,
+  "templates": 69,
+  "query_hashes_verified": 80,
+  "independent_static_reviews": 80,
+  "local_document_links_verified": 329,
+  "template_bindings_unfilled": 69,
+  "compiler": "NOT RUN",
+  "execution": "NOT RUN",
+  "publication": "NOT RUN",
+  "binding_tool_sha256": "d8bbd08a3f293266dfad578257208fd2eb651ee47934c2eef76418202ea0fd1a",
+  "structural_checks": "PASS; 74 latest files and 86 preserved prior files",
+  "local_binding_fixture_checks": "PASS; see the private release QA record for detailed fixture scope",
+  "interpretation": "Static and local tooling checks only. The 296 latest per-query acceptance scenarios remain plans, not executed detections."
+}

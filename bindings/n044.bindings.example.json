@@ -1,0 +1,97 @@
+{
+  "query_id": "N044",
+  "source_sha256": "668f08150735d8f99326cce3075d5124eb94fbc81cd72e3e775bffd650110ead",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "AUTH_FAILURE_DATASET": null,
+    "FAIL_ACCOUNT_KEY": null,
+    "FAIL_EVENT_UID": null,
+    "FAIL_OUTCOME": null,
+    "FAIL_REASON_CLASS": null,
+    "FAIL_REASON_RAW": null,
+    "FAIL_SOURCE_IP": null,
+    "FAIL_SOURCE_SYSTEM": null,
+    "FAIL_TIME": null,
+    "MAX_FAILURES_PER_ACCOUNT": null,
+    "MIN_ACCOUNTS": null
+  },
+  "contracts": {
+    "AUTH_FAILURE_DATASET": {
+      "type": "DATASET_IDENTIFIER",
+      "kind": "DATASET",
+      "binding_contract": "One source-specific authentication audit dataset or a verified union preserving source_system.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FAIL_ACCOUNT_KEY": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Realm-qualified target account, not reporting actor. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FAIL_EVENT_UID": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Source-system-scoped unique event key; no cross-provider dedup by account/time. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FAIL_OUTCOME": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Normalize verified failure events to failure; successes to success; unknown stays null. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FAIL_REASON_CLASS": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Normalize wrong-password/bad-secret failures to bad_secret using source-specific verified status/substatus; lockout/unknown-user/unrelated errors stay separate. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FAIL_REASON_RAW": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Original status and substatus or reason code for audit. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FAIL_SOURCE_IP": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Canonical client IP; unknown/dash to null; preserve source-specific NAT context. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FAIL_SOURCE_SYSTEM": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Original provider/product and authentication mechanism. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "FAIL_TIME": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Source authentication timestamp.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "MAX_FAILURES_PER_ACCOUNT": {
+      "type": "NUMBER_LITERAL",
+      "kind": "VALUE_OR_LITERAL",
+      "binding_contract": "Positive upper average retries consistent with spray hypothesis, example 3; not a universal security threshold.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "MIN_ACCOUNTS": {
+      "type": "INTEGER_LITERAL",
+      "kind": "VALUE_OR_LITERAL",
+      "binding_contract": "Set positive peer-reviewed minimum distinct target accounts; test example 10.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    }
+  }
+}

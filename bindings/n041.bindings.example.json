@@ -1,0 +1,201 @@
+{
+  "query_id": "N041",
+  "source_sha256": "531fe2bbb44b233e39c266e94e2a4995e7ecad0969ce246eb1e799042fb8a58d",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "DRS_OPERATIONS_DATASET": null,
+    "DRS_OPERATIONS_D_DC": null,
+    "DRS_OPERATIONS_D_OPERATION": null,
+    "DRS_OPERATIONS_D_RESULT": null,
+    "DRS_OPERATIONS_D_SOURCE": null,
+    "DRS_OPERATIONS_D_TIME": null,
+    "REPLICATION_ORIGIN_AUTH_TIME": null,
+    "REPLICATION_ORIGIN_DATASET": null,
+    "REPLICATION_ORIGIN_O_DC": null,
+    "REPLICATION_ORIGIN_O_LOGON": null,
+    "REPLICATION_ORIGIN_O_SID": null,
+    "REPLICATION_ORIGIN_SOURCE_HOST": null,
+    "REPLICATION_ORIGIN_SOURCE_IP": null,
+    "REPLICATION_ORIGIN_SOURCE_IS_DC": null,
+    "REPLICATION_RIGHTS_ACCESS_IS_CONTROL": null,
+    "REPLICATION_RIGHTS_DATASET": null,
+    "REPLICATION_RIGHTS_DC_ID": null,
+    "REPLICATION_RIGHTS_EVENT_ID": null,
+    "REPLICATION_RIGHTS_EVENT_TIME": null,
+    "REPLICATION_RIGHTS_EXPECTED_PRINCIPAL": null,
+    "REPLICATION_RIGHTS_LOGON_KEY": null,
+    "REPLICATION_RIGHTS_PROPERTIES": null,
+    "REPLICATION_RIGHTS_SUBJECT_SID": null,
+    "REPLICATION_RIGHTS_SUCCESS": null
+  },
+  "contracts": {
+    "DRS_OPERATIONS_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for DRS_OPERATIONS. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DRS_OPERATIONS_D_DC": {
+      "type": "STRING scalar expression",
+      "description": "Target DC identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DRS_OPERATIONS_D_OPERATION": {
+      "type": "STRING scalar expression",
+      "description": "Validated DRS/RPC replication operation, not a port classification Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DRS_OPERATIONS_D_RESULT": {
+      "type": "STRING scalar expression",
+      "description": "Actual operation outcome Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DRS_OPERATIONS_D_SOURCE": {
+      "type": "STRING scalar expression",
+      "description": "Source identity in the origin namespace Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DRS_OPERATIONS_D_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "Observed replication operation time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_ORIGIN_AUTH_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "Authentication time that established this session Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_ORIGIN_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for REPLICATION_ORIGIN. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_ORIGIN_O_DC": {
+      "type": "STRING scalar expression",
+      "description": "Same target DC identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_ORIGIN_O_LOGON": {
+      "type": "STRING scalar expression",
+      "description": "Verified DC/logon-session key matching the rights event Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_ORIGIN_O_SID": {
+      "type": "STRING scalar expression",
+      "description": "Same authenticated principal SID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_ORIGIN_SOURCE_HOST": {
+      "type": "STRING scalar expression",
+      "description": "Source endpoint identity from correlated successful authentication Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_ORIGIN_SOURCE_IP": {
+      "type": "STRING scalar expression",
+      "description": "Observed source address with NAT/ownership context Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_ORIGIN_SOURCE_IS_DC": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Time-valid authoritative DC inventory match; null unknown Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_RIGHTS_ACCESS_IS_CONTROL": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Verified control-access operation flag Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_RIGHTS_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for REPLICATION_RIGHTS. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_RIGHTS_DC_ID": {
+      "type": "STRING scalar expression",
+      "description": "Target DC identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_RIGHTS_EVENT_ID": {
+      "type": "INTEGER scalar expression",
+      "description": "Provider-verified Security event ID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_RIGHTS_EVENT_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "Audited directory-object operation time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_RIGHTS_EXPECTED_PRINCIPAL": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Current scoped DC/approved-sync principal baseline; null when unknown Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_RIGHTS_LOGON_KEY": {
+      "type": "STRING scalar expression",
+      "description": "Host/logon-session-scoped correlation identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_RIGHTS_PROPERTIES": {
+      "type": "STRING scalar expression",
+      "description": "Actual control-access property GUIDs from 4662 Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_RIGHTS_SUBJECT_SID": {
+      "type": "STRING scalar expression",
+      "description": "Acting principal SID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "REPLICATION_RIGHTS_SUCCESS": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Successful directory-object access outcome Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    }
+  }
+}

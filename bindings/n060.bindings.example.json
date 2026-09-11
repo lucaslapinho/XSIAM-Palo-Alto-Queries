@@ -1,0 +1,29 @@
+{
+  "query_id": "N060",
+  "source_sha256": "552d35e5b15a5a47e3badd51142eae0175056d2ce9aa1d85208dec7a4cc7b288",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "DNS_BASE_DOMAIN": null,
+    "DNS_ENDPOINT_ID": null,
+    "DNS_PROCESS_INSTANCE": null,
+    "DNS_QUERY_EVENTS": null,
+    "DNS_QUERY_NAME": null,
+    "DNS_QUERY_TYPE": null,
+    "DNS_RESPONSE_CODE": null,
+    "DNS_TIME": null,
+    "MIN_DISTINCT_NAMES": null,
+    "MIN_MEAN_LENGTH": null
+  },
+  "contracts": {
+    "DNS_BASE_DOMAIN": "STRING: organizational/registrable domain from a validated public-suffix-aware resolver; not simply the last two labels.",
+    "DNS_ENDPOINT_ID": "STRING: stable endpoint identity.",
+    "DNS_PROCESS_INSTANCE": "STRING nullable: initiating process instance, not PID alone.",
+    "DNS_QUERY_EVENTS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "DNS_QUERY_NAME": "STRING: full DNS name; bind a lowercase, trailing-dot-normalized value.",
+    "DNS_QUERY_TYPE": "STRING: DNS record type.",
+    "DNS_RESPONSE_CODE": "STRING nullable: actual response code; unknown must remain null.",
+    "DNS_TIME": "DATETIME: DNS query observation time.",
+    "MIN_DISTINCT_NAMES": "Positive INTEGER literal: tuned distinct full-query-name count threshold per endpoint/base-domain/day.",
+    "MIN_MEAN_LENGTH": "Positive numeric literal: tuned mean DNS-query-name character length threshold."
+  }
+}

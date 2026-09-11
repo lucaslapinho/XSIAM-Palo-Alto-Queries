@@ -1,0 +1,27 @@
+{
+  "query_id": "N087",
+  "source_sha256": "ab47ed33fb38c2927ce09044194ddd25a140c4a05eee2f2aa0b1c03662a43de7",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "LOCAL_GROUP_SID": null,
+    "LOCAL_MEMBERSHIP_SNAPSHOTS": null,
+    "LOCAL_MEMBER_KIND": null,
+    "LOCAL_MEMBER_NAME": null,
+    "LOCAL_MEMBER_SID": null,
+    "MEMBERSHIP_ENDPOINT_ID": null,
+    "MEMBERSHIP_ENDPOINT_ROLE": null,
+    "MEMBERSHIP_SNAPSHOT_COMPLETE": null,
+    "MEMBERSHIP_SNAPSHOT_TIME": null
+  },
+  "contracts": {
+    "LOCAL_GROUP_SID": "STRING: local group SID; preserve canonical SID spelling.",
+    "LOCAL_MEMBERSHIP_SNAPSHOTS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "LOCAL_MEMBER_KIND": "STRING: user/group; nested expansion is not performed by this query.",
+    "LOCAL_MEMBER_NAME": "STRING nullable: resolved display name.",
+    "LOCAL_MEMBER_SID": "STRING nullable: direct member SID; null represents a deliberately empty group snapshot, not missing telemetry.",
+    "MEMBERSHIP_ENDPOINT_ID": "STRING: stable endpoint ID; exclude domain controllers for workstation/member-server local membership scope.",
+    "MEMBERSHIP_ENDPOINT_ROLE": "STRING: normalized workstation/member_server/domain_controller role, time-valid at snapshot.",
+    "MEMBERSHIP_SNAPSHOT_COMPLETE": "BOOLEAN: true only when the complete local-group snapshot was collected, including explicit empty groups.",
+    "MEMBERSHIP_SNAPSHOT_TIME": "DATETIME: time of a complete snapshot; all member rows share this value."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "query_id": "N065",
+  "source_sha256": "0ac2c9a2ae40eeda637f7345d15cf9889a528ff29acd57adb0eb05235da6afc3",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "CLOUD_STORAGE_UPLOAD_EVENTS": null,
+    "MIN_UPLOAD_BYTES": null,
+    "UPLOAD_DESTINATION_ACCOUNT": null,
+    "UPLOAD_DESTINATION_OWNED": null,
+    "UPLOAD_ENDPOINT": null,
+    "UPLOAD_OBJECT_ID": null,
+    "UPLOAD_OPERATION": null,
+    "UPLOAD_OUTBOUND_BYTES": null,
+    "UPLOAD_PRINCIPAL": null,
+    "UPLOAD_SERVICE": null,
+    "UPLOAD_SUCCESS": null,
+    "UPLOAD_TIME": null
+  },
+  "contracts": {
+    "CLOUD_STORAGE_UPLOAD_EVENTS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "MIN_UPLOAD_BYTES": "Positive INTEGER literal: reviewed minimum outbound object/request byte volume.",
+    "UPLOAD_DESTINATION_ACCOUNT": "STRING: actual destination tenant/account/bucket owner.",
+    "UPLOAD_DESTINATION_OWNED": "BOOLEAN: false only when authoritative ownership data confirms an external account; unknown must remain null.",
+    "UPLOAD_ENDPOINT": "STRING nullable: attributed endpoint.",
+    "UPLOAD_OBJECT_ID": "STRING: non-secret object/resource identifier.",
+    "UPLOAD_OPERATION": "STRING: normalized object_upload/object_write from real request semantics.",
+    "UPLOAD_OUTBOUND_BYTES": "INTEGER: actual uploaded/request bytes, not response/download bytes.",
+    "UPLOAD_PRINCIPAL": "STRING: stable uploading principal.",
+    "UPLOAD_SERVICE": "STRING: identified storage service, not domain suffix alone.",
+    "UPLOAD_SUCCESS": "BOOLEAN: successful write outcome.",
+    "UPLOAD_TIME": "DATETIME: source upload/write event time."
+  }
+}

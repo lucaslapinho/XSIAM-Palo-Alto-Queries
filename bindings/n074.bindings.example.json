@@ -1,0 +1,39 @@
+{
+  "query_id": "N074",
+  "source_sha256": "ba7809be6a6c2061291b14b8f14a5b56f69ddb869f3367d911de6fa545b18cf6",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "ADMITTED_KUBERNETES_CONTAINER_SPECS": null,
+    "CONTAINER_ADMISSION_ACTOR": null,
+    "CONTAINER_ADMISSION_TIME": null,
+    "CONTAINER_ADMITTED_FLAG": null,
+    "CONTAINER_CLUSTER": null,
+    "CONTAINER_HOSTPATH_MOUNT": null,
+    "CONTAINER_HOST_IPC": null,
+    "CONTAINER_HOST_NETWORK": null,
+    "CONTAINER_HOST_PID": null,
+    "CONTAINER_KIND": null,
+    "CONTAINER_NAME": null,
+    "CONTAINER_NAMESPACE": null,
+    "CONTAINER_POD_UID": null,
+    "CONTAINER_PRIVILEGED": null,
+    "CONTAINER_RUNTIME_ID": null
+  },
+  "contracts": {
+    "ADMITTED_KUBERNETES_CONTAINER_SPECS": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "CONTAINER_ADMISSION_ACTOR": "STRING nullable: verified originating audit principal.",
+    "CONTAINER_ADMISSION_TIME": "DATETIME: successful admitted spec/version observation time.",
+    "CONTAINER_ADMITTED_FLAG": "BOOLEAN: true only for the admitted object; request-only and denied objects must not be marked true.",
+    "CONTAINER_CLUSTER": "STRING: stable cluster ID.",
+    "CONTAINER_HOSTPATH_MOUNT": "BOOLEAN nullable: true only if this container mounts a hostPath-backed volume; do not flag unused pod volumes.",
+    "CONTAINER_HOST_IPC": "BOOLEAN nullable: effective pod hostIPC.",
+    "CONTAINER_HOST_NETWORK": "BOOLEAN nullable: effective pod hostNetwork.",
+    "CONTAINER_HOST_PID": "BOOLEAN nullable: effective pod hostPID.",
+    "CONTAINER_KIND": "STRING: normal/init/ephemeral; source must expand all three lists into distinct rows.",
+    "CONTAINER_NAME": "STRING: container name.",
+    "CONTAINER_NAMESPACE": "STRING: namespace.",
+    "CONTAINER_POD_UID": "STRING: admitted pod UID, stable across same-name recreation.",
+    "CONTAINER_PRIVILEGED": "BOOLEAN nullable: effective securityContext.privileged with version/OS defaults resolved.",
+    "CONTAINER_RUNTIME_ID": "STRING nullable: independently observed runtime container identity, if available."
+  }
+}

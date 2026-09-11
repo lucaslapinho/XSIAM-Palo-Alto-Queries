@@ -1,0 +1,153 @@
+{
+  "query_id": "N031",
+  "source_sha256": "ee4496c2f22b1a0352e968787d6bef50c82faddda1361141d22fac9097cae49e",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "APPROVED_TASKS_APPROVAL_ID": null,
+    "APPROVED_TASKS_APPROVED_CONFIG": null,
+    "APPROVED_TASKS_APPROVED_HOST": null,
+    "APPROVED_TASKS_DATASET": null,
+    "TASK_AUDIT_ACTION_COMMAND": null,
+    "TASK_AUDIT_CONFIG_KEY": null,
+    "TASK_AUDIT_CREATOR_SID": null,
+    "TASK_AUDIT_DATASET": null,
+    "TASK_AUDIT_EVENT_ID": null,
+    "TASK_AUDIT_HOST_ID": null,
+    "TASK_AUDIT_RECORD_KEY": null,
+    "TASK_AUDIT_RUN_LEVEL": null,
+    "TASK_AUDIT_RUN_PRINCIPAL": null,
+    "TASK_AUDIT_TASK_NAME": null,
+    "TASK_AUDIT_TASK_TIME": null,
+    "TASK_AUDIT_TASK_TRIGGERS": null,
+    "TASK_AUDIT_TASK_XML": null,
+    "TASK_AUDIT_XML_AUTHOR": null
+  },
+  "contracts": {
+    "APPROVED_TASKS_APPROVAL_ID": {
+      "type": "STRING scalar expression",
+      "description": "Actual current approved task/deployment reference; never infer that approval existed when the historical event occurred Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "APPROVED_TASKS_APPROVED_CONFIG": {
+      "type": "STRING scalar expression",
+      "description": "Exact configuration identity with author, actions, triggers and principal; one current approved row per key. This is a review-time snapshot, not historical approval at event time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "APPROVED_TASKS_APPROVED_HOST": {
+      "type": "STRING scalar expression",
+      "description": "Same host scope as the task event Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "APPROVED_TASKS_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for APPROVED_TASKS. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_ACTION_COMMAND": {
+      "type": "STRING scalar expression",
+      "description": "Configured executable and arguments from all actions, serialized without losing additional actions Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_CONFIG_KEY": {
+      "type": "STRING scalar expression",
+      "description": "Canonical configuration identity used by the approved baseline Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_CREATOR_SID": {
+      "type": "STRING scalar expression",
+      "description": "Audited subject SID; distinct from XML author Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for TASK_AUDIT. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_EVENT_ID": {
+      "type": "INTEGER scalar expression",
+      "description": "Windows audit ID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_HOST_ID": {
+      "type": "STRING scalar expression",
+      "description": "Stable host identifier Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_RECORD_KEY": {
+      "type": "STRING scalar expression",
+      "description": "Stable event key including provider/host/record identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_RUN_LEVEL": {
+      "type": "STRING scalar expression",
+      "description": "Normalized run level, including HighestAvailable where explicitly configured Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_RUN_PRINCIPAL": {
+      "type": "STRING scalar expression",
+      "description": "Configured task principal Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_TASK_NAME": {
+      "type": "STRING scalar expression",
+      "description": "Configured task name Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_TASK_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "Creation/modification event time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_TASK_TRIGGERS": {
+      "type": "STRING scalar expression",
+      "description": "Configured triggers from the actual XML Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_TASK_XML": {
+      "type": "STRING scalar expression",
+      "description": "Complete original task XML for investigation Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "TASK_AUDIT_XML_AUTHOR": {
+      "type": "STRING scalar expression",
+      "description": "Author extracted from the actual task XML Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    }
+  }
+}

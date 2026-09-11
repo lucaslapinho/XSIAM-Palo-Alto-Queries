@@ -1,0 +1,137 @@
+{
+  "query_id": "N036",
+  "source_sha256": "c0f0bf0de657bdf646cf570aa38e65efe1974d42285ef80f35b0f25ffe6bd587",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "ACCOUNT_LIFECYCLE_EVENTS_DATASET": null,
+    "ACCOUNT_LIFECYCLE_EVENTS_L_DETAIL": null,
+    "ACCOUNT_LIFECYCLE_EVENTS_L_DOMAIN": null,
+    "ACCOUNT_LIFECYCLE_EVENTS_L_HOST": null,
+    "ACCOUNT_LIFECYCLE_EVENTS_L_KIND": null,
+    "ACCOUNT_LIFECYCLE_EVENTS_L_SID": null,
+    "ACCOUNT_LIFECYCLE_EVENTS_L_TIME": null,
+    "DOMAIN_ACCOUNT_CREATION_ACCOUNT_SID": null,
+    "DOMAIN_ACCOUNT_CREATION_CREATED_NAME": null,
+    "DOMAIN_ACCOUNT_CREATION_CREATION_HOST": null,
+    "DOMAIN_ACCOUNT_CREATION_CREATION_TIME": null,
+    "DOMAIN_ACCOUNT_CREATION_CREATOR_SID": null,
+    "DOMAIN_ACCOUNT_CREATION_DATASET": null,
+    "DOMAIN_ACCOUNT_CREATION_DOMAIN_ID": null,
+    "DOMAIN_ACCOUNT_CREATION_EVENT_ID": null,
+    "DOMAIN_ACCOUNT_CREATION_IS_DOMAIN_ACCOUNT": null
+  },
+  "contracts": {
+    "ACCOUNT_LIFECYCLE_EVENTS_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for ACCOUNT_LIFECYCLE_EVENTS. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ACCOUNT_LIFECYCLE_EVENTS_L_DETAIL": {
+      "type": "STRING scalar expression",
+      "description": "Provider/outcome/source context or target group SID and role Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ACCOUNT_LIFECYCLE_EVENTS_L_DOMAIN": {
+      "type": "STRING scalar expression",
+      "description": "Same authoritative domain namespace Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ACCOUNT_LIFECYCLE_EVENTS_L_HOST": {
+      "type": "STRING scalar expression",
+      "description": "Authentication/group-change target host Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ACCOUNT_LIFECYCLE_EVENTS_L_KIND": {
+      "type": "STRING scalar expression",
+      "description": "Normalized SUCCESSFUL_AUTH or GROUP_ADDITION from actual outcome/event family Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ACCOUNT_LIFECYCLE_EVENTS_L_SID": {
+      "type": "STRING scalar expression",
+      "description": "Target authenticated SID or added MemberSid Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "ACCOUNT_LIFECYCLE_EVENTS_L_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "Later activity time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DOMAIN_ACCOUNT_CREATION_ACCOUNT_SID": {
+      "type": "STRING scalar expression",
+      "description": "Created TargetSid Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DOMAIN_ACCOUNT_CREATION_CREATED_NAME": {
+      "type": "STRING scalar expression",
+      "description": "Created account name Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DOMAIN_ACCOUNT_CREATION_CREATION_HOST": {
+      "type": "STRING scalar expression",
+      "description": "Auditing host Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DOMAIN_ACCOUNT_CREATION_CREATION_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "4720 creation time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DOMAIN_ACCOUNT_CREATION_CREATOR_SID": {
+      "type": "STRING scalar expression",
+      "description": "Creating subject SID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DOMAIN_ACCOUNT_CREATION_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for DOMAIN_ACCOUNT_CREATION. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DOMAIN_ACCOUNT_CREATION_DOMAIN_ID": {
+      "type": "STRING scalar expression",
+      "description": "Authoritative domain SID/identifier; cannot be inferred from host/account name Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DOMAIN_ACCOUNT_CREATION_EVENT_ID": {
+      "type": "INTEGER scalar expression",
+      "description": "Provider-verified event ID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "DOMAIN_ACCOUNT_CREATION_IS_DOMAIN_ACCOUNT": {
+      "type": "BOOLEAN scalar expression",
+      "description": "Verified domain-account classification from DC/domain inventory and TargetSid, excluding local accounts Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    }
+  }
+}

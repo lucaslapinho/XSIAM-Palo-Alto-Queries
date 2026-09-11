@@ -1,0 +1,41 @@
+{
+  "query_id": "N066",
+  "source_sha256": "c6a4b80b67cc329499c1c58ba90fe16ac69ec8c498d60ceefe2ce3328c37c7cd",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "RECOVERY_ACTOR": null,
+    "RECOVERY_AFTER_STATE": null,
+    "RECOVERY_BEFORE_STATE": null,
+    "RECOVERY_CHANGE_AUDIT": null,
+    "RECOVERY_ENDPOINT": null,
+    "RECOVERY_OPERATION": null,
+    "RECOVERY_OPERATIONS": null,
+    "RECOVERY_OPERATION_ID": null,
+    "RECOVERY_REQUEST_RESULT": null,
+    "RECOVERY_RESOURCE": null,
+    "RECOVERY_STATE_CHANGES": null,
+    "RECOVERY_STATE_ENDPOINT": null,
+    "RECOVERY_STATE_OPERATION_ID": null,
+    "RECOVERY_STATE_RESOURCE": null,
+    "RECOVERY_STATE_TIME": null,
+    "RECOVERY_TIME": null
+  },
+  "contracts": {
+    "RECOVERY_ACTOR": "STRING nullable: responsible principal.",
+    "RECOVERY_AFTER_STATE": "STRING: captured new value/state.",
+    "RECOVERY_BEFORE_STATE": "STRING: captured prior value/state.",
+    "RECOVERY_CHANGE_AUDIT": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "RECOVERY_ENDPOINT": "STRING: affected endpoint.",
+    "RECOVERY_OPERATION": "STRING: exact operation name.",
+    "RECOVERY_OPERATIONS": "Comma-separated quoted STRING literals: exact verified operations for shadow-copy deletion, backup catalog deletion or recovery setting changes.",
+    "RECOVERY_OPERATION_ID": "STRING: stable operation/correlation key.",
+    "RECOVERY_REQUEST_RESULT": "STRING: original request result; not final state.",
+    "RECOVERY_RESOURCE": "STRING: affected shadow-copy/backup/configuration resource.",
+    "RECOVERY_STATE_CHANGES": "Dataset identifier: tenant-verified source with the row grain and collection requirements described below.",
+    "RECOVERY_STATE_ENDPOINT": "STRING: affected endpoint.",
+    "RECOVERY_STATE_OPERATION_ID": "STRING: independently verified linkage to the request.",
+    "RECOVERY_STATE_RESOURCE": "STRING: same affected-resource namespace.",
+    "RECOVERY_STATE_TIME": "DATETIME: observed state transition time.",
+    "RECOVERY_TIME": "DATETIME: recovery-change request time."
+  }
+}

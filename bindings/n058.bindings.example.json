@@ -1,0 +1,137 @@
+{
+  "query_id": "N058",
+  "source_sha256": "22ccfe9ab9c291a517a3b26e74d602b902af2d286f9ad04330719354e66df5ef",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "AWS_CLOUDTRAIL_DATASET": null,
+    "CT_ACCOUNT": null,
+    "CT_ACTOR_SESSION": null,
+    "CT_ERROR_CODE": null,
+    "CT_EVENT_NAME": null,
+    "CT_EVENT_SOURCE": null,
+    "CT_EVENT_TIME": null,
+    "CT_EVENT_UID": null,
+    "CT_REGION": null,
+    "CT_SOURCE_ADDRESS": null,
+    "CT_TRAIL_ARN": null,
+    "TRAIL_IS_LOGGING": null,
+    "TRAIL_STATUS_ACCOUNT": null,
+    "TRAIL_STATUS_ARN": null,
+    "TRAIL_STATUS_SNAPSHOTS": null,
+    "TRAIL_STATUS_TIME": null
+  },
+  "contracts": {
+    "AWS_CLOUDTRAIL_DATASET": {
+      "type": "DATASET_IDENTIFIER",
+      "kind": "DATASET",
+      "binding_contract": "Ingested CloudTrail management events; bind actual parser fields from original records, including operation and errors.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "CT_ACCOUNT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Recipient account ID. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "CT_ACTOR_SESSION": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Principal/session identifier with issuer context; do not expose credentials. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "CT_ERROR_CODE": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Original errorCode; map empty to null only when source contract establishes absence. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "CT_EVENT_NAME": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "CloudTrail eventName. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "CT_EVENT_SOURCE": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "CloudTrail eventSource. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "CT_EVENT_TIME": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "CloudTrail eventTime.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "CT_EVENT_UID": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "CloudTrail eventID. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "CT_REGION": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Event awsRegion. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "CT_SOURCE_ADDRESS": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "sourceIPAddress, preserving AWS-service attribution. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "CT_TRAIL_ARN": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Resolve request trail Name/name-or-ARN to canonical account/region trail ARN; unresolved names remain null. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "TRAIL_IS_LOGGING": {
+      "type": "BOOLEAN",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Observed IsLogging; unknown/deleted/not-found must remain null with separate source context.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "TRAIL_STATUS_ACCOUNT": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Account scope. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "TRAIL_STATUS_ARN": {
+      "type": "STRING",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Canonical trail ARN matching request. Preserve source case unless a reviewed namespace-specific canonicalization is required; apply matching normalization on both join sides. Unknown keys must be null, not empty or a shared placeholder.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "TRAIL_STATUS_SNAPSHOTS": {
+      "type": "DATASET_IDENTIFIER",
+      "kind": "DATASET",
+      "binding_contract": "Authenticated read-only historical GetTrailStatus/configuration snapshots with collection timestamp, including deleted/not-found state distinctly.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    },
+    "TRAIL_STATUS_TIME": {
+      "type": "DATETIME",
+      "kind": "FIELD_OR_EXPRESSION",
+      "binding_contract": "Actual observation time, not query ingestion time.",
+      "status": "UNVERIFIED",
+      "tenant_validation": "NOT RUN"
+    }
+  }
+}

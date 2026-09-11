@@ -1,0 +1,177 @@
+{
+  "query_id": "N035",
+  "source_sha256": "cb80766c3d7c6f838b96a468119112f4ff6f809ed1b309a589a58812eab39bd3",
+  "status": "UNFILLED — inspect and review every mapping",
+  "bindings": {
+    "GROUP_ADDITIONS_ACTOR_SCOPE": null,
+    "GROUP_ADDITIONS_ACTOR_SID": null,
+    "GROUP_ADDITIONS_CHANGE_REFERENCE": null,
+    "GROUP_ADDITIONS_DATASET": null,
+    "GROUP_ADDITIONS_EVENT_ID": null,
+    "GROUP_ADDITIONS_EVENT_TIME": null,
+    "GROUP_ADDITIONS_GROUP_SID": null,
+    "GROUP_ADDITIONS_HOST_ID": null,
+    "GROUP_ADDITIONS_MEMBER_SCOPE": null,
+    "GROUP_ADDITIONS_MEMBER_SID": null,
+    "GROUP_ADDITIONS_RECORD_ID": null,
+    "PRIVILEGED_GROUPS_DATASET": null,
+    "PRIVILEGED_GROUPS_PG_HOST": null,
+    "PRIVILEGED_GROUPS_PG_NAME": null,
+    "PRIVILEGED_GROUPS_PG_SCOPE": null,
+    "PRIVILEGED_GROUPS_PG_SID": null,
+    "SID_DIRECTORY_DATASET": null,
+    "SID_DIRECTORY_DIR_KIND": null,
+    "SID_DIRECTORY_DIR_NAME": null,
+    "SID_DIRECTORY_DIR_SCOPE": null,
+    "SID_DIRECTORY_DIR_SID": null
+  },
+  "contracts": {
+    "GROUP_ADDITIONS_ACTOR_SCOPE": {
+      "type": "STRING scalar expression",
+      "description": "Authoritative SID issuer domain or machine namespace for actor_sid; local/builtin SIDs must include their applicable host scope Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "GROUP_ADDITIONS_ACTOR_SID": {
+      "type": "STRING scalar expression",
+      "description": "Subject SID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "GROUP_ADDITIONS_CHANGE_REFERENCE": {
+      "type": "STRING scalar expression",
+      "description": "Actual associated approved-change reference; null when not established Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "GROUP_ADDITIONS_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for GROUP_ADDITIONS. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "GROUP_ADDITIONS_EVENT_ID": {
+      "type": "INTEGER scalar expression",
+      "description": "Provider-verified Security event ID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "GROUP_ADDITIONS_EVENT_TIME": {
+      "type": "DATETIME scalar expression",
+      "description": "Membership-addition time Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "GROUP_ADDITIONS_GROUP_SID": {
+      "type": "STRING scalar expression",
+      "description": "Target group SID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "GROUP_ADDITIONS_HOST_ID": {
+      "type": "STRING scalar expression",
+      "description": "Auditing host identity Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "GROUP_ADDITIONS_MEMBER_SCOPE": {
+      "type": "STRING scalar expression",
+      "description": "Authoritative SID issuer domain or machine namespace for member_sid; preserve host scope for local/builtin SIDs Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "GROUP_ADDITIONS_MEMBER_SID": {
+      "type": "STRING scalar expression",
+      "description": "Added member SID Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "GROUP_ADDITIONS_RECORD_ID": {
+      "type": "STRING scalar expression",
+      "description": "Unique source event key Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PRIVILEGED_GROUPS_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for PRIVILEGED_GROUPS. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PRIVILEGED_GROUPS_PG_HOST": {
+      "type": "STRING scalar expression",
+      "description": "Resolved auditing host scope; expand a domain-wide baseline deliberately to applicable audit hosts Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PRIVILEGED_GROUPS_PG_NAME": {
+      "type": "STRING scalar expression",
+      "description": "Reviewed privileged group name Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PRIVILEGED_GROUPS_PG_SCOPE": {
+      "type": "STRING scalar expression",
+      "description": "Host/domain scope preventing local-group cross-host confusion Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "PRIVILEGED_GROUPS_PG_SID": {
+      "type": "STRING scalar expression",
+      "description": "Exact privileged group SID in this scope, including scoped local groups Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "SID_DIRECTORY_DATASET": {
+      "type": "XQL dataset identifier",
+      "description": "Actual read-only source for SID_DIRECTORY. Bind a documented/inspected dataset or reviewed view; this name is not a claim of an existing integration.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "SID_DIRECTORY_DIR_KIND": {
+      "type": "STRING scalar expression",
+      "description": "Account/group type; one applicable row per SID plus issuer/machine scope Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "SID_DIRECTORY_DIR_NAME": {
+      "type": "STRING scalar expression",
+      "description": "Resolved account/group name Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "SID_DIRECTORY_DIR_SCOPE": {
+      "type": "STRING scalar expression",
+      "description": "Authoritative issuer domain or machine namespace matching the corresponding event-side actor_scope/member_scope Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    },
+    "SID_DIRECTORY_DIR_SID": {
+      "type": "STRING scalar expression",
+      "description": "SID in the selected authoritative directory/scope Map from the actual source schema; preserve null when unavailable, and validate normalization against raw records.",
+      "required": true,
+      "evidence_status": "UNVERIFIED / TENANT-UNVERIFIED",
+      "substitution": "Replace the entire token with one validated XQL identifier, scalar expression or literal of the stated type; do not quote identifiers or splice arbitrary stages."
+    }
+  }
+}
