@@ -2,6 +2,8 @@
 
 Software inventory, policy review and configuration hygiene.
 
+For the catalog-driven, extensively documented Cyber Hygiene module, see the [Cyber Hygiene Query Library](../cyber-hygiene-library/README.md). It is maintained separately to preserve the stable N001–N100 query set below.
+
 **10 queries** · [All categories](../README.md)
 
 | ID | Query and documentation | Topic | XQL | Status |

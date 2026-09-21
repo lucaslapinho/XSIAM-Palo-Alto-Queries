@@ -36,3 +36,11 @@ README.md
 ```
 
 The collection includes all authored items N001–N100. Query IDs remain stable for reference. Community-maintained content; not an official Palo Alto Networks library.
+
+## Extended Cyber Hygiene Library
+
+The [Cyber Hygiene Query Library](cyber-hygiene-library/README.md) adds a documented, catalog-driven collection of 31 candidate XQL queries: 30 category queries and one consolidated query covering 124 products across 30 software categories. Every query has English usage notes, metadata, validation guidance, and a clear `NOT RUN` execution status until it is validated in a tenant.
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE).

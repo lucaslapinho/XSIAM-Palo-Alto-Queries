@@ -1,0 +1,285 @@
+schema_version: 1.0.0
+query_id: cyber-hygiene-local-ai
+title: Local AI / LLM Runtimes inventory review candidates
+module: Cyber Hygiene
+name: Local AI / LLM Runtimes inventory review candidates
+id: cyber-hygiene-local-ai
+category: local-ai
+category_name: Local AI / LLM Runtimes
+subcategory: Multiple catalog subcategories
+description: Return policy-neutral application-inventory name candidates; not evidence of execution, current installation,
+  approval or maliciousness.
+artifact_role: GENERATED_CATEGORY_QUERY
+query_file: detect-local-ai-tools.xql
+documentation_file: README.md
+generated_by: tools/generate_query_library.py
+classifier_source: catalog/software-catalog.yaml
+catalog_sha256: 2efabf9a8fe86efa4e7f289c4a1abc940c570e35c3dede608881569d744037a8
+product: Cortex XDR
+product_version: Unknown; historical Cortex XDR example ceiling
+platform: Windows, macOS and Linux are documented for Host Inventory applications; actual tenant and product coverage
+  unverified
+execution_surface: Query Center interactive
+documentation_review_date: '2026-09-20'
+last_reviewed: '2026-09-20'
+status: VERSION-DEPENDENT
+qualifiers:
+- OFFICIAL-EXAMPLE
+- TENANT-UNVERIFIED
+validation_status: requires-tenant-validation
+confidence: UNMEASURED; exact-name specificity is not measured identity accuracy
+xsiam_compatibility: UNVERIFIED; separate field-binding record and compiler/runtime validation required
+production_ready: false
+read_only: true
+source:
+  kind: preset
+  name: host_inventory_applications
+  fields:
+  - endpoint_name
+  - platform
+  - application_name
+  - version
+  field_evidence: Historical Cortex XDR Unit 42 OpenSSL example, updated 2022-11-04
+  field_status: VERSION-DEPENDENT / OFFICIAL-EXAMPLE / TENANT-UNVERIFIED
+  types: Unknown in tenant; application_name must be string; remaining fields projected without conversion
+data_source: application inventory preset; current field binding and tenant population unverified
+preset: host_inventory_applications
+timeframe: 30d
+timezone: Not configured; record resolved UTC bounds and operator display timezone
+result_limit: 1000
+ordering: UNSPECIFIED
+output_grain: One admitted matching application-inventory row; reports, duplicates, components and versions retained
+  until cap
+latest_snapshot: false
+completeness_claim: false
+output_fields:
+- endpoint_name
+- platform
+- application_name
+- version
+- application_name_normalized
+- detected_product
+- product_id
+- tool_family
+- tool_subcategory
+- expected_product_vendor
+- corporate_relevance
+- review_priority
+matching:
+  operator: Full-string equals_ci using lowercase, equality/in and case_sensitive=false
+  primary_category_only: true
+  product_count: 4
+  literal_count: 4
+  raw_name_preserved: true
+  trim_or_suffix_removal: false
+  display_name_status: UNVERIFIED_CORTEX_DISPLAY_NAME
+  collisions: Generation fails on duplicate literals; no first-match ambiguity resolution
+  unmatched: Excluded; no fallback category
+  aliases: Descriptive aliases are not compiled
+products:
+- product_id: ollama
+  canonical_product_name: Ollama
+  category: local-ai
+  subcategory: model-runtime
+  expected_product_vendor: Ollama
+  application_name_patterns:
+  - Ollama
+  corporate_relevance: Local model execution; review model provenance, resource use, listener exposure and optional
+    cloud connections.
+  review_priority: POLICY_DEPENDENT_UNASSIGNED
+  inventory_coverage: APPLICATION_ENTRY_COVERAGE_UNVERIFIED
+  validation_notes:
+  - Local and hosted functionality coexist; installation does not prove offline-only use.
+  - Candidate labels were authored for validation; no Cortex tenant inventory names were observed. Exact matching
+    intentionally misses unlisted version, locale, architecture and edition suffixes.
+  expected_false_positives:
+  - Repackaged, spoofed or unrelated software can register the same display name.
+  - An approved business installation is a true inventory match, not a policy violation.
+  identity_corroboration: Required before treating a name candidate as confirmed product identity; use independently
+    validated publisher/package/signature evidence. No specific Cortex vendor field is assumed.
+  product_reference:
+    product_reference_url: https://ollama.com/
+    retrieval_status: PRIMARY_REFERENCE_RETRIEVED
+    retrieval_date: '2026-09-20'
+    product_identity_scope: Vendor/project product-family reference only; not installation display-name, legal-entity,
+      edition, lifecycle or tenant evidence.
+    vendor_label_status: CURATED_BRAND_OR_PROJECT_LABEL_NOT_INSTALLER_PUBLISHER
+- product_id: lm-studio
+  canonical_product_name: LM Studio
+  category: local-ai
+  subcategory: model-runtime
+  expected_product_vendor: Element Labs
+  application_name_patterns:
+  - LM Studio
+  corporate_relevance: Local model execution; review model provenance, resource use, listener exposure and optional
+    cloud connections.
+  review_priority: POLICY_DEPENDENT_UNASSIGNED
+  inventory_coverage: APPLICATION_ENTRY_COVERAGE_UNVERIFIED
+  validation_notes:
+  - GUI, headless runtime and model files need separate coverage; network listeners depend on configuration.
+  - Candidate labels were authored for validation; no Cortex tenant inventory names were observed. Exact matching
+    intentionally misses unlisted version, locale, architecture and edition suffixes.
+  expected_false_positives:
+  - Repackaged, spoofed or unrelated software can register the same display name.
+  - An approved business installation is a true inventory match, not a policy violation.
+  identity_corroboration: Required before treating a name candidate as confirmed product identity; use independently
+    validated publisher/package/signature evidence. No specific Cortex vendor field is assumed.
+  product_reference:
+    product_reference_url: https://lmstudio.ai/docs/app
+    retrieval_status: PRIMARY_REFERENCE_RETRIEVED
+    retrieval_date: '2026-09-20'
+    product_identity_scope: Vendor/project product-family reference only; not installation display-name, legal-entity,
+      edition, lifecycle or tenant evidence.
+    vendor_label_status: CURATED_BRAND_OR_PROJECT_LABEL_NOT_INSTALLER_PUBLISHER
+- product_id: gpt4all
+  canonical_product_name: GPT4All
+  category: local-ai
+  subcategory: local-model-runtime
+  expected_product_vendor: Nomic AI
+  application_name_patterns:
+  - GPT4All
+  corporate_relevance: Local model execution; review model provenance, resource use, listener exposure and optional
+    cloud connections.
+  review_priority: POLICY_DEPENDENT_UNASSIGNED
+  inventory_coverage: APPLICATION_ENTRY_COVERAGE_UNVERIFIED
+  validation_notes:
+  - Model downloads are data assets and are not separate installed-software identities.
+  - Candidate labels were authored for validation; no Cortex tenant inventory names were observed. Exact matching
+    intentionally misses unlisted version, locale, architecture and edition suffixes.
+  expected_false_positives:
+  - Repackaged, spoofed or unrelated software can register the same display name.
+  - An approved business installation is a true inventory match, not a policy violation.
+  identity_corroboration: Required before treating a name candidate as confirmed product identity; use independently
+    validated publisher/package/signature evidence. No specific Cortex vendor field is assumed.
+  product_reference:
+    product_reference_url: https://www.nomic.ai/gpt4all
+    retrieval_status: PRIMARY_REFERENCE_RETRIEVED
+    retrieval_date: '2026-09-20'
+    product_identity_scope: Vendor/project product-family reference only; not installation display-name, legal-entity,
+      edition, lifecycle or tenant evidence.
+    vendor_label_status: CURATED_BRAND_OR_PROJECT_LABEL_NOT_INSTALLER_PUBLISHER
+- product_id: llama-cpp
+  canonical_product_name: llama.cpp
+  category: local-ai
+  subcategory: inference-engine
+  expected_product_vendor: ggml-org contributors
+  application_name_patterns:
+  - llama.cpp
+  corporate_relevance: Local model execution; review model provenance, resource use, listener exposure and optional
+    cloud connections.
+  review_priority: POLICY_DEPENDENT_UNASSIGNED
+  inventory_coverage: PORTABLE_OR_PACKAGE_MAY_BE_ABSENT
+  validation_notes:
+  - Often embedded or source-built; do not infer engine absence from missing application rows.
+  - Candidate labels were authored for validation; no Cortex tenant inventory names were observed. Exact matching
+    intentionally misses unlisted version, locale, architecture and edition suffixes.
+  expected_false_positives:
+  - Repackaged, spoofed or unrelated software can register the same display name.
+  - An approved business installation is a true inventory match, not a policy violation.
+  identity_corroboration: Required before treating a name candidate as confirmed product identity; use independently
+    validated publisher/package/signature evidence. No specific Cortex vendor field is assumed.
+  product_reference:
+    product_reference_url: https://github.com/ggml-org/llama.cpp
+    retrieval_status: PRIMARY_REFERENCE_RETRIEVED
+    retrieval_date: '2026-09-20'
+    product_identity_scope: Vendor/project product-family reference only; not installation display-name, legal-entity,
+      edition, lifecycle or tenant evidence.
+    vendor_label_status: CURATED_BRAND_OR_PROJECT_LABEL_NOT_INSTALLER_PUBLISHER
+review_priority: POLICY_DEPENDENT_UNASSIGNED
+corporate_relevance: Local model execution; review model provenance, resource use, listener exposure and optional
+  cloud connections.
+vendor_interpretation: Curated catalog brand/project; not reported publisher or verified legal entity
+null_behavior: Exclude null/empty names; preserve null endpoint_name/platform/version on matching rows
+system_fields: Non-excludable product system fields may appear if present; not relied upon
+false_positives:
+- Identical labels on spoofed, repackaged or unrelated software
+- Approved installations are inventory matches; only an unsupported policy verdict would make them policy false
+  positives
+false_positive_considerations:
+- Identical labels on spoofed, repackaged or unrelated software
+- An approved installation is not an unauthorized-software verdict
+false_negatives:
+- Unlisted version/locale/edition/architecture/whitespace variants
+- Portable, embedded, web-only, extension or unregistered packages absent from inventory
+- Collection, access, retention and result-cap gaps
+limitations:
+- No identity, execution, session, current-installation, protection-health or compromise proof
+- No unique endpoint or installation counts
+- Primary category membership only; secondary roles do not duplicate products
+prerequisites:
+  build_license_identity_rbac_sbac: Unknown
+  collection_retention_population: Unknown
+  field_schema_types: Unknown
+validation:
+  S:
+    result: NOT RUN
+    scope: Complete query
+    rationale: Independent controlled query evaluation not run; generator integrity checks are separate
+  D:
+    result: NOT RUN
+    scope: Complete query
+    rationale: No current source binds every material construct and field to one named release
+  C:
+    result: NOT RUN
+    scope: Complete query
+    rationale: No named tenant schema/compiler acceptance
+  E:
+    result: NOT RUN
+    scope: Complete query
+    rationale: No tenant query execution/results
+claim_level_documentation: Individual sources/constructs have documented support with the scopes and retrieval gaps
+  recorded in references; this is not complete-query D PASS
+compiler_and_runtime_size: UNMEASURED; query length/stages and volume require bounded target checks
+performance_and_accuracy: UNMEASURED; no precision/recall, resource or runtime claim
+comment_compatibility: UNVERIFIED for exact target; no comments emitted
+references:
+- id: R1
+  title: XDR 5 datasets and presets
+  url: https://cortex-docs.paloaltonetworks.com/cortex-xdr-5.x/reference-and-developer-docs/cortex-xdr-xql/get-started-with-xql/datasets-and-presets
+  supports: Current source listing, retained in Phase 1 research; not complete application schema.
+- id: R2
+  title: Unit 42 OpenSSL threat brief
+  url: https://unit42.paloaltonetworks.com/openssl-vulnerabilities/
+  supports: Historical Cortex XDR preset and source-field example, updated 2022-11-04.
+- id: R3
+  title: config
+  url: https://cortex-docs.paloaltonetworks.com/xql-command-reference-guide/readme/stages/config
+  supports: Current individual case/time controls and first-stage ordering.
+- id: R4
+  title: filter
+  url: https://cortex-docs.paloaltonetworks.com/xql-command-reference-guide/readme/stages/filter.md
+  supports: Phase 1 retrieval and official indexed examples support boolean/null/in comparison.
+- id: R5
+  title: fields
+  url: https://cortex-docs.paloaltonetworks.com/xql-command-reference-guide/readme/stages/fields
+  supports: Current projection and possible non-excludable system fields.
+- id: R6
+  title: lowercase, XDR 3
+  url: https://cortex-docs.paloaltonetworks.com/cortex-xdr-3.x/cortex-xdr-3.x-documentation/cortex-xdr-xql/functions/lowercase
+  supports: Version-scoped string normalization; current general page retrieval failed.
+- id: R6b
+  title: Indexed lowercase example
+  url: https://docs-cortex.paloaltonetworks.com/r/Cortex/Cortex-XQL-Command-Reference/Example-2-Lowercasing-a-literal-string?contentId=NcAsuVD5jrBpE0EZmIwXLA
+  supports: Substantive official indexed lowercase/alter example.
+- id: R7
+  title: Nested if example
+  url: https://docs-cortex.paloaltonetworks.com/r/Cortex/Cortex-XQL-Command-Reference/Example-4-if-with-nested-if-for-complex-logic
+  supports: Substantive official indexed three-argument conditional code; direct fetch failed.
+- id: R8
+  title: Conditional alter example
+  url: https://docs-cortex.paloaltonetworks.com/r/Cortex/Cortex-XQL-Command-Reference/Example-9-Using-conditional-and-null-handling-functions-if
+  supports: Official indexed conditional assignment; current general if/alter retrieval failed.
+- id: R8b
+  title: alter
+  url: https://cortex-docs.paloaltonetworks.com/xql-command-reference-guide/readme/stages/alter.md
+  supports: Dated skill reference documents comma-separated constant/field/function assignments; no successful fresh
+    standalone retrieval.
+- id: R9
+  title: Unit 42 unsigned DLL investigation
+  url: https://unit42.paloaltonetworks.com/unsigned-dlls/
+  supports: Phase 1 historical combined insensitive 30-day config example; not an inventory test.
+- id: R10
+  title: limit
+  url: https://cortex-docs.paloaltonetworks.com/xql-command-reference-guide/readme/stages/limit
+  supports: Current explicit result bound; no measured performance claim.
+next_step: Record target build/preset/types/access; compile progressively and execute bounded controlled fixtures
