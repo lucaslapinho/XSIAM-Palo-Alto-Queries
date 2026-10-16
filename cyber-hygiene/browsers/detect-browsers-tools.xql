@@ -9,7 +9,8 @@ config case_sensitive = false timeframe = 30d
     "firefox",
     "google chrome",
     "microsoft edge",
-    "mozilla firefox"
+    "mozilla firefox",
+    "vivaldi"
 )
 
 | alter detected_product = "UNMAPPED",
@@ -57,6 +58,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized in ("firefox", "mozilla firefox"),
             "mozilla-firefox",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "vivaldi",
+            "Vivaldi",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "vivaldi",
+            "vivaldi",
             product_id
         )
 

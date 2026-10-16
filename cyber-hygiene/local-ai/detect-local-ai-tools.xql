@@ -7,6 +7,7 @@ config case_sensitive = false timeframe = 30d
     "gpt4all",
     "llama.cpp",
     "lm studio",
+    "msty studio",
     "ollama"
 )
 
@@ -44,6 +45,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "lm studio",
             "lm-studio",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "msty studio",
+            "Msty Studio",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "msty studio",
+            "msty-studio",
             product_id
         )
 

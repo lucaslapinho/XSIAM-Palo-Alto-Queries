@@ -2,22 +2,29 @@
 
 [Open query](detect-browsers-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **4 products / 6 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 7 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| Brave Browser | `brave-browser` | `brave`; `brave browser` |
-| Google Chrome | `google-chrome` | `google chrome` |
-| Microsoft Edge | `microsoft-edge` | `microsoft edge` |
-| Mozilla Firefox | `mozilla-firefox` | `firefox`; `mozilla firefox` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| Brave Browser | `brave-browser` | `brave`; `brave browser` | [Inherited candidate](https://brave.com/) |
+| Google Chrome | `google-chrome` | `google chrome` | [Inherited candidate](https://www.google.com/chrome/) |
+| Microsoft Edge | `microsoft-edge` | `microsoft edge` | [Inherited candidate](https://www.microsoft.com/en-us/edge) |
+| Mozilla Firefox | `mozilla-firefox` | `firefox`; `mozilla firefox` | [Inherited candidate](https://www.mozilla.org/firefox/) |
+| Vivaldi | `vivaldi` | `vivaldi` | [Product-name candidate](https://vivaldi.com/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Web access; review update ownership, extensions, profile management and enterprise configuration.
+
+Added Vivaldi. Browsers do not identify profile policy, account tenancy, extensions or visited destinations. Version/channel names and portable copies need specific label evidence; privacy browsers retain their existing primary category to avoid duplicates.
+
+- **Vivaldi**: Profiles, extensions, managed enrollment and visited sites are outside application inventory.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

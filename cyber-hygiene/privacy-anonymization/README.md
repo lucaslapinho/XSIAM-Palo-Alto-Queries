@@ -2,22 +2,29 @@
 
 [Open query](detect-privacy-anonymization-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **4 products / 4 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 5 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| Cryptomator | `cryptomator` | `cryptomator` |
-| I2P | `i2p` | `i2p` |
-| Tor Browser | `tor-browser` | `tor browser` |
-| VeraCrypt | `veracrypt` | `veracrypt` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| Cryptomator | `cryptomator` | `cryptomator` | [Inherited candidate](https://cryptomator.org/) |
+| I2P | `i2p` | `i2p` | [Inherited candidate](https://geti2p.net/) |
+| Mullvad Browser | `mullvad-browser` | `mullvad browser` | [Product-name candidate](https://mullvad.net/en/browser) |
+| Tor Browser | `tor-browser` | `tor browser` | [Inherited candidate](https://www.torproject.org/) |
+| VeraCrypt | `veracrypt` | `veracrypt` | [Inherited candidate](https://veracrypt.io/en/Home.html) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Privacy and confidentiality; review routing, key recovery, approved use and access requirements.
+
+Added Mullvad Browser separately from Mullvad VPN. Encryption utilities, privacy browsers and overlay networks are different capabilities. Installation does not prove Tor/VPN use, hidden data or unauthorized activity.
+
+- **Mullvad Browser**: Keep this browser distinct from Mullvad VPN; presence does not prove VPN or Tor network use.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

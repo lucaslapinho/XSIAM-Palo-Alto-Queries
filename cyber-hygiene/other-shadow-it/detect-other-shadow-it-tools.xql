@@ -8,6 +8,7 @@ config case_sensitive = false timeframe = 30d
     "bluestacks app player",
     "ccleaner",
     "internet download manager",
+    "peazip",
     "revo uninstaller",
     "revo uninstaller pro"
 )
@@ -46,6 +47,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "internet download manager",
             "internet-download-manager",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "peazip",
+            "PeaZip",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "peazip",
+            "peazip",
             product_id
         )
 

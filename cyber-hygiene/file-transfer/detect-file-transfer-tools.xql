@@ -8,6 +8,7 @@ config case_sensitive = false timeframe = 30d
     "filezilla",
     "filezilla client",
     "rclone",
+    "smartftp",
     "winscp"
 )
 
@@ -45,6 +46,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "rclone",
             "rclone",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "smartftp",
+            "SmartFTP",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "smartftp",
+            "smartftp",
             product_id
         )
 

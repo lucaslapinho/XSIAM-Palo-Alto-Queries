@@ -6,6 +6,7 @@ config case_sensitive = false timeframe = 30d
 | filter application_name_normalized in (
     "docker desktop",
     "minikube",
+    "orbstack",
     "podman desktop",
     "rancher desktop"
 )
@@ -33,6 +34,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "minikube",
             "minikube",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "orbstack",
+            "OrbStack",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "orbstack",
+            "orbstack",
             product_id
         )
 

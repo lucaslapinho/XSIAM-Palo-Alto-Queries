@@ -8,7 +8,9 @@ config case_sensitive = false timeframe = 30d
     "dbeaver community",
     "heidisql",
     "mysql workbench",
-    "pgadmin 4"
+    "oracle sql developer",
+    "pgadmin 4",
+    "sql developer"
 )
 
 | alter detected_product = "UNMAPPED",
@@ -45,6 +47,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "mysql workbench",
             "mysql-workbench",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("oracle sql developer", "sql developer"),
+            "Oracle SQL Developer",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("oracle sql developer", "sql developer"),
+            "oracle-sql-developer",
             product_id
         )
 

@@ -6,6 +6,7 @@ config case_sensitive = false timeframe = 30d
 | filter application_name_normalized in (
     "1password",
     "bitwarden",
+    "enpass",
     "keepass password safe",
     "keepass password safe 2",
     "keepassxc"
@@ -34,6 +35,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "bitwarden",
             "bitwarden",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "enpass",
+            "Enpass",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "enpass",
+            "enpass",
             product_id
         )
 

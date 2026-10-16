@@ -10,7 +10,8 @@ config case_sensitive = false timeframe = 30d
     "signal",
     "signal desktop",
     "slack",
-    "telegram desktop"
+    "telegram desktop",
+    "zoom workplace"
 )
 
 | alter detected_product = "UNMAPPED",
@@ -69,6 +70,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "telegram desktop",
             "telegram-desktop",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "zoom workplace",
+            "Zoom Workplace",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "zoom workplace",
+            "zoom-workplace",
             product_id
         )
 

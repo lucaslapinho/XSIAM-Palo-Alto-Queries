@@ -2,22 +2,29 @@
 
 [Open query](detect-containers-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **4 products / 4 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 5 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| Docker Desktop | `docker-desktop` | `docker desktop` |
-| minikube | `minikube` | `minikube` |
-| Podman Desktop | `podman-desktop` | `podman desktop` |
-| Rancher Desktop | `rancher-desktop` | `rancher desktop` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| Docker Desktop | `docker-desktop` | `docker desktop` | [Inherited candidate](https://www.docker.com/products/docker-desktop/) |
+| minikube | `minikube` | `minikube` | [Inherited candidate](https://minikube.sigs.k8s.io/docs/) |
+| OrbStack | `orbstack` | `orbstack` | [Product-name candidate](https://orbstack.dev/) |
+| Podman Desktop | `podman-desktop` | `podman desktop` | [Inherited candidate](https://podman-desktop.io/) |
+| Rancher Desktop | `rancher-desktop` | `rancher desktop` | [Inherited candidate](https://rancherdesktop.io/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Container workloads; review registries, image provenance, daemon permissions and host integration.
+
+Added OrbStack. Container engines, desktop frontends and Kubernetes tooling are distinct. Host app inventory does not enumerate images, container packages, running workloads, registry access or privileged sockets.
+
+- **OrbStack**: macOS host app only; container image packages, workload state and daemon access are separate surfaces.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

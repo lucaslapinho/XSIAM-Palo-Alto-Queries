@@ -1,43 +1,45 @@
 # Cyber Hygiene XQL Queries
 
-Community queries for reviewing software reported by Cortex application inventory: **30 category queries, one consolidated query, 124 product candidates and 160 exact labels**.
+Community queries for reviewing software reported by Cortex application inventory: **30 category queries, one consolidated query, 167 product/family candidates and 212 exact labels**.
 
 Start with a category below. Use [all-detected-tools.xql](all-detected-tools.xql) for a combined view; its [guide](all-detected-tools.md) explains the larger query. Every query is self-contained and read-only.
+
+Read the [coverage review](coverage.md) for the category-by-category research, source boundaries, additions and known gaps. Product families can group editions; counts are neither independent installations nor a complete market survey.
 
 ## Query index
 
 | Category | Products | Query |
 |---|---:|---|
-| [AI Development Tools](ai-development/README.md) | 4 | [XQL](ai-development/detect-ai-development-tools.xql) |
-| [Antivirus](antivirus/README.md) | 4 | [XQL](antivirus/detect-antivirus-tools.xql) |
+| [AI Development Tools](ai-development/README.md) | 5 | [XQL](ai-development/detect-ai-development-tools.xql) |
+| [Antivirus](antivirus/README.md) | 15 | [XQL](antivirus/detect-antivirus-tools.xql) |
 | [Artificial Intelligence Tools](ai-tools/README.md) | 4 | [XQL](ai-tools/detect-ai-tools.xql) |
-| [Browsers](browsers/README.md) | 4 | [XQL](browsers/detect-browsers-tools.xql) |
-| [Cloud Storage / File Synchronization](cloud-storage/README.md) | 4 | [XQL](cloud-storage/detect-cloud-storage-tools.xql) |
-| [Communication / Messaging](messaging/README.md) | 5 | [XQL](messaging/detect-messaging-tools.xql) |
-| [Containers](containers/README.md) | 4 | [XQL](containers/detect-containers-tools.xql) |
-| [Crypto / Mining Tools](crypto-mining/README.md) | 4 | [XQL](crypto-mining/detect-crypto-mining-tools.xql) |
-| [Database Clients](database-clients/README.md) | 4 | [XQL](database-clients/detect-database-clients-tools.xql) |
-| [Developer Utilities](developer-utilities/README.md) | 4 | [XQL](developer-utilities/detect-developer-utilities-tools.xql) |
-| [Development Tools / IDEs](development-ides/README.md) | 4 | [XQL](development-ides/detect-development-ides-tools.xql) |
-| [EDR / Endpoint Security](endpoint-security/README.md) | 4 | [XQL](endpoint-security/detect-endpoint-security-tools.xql) |
-| [File Transfer Tools](file-transfer/README.md) | 4 | [XQL](file-transfer/detect-file-transfer-tools.xql) |
-| [Gaming Platforms](gaming/README.md) | 4 | [XQL](gaming/detect-gaming-tools.xql) |
-| [Local AI / LLM Runtimes](local-ai/README.md) | 4 | [XQL](local-ai/detect-local-ai-tools.xql) |
-| [Network Utilities](network-utilities/README.md) | 4 | [XQL](network-utilities/detect-network-utilities-tools.xql) |
-| [Other Corporate-Risk / Shadow-IT Applications](other-shadow-it/README.md) | 4 | [XQL](other-shadow-it/detect-other-shadow-it-tools.xql) |
-| [P2P / Torrent](p2p-torrent/README.md) | 4 | [XQL](p2p-torrent/detect-p2p-torrent-tools.xql) |
-| [Password Managers](password-managers/README.md) | 4 | [XQL](password-managers/detect-password-managers-tools.xql) |
-| [Penetration Testing / Dual-Use Security Tools](penetration-testing/README.md) | 4 | [XQL](penetration-testing/detect-penetration-testing-tools.xql) |
-| [Personal Collaboration Tools](personal-collaboration/README.md) | 4 | [XQL](personal-collaboration/detect-personal-collaboration-tools.xql) |
-| [Privacy / Anonymization Tools](privacy-anonymization/README.md) | 4 | [XQL](privacy-anonymization/detect-privacy-anonymization-tools.xql) |
-| [Remote Access / Remote Administration](remote-access/README.md) | 5 | [XQL](remote-access/detect-remote-access-tools.xql) |
-| [Remote Shell / SSH Tools](remote-shell-ssh/README.md) | 4 | [XQL](remote-shell-ssh/detect-remote-shell-ssh-tools.xql) |
-| [Screen Recording / Capture](screen-capture/README.md) | 4 | [XQL](screen-capture/detect-screen-capture-tools.xql) |
-| [Scripting / Automation Tools](scripting-automation/README.md) | 4 | [XQL](scripting-automation/detect-scripting-automation-tools.xql) |
+| [Browsers](browsers/README.md) | 5 | [XQL](browsers/detect-browsers-tools.xql) |
+| [Cloud Storage / File Synchronization](cloud-storage/README.md) | 5 | [XQL](cloud-storage/detect-cloud-storage-tools.xql) |
+| [Communication / Messaging](messaging/README.md) | 6 | [XQL](messaging/detect-messaging-tools.xql) |
+| [Containers](containers/README.md) | 5 | [XQL](containers/detect-containers-tools.xql) |
+| [Crypto / Mining Tools](crypto-mining/README.md) | 5 | [XQL](crypto-mining/detect-crypto-mining-tools.xql) |
+| [Database Clients](database-clients/README.md) | 5 | [XQL](database-clients/detect-database-clients-tools.xql) |
+| [Developer Utilities](developer-utilities/README.md) | 5 | [XQL](developer-utilities/detect-developer-utilities-tools.xql) |
+| [Development Tools / IDEs](development-ides/README.md) | 5 | [XQL](development-ides/detect-development-ides-tools.xql) |
+| [EDR / Endpoint Security](endpoint-security/README.md) | 8 | [XQL](endpoint-security/detect-endpoint-security-tools.xql) |
+| [File Transfer Tools](file-transfer/README.md) | 5 | [XQL](file-transfer/detect-file-transfer-tools.xql) |
+| [Gaming Platforms](gaming/README.md) | 6 | [XQL](gaming/detect-gaming-tools.xql) |
+| [Local AI / LLM Runtimes](local-ai/README.md) | 5 | [XQL](local-ai/detect-local-ai-tools.xql) |
+| [Network Utilities](network-utilities/README.md) | 5 | [XQL](network-utilities/detect-network-utilities-tools.xql) |
+| [Other Corporate-Risk / Shadow-IT Applications](other-shadow-it/README.md) | 5 | [XQL](other-shadow-it/detect-other-shadow-it-tools.xql) |
+| [P2P / Torrent](p2p-torrent/README.md) | 5 | [XQL](p2p-torrent/detect-p2p-torrent-tools.xql) |
+| [Password Managers](password-managers/README.md) | 5 | [XQL](password-managers/detect-password-managers-tools.xql) |
+| [Penetration Testing / Dual-Use Security Tools](penetration-testing/README.md) | 5 | [XQL](penetration-testing/detect-penetration-testing-tools.xql) |
+| [Personal Collaboration Tools](personal-collaboration/README.md) | 5 | [XQL](personal-collaboration/detect-personal-collaboration-tools.xql) |
+| [Privacy / Anonymization Tools](privacy-anonymization/README.md) | 5 | [XQL](privacy-anonymization/detect-privacy-anonymization-tools.xql) |
+| [Remote Access / Remote Administration](remote-access/README.md) | 6 | [XQL](remote-access/detect-remote-access-tools.xql) |
+| [Remote Shell / SSH Tools](remote-shell-ssh/README.md) | 5 | [XQL](remote-shell-ssh/detect-remote-shell-ssh-tools.xql) |
+| [Screen Recording / Capture](screen-capture/README.md) | 5 | [XQL](screen-capture/detect-screen-capture-tools.xql) |
+| [Scripting / Automation Tools](scripting-automation/README.md) | 5 | [XQL](scripting-automation/detect-scripting-automation-tools.xql) |
 | [Social Applications](social-applications/README.md) | 4 | [XQL](social-applications/detect-social-applications-tools.xql) |
-| [System Administration Tools](system-administration/README.md) | 4 | [XQL](system-administration/detect-system-administration-tools.xql) |
-| [Virtualization](virtualization/README.md) | 4 | [XQL](virtualization/detect-virtualization-tools.xql) |
-| [VPN / Tunneling / Proxy](vpn-tunneling-proxy/README.md) | 6 | [XQL](vpn-tunneling-proxy/detect-vpn-tunneling-proxy-tools.xql) |
+| [System Administration Tools](system-administration/README.md) | 5 | [XQL](system-administration/detect-system-administration-tools.xql) |
+| [Virtualization](virtualization/README.md) | 5 | [XQL](virtualization/detect-virtualization-tools.xql) |
+| [VPN / Tunneling / Proxy](vpn-tunneling-proxy/README.md) | 8 | [XQL](vpn-tunneling-proxy/detect-vpn-tunneling-proxy-tools.xql) |
 
 ## Before running
 
@@ -73,7 +75,7 @@ The normalized matching copy is internal. Product-defined system fields can also
 
 Review date: **2026-10-16**. Overall status: **VERSION-DEPENDENT / OFFICIAL-EXAMPLE / TENANT-UNVERIFIED**. Current language and preset pages were inspected; the four input field spellings still rely on the historical XDR example. Complete-query S/D/C/E validation remains **NOT RUN**: there is no named target build, complete current field/type contract, tenant compilation or execution record. XSIAM field compatibility remains **UNVERIFIED**.
 
-Offline checks cover the 31 query files, all 160 labels, original-to-revised mapping consistency, null/negative fixtures, category/master consistency and documentation links. They do not simulate the Cortex engine or establish runtime performance, compiler limits, precision or recall.
+Offline checks cover the 31 query files, all enabled labels, baseline regressions and declared corrections, null/negative fixtures, category/master consistency and documentation links. They do not simulate the Cortex engine or establish runtime performance, compiler limits, precision or recall.
 
 Each returned row is one admitted matching inventory row. Duplicate reports and versions remain separate, null source context is preserved, and result ordering is unspecified. Counts are not unique installations or endpoints. The cap can truncate results, and the master can require more compiler/runtime resources; prefer category queries for initial validation.
 
@@ -81,11 +83,13 @@ Historical inventory can contain removed software. Exact matching misses unliste
 
 Category membership is review context, not a risk score or policy verdict. These queries do not establish execution, network sessions, current installation, protection health, malicious behavior or unauthorized use. Rule, API and XQLp compatibility require separate validation.
 
+**Presence and authorization are separate decisions.** A matched product can be approved. To call it unauthorized, establish the product identity, asset/business scope, owner, effective policy, approval status, exception and expiry from an independent governed source. Missing approval data means Unknown. No policy fields or risk scores are invented by these queries.
+
 ## Maintenance and review
 
 Use lowercase whole labels, one entry per line in the admission list, a stable product ID and a single primary category. Add a name only after checking sanitized inventory evidence. Update the category and master together, then check positive, mixed-case, near-match and null cases. Keep descriptive notes in the adjacent English guide.
 
-The October 16 revision removed YAML metadata and the auxiliary project structure, shortened the guides, formatted filters and mappings into readable blocks, and reduced the requested output from 12 columns to seven. It preserves the original 160 admitted labels, 124 product mappings, 30-day window, 1,000-row cap and duplicate-row behavior. No tenant equivalence or speedup is claimed.
+The initial October 16 cleanup removed YAML metadata and the auxiliary project structure and standardized seven output columns. This coverage round retains those columns, the original 160 labels, 30-day window, 1,000-row cap and duplicate-row behavior while adding documented candidate families. The existing `git-for-windows` ID now displays **Git family** because a bare Git label cannot establish Windows packaging. See [coverage changes](coverage.md#changes-and-validation). No tenant equivalence or speedup is claimed.
 
 ## Language references
 

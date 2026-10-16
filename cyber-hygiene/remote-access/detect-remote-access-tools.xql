@@ -12,6 +12,7 @@ config case_sensitive = false timeframe = 30d
     "rustdesk",
     "screenconnect",
     "screenconnect client",
+    "splashtop streamer",
     "teamviewer",
     "teamviewer host",
     "teamviewer quicksupport"
@@ -62,6 +63,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized in ("connectwise control", "screenconnect", "screenconnect client"),
             "screenconnect",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "splashtop streamer",
+            "Splashtop Streamer",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "splashtop streamer",
+            "splashtop-streamer",
             product_id
         )
 

@@ -6,6 +6,10 @@ config case_sensitive = false timeframe = 30d
 | filter application_name_normalized in (
     "cisco anyconnect secure mobility client",
     "cisco secure client",
+    "cloudflare warp",
+    "cloudflare-warp",
+    "forticlient",
+    "forticlient vpn",
     "globalprotect",
     "ngrok",
     "openvpn connect",
@@ -25,6 +29,28 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized in ("cisco anyconnect secure mobility client", "cisco secure client"),
             "cisco-secure-client",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("cloudflare warp", "cloudflare-warp"),
+            "Cloudflare WARP / One Client family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("cloudflare warp", "cloudflare-warp"),
+            "cloudflare-warp",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("forticlient", "forticlient vpn"),
+            "FortiClient family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("forticlient", "forticlient vpn"),
+            "forticlient",
             product_id
         )
 

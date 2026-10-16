@@ -2,22 +2,29 @@
 
 [Open query](detect-penetration-testing-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **4 products / 5 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 6 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| BloodHound Community Edition | `bloodhound-community` | `bloodhound community edition` |
-| Burp Suite | `burp-suite` | `burp suite community edition`; `burp suite professional` |
-| Metasploit Framework | `metasploit-framework` | `metasploit framework` |
-| Nmap | `nmap` | `nmap` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| BloodHound Community Edition | `bloodhound-community` | `bloodhound community edition` | [Inherited candidate](https://bloodhound.specterops.io/) |
+| Burp Suite | `burp-suite` | `burp suite community edition`; `burp suite professional` | [Inherited candidate](https://portswigger.net/burp) |
+| Metasploit Framework | `metasploit-framework` | `metasploit framework` | [Inherited candidate](https://www.metasploit.com/) |
+| Nmap | `nmap` | `nmap` | [Inherited candidate](https://nmap.org/) |
+| Tenable Nessus | `tenable-nessus` | `nessus` | [Product-name candidate](https://www.tenable.com/products/nessus) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Authorized assessment tooling; review engagement scope, credential handling and permitted operators.
+
+Added Nessus. Portable Nmap and ZIP/container-based assessment tools can be absent. ZAP's current distribution page alone does not establish an installed display label; no generic ZAP alias was enabled. A tool label is not exploitation or authorization evidence.
+
+- **Tenable Nessus**: Scanner presence is not a scan, exploitation or an authorization verdict.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

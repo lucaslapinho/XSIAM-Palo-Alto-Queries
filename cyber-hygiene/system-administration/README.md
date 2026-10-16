@@ -2,22 +2,29 @@
 
 [Open query](detect-system-administration-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **4 products / 5 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 6 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| Microsoft PowerToys | `microsoft-powertoys` | `microsoft powertoys`; `powertoys` |
-| PDQ Deploy | `pdq-deploy` | `pdq deploy` |
-| Sysinternals Suite | `sysinternals-suite` | `sysinternals suite` |
-| Windows Admin Center | `windows-admin-center` | `windows admin center` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| Microsoft PowerToys | `microsoft-powertoys` | `microsoft powertoys`; `powertoys` | [Inherited candidate](https://learn.microsoft.com/en-us/windows/powertoys/) |
+| PDQ Deploy | `pdq-deploy` | `pdq deploy` | [Inherited candidate](https://www.pdq.com/pdq-deploy/) |
+| PDQ Inventory | `pdq-inventory` | `pdq inventory` | [Product-name candidate](https://www.pdq.com/pdq-inventory/) |
+| Sysinternals Suite | `sysinternals-suite` | `sysinternals suite` | [Inherited candidate](https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite) |
+| Windows Admin Center | `windows-admin-center` | `windows admin center` | [Inherited candidate](https://learn.microsoft.com/windows-server/manage/windows-admin-center/overview) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Administrative operations; review privilege, approved operators and change logging.
+
+Added PDQ Inventory separately from PDQ Deploy. Administrative consoles, agents and scanned target machines are distinct. Sysinternals standalone tools and OS administrative features can have no app entry; privilege and execution remain unknown.
+
+- **PDQ Inventory**: Do not confuse an administrative console with agent deployment to all scanned endpoints.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

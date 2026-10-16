@@ -11,6 +11,7 @@ config case_sensitive = false timeframe = 30d
     "openssh client",
     "openssh server",
     "putty",
+    "securecrt",
     "termius"
 )
 
@@ -48,6 +49,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "putty",
             "putty",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "securecrt",
+            "SecureCRT",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "securecrt",
+            "securecrt",
             product_id
         )
 

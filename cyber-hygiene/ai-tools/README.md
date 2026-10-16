@@ -6,18 +6,24 @@ Find application-inventory rows whose complete name matches one of the labels be
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| AnythingLLM Desktop | `anythingllm` | `anythingllm`; `anythingllm desktop` |
-| ChatGPT desktop app | `chatgpt-desktop` | `chatgpt` |
-| Claude desktop app | `claude-desktop` | `claude` |
-| Jan | `jan` | `jan` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| AnythingLLM Desktop | `anythingllm` | `anythingllm`; `anythingllm desktop` | [Inherited candidate](https://anythingllm.com/) |
+| ChatGPT desktop app | `chatgpt-desktop` | `chatgpt` | [Inherited candidate](https://chatgpt.com/download/) |
+| Claude desktop app | `claude-desktop` | `claude` | [Inherited candidate](https://claude.com/download) |
+| Jan | `jan` | `jan` | [Inherited candidate](https://jan.ai/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 AI assistance; review account tenancy, submitted data, retention and approved connectors.
+
+Refreshed native ChatGPT distribution context; retained four families. No new Perplexity desktop label was enabled because sufficient primary page content was not retrieved. Native app, PWA and web usage are separate; no model/provider or prompt destination follows from a label.
+
+
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

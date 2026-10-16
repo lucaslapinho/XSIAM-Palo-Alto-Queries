@@ -6,9 +6,11 @@ config case_sensitive = false timeframe = 30d
 | filter application_name_normalized in (
     "battle.net",
     "blizzard battle.net",
+    "ea app",
     "epic games launcher",
     "gog galaxy",
-    "steam"
+    "steam",
+    "ubisoft connect"
 )
 
 | alter detected_product = "UNMAPPED",
@@ -23,6 +25,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized in ("battle.net", "blizzard battle.net"),
             "battle-net",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "ea app",
+            "EA app",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "ea app",
+            "ea-app",
             product_id
         )
 
@@ -56,6 +69,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "steam",
             "steam",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "ubisoft connect",
+            "Ubisoft Connect",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "ubisoft connect",
+            "ubisoft-connect",
             product_id
         )
 

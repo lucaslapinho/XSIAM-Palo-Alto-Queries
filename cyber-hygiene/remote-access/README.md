@@ -2,23 +2,30 @@
 
 [Open query](detect-remote-access-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 11 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **6 products / 12 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| AnyDesk | `anydesk` | `anydesk` |
-| RealVNC Connect | `realvnc-connect` | `realvnc connect`; `realvnc server`; `realvnc viewer` |
-| RustDesk | `rustdesk` | `rustdesk` |
-| ScreenConnect | `screenconnect` | `connectwise control`; `screenconnect`; `screenconnect client` |
-| TeamViewer Remote | `teamviewer` | `teamviewer`; `teamviewer host`; `teamviewer quicksupport` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| AnyDesk | `anydesk` | `anydesk` | [Inherited candidate](https://anydesk.com/) |
+| RealVNC Connect | `realvnc-connect` | `realvnc connect`; `realvnc server`; `realvnc viewer` | [Inherited candidate](https://www.realvnc.com/en/connect/) |
+| RustDesk | `rustdesk` | `rustdesk` | [Inherited candidate](https://rustdesk.com/) |
+| ScreenConnect | `screenconnect` | `connectwise control`; `screenconnect`; `screenconnect client` | [Inherited candidate](https://www.screenconnect.com/) |
+| Splashtop Streamer | `splashtop-streamer` | `splashtop streamer` | [Product-name candidate](https://www.splashtop.com/downloads) |
+| TeamViewer Remote | `teamviewer` | `teamviewer`; `teamviewer host`; `teamviewer quicksupport` | [Inherited candidate](https://www.teamviewer.com/en/products/remote/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Support and administration; review access ownership, unattended access, authentication and session logging.
+
+Added a distinct Splashtop Streamer candidate. Operator apps, host services and custom tenant-branded ScreenConnect clients need separate identities. Whole-name filters intentionally miss customer-specific names; avoid generic remote or control substrings.
+
+- **Splashtop Streamer**: Streamer and operator-side Business App are distinct components. Do not infer an active remote session.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

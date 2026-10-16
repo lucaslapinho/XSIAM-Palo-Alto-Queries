@@ -4,6 +4,7 @@ config case_sensitive = false timeframe = 30d
 | fields endpoint_name, platform, application_name, version
 | alter application_name_normalized = lowercase(application_name)
 | filter application_name_normalized in (
+    "bruno",
     "git",
     "git for windows",
     "github desktop",
@@ -16,8 +17,19 @@ config case_sensitive = false timeframe = 30d
         tool_family = "Developer Utilities"
 
 | alter detected_product = if(
+            application_name_normalized = "bruno",
+            "Bruno",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "bruno",
+            "bruno",
+            product_id
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("git", "git for windows"),
-            "Git for Windows",
+            "Git family",
             detected_product
         ),
         product_id = if(

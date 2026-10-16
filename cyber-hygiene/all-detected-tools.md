@@ -2,7 +2,7 @@
 
 [Open query](all-detected-tools.xql) · [Category index and shared instructions](README.md)
 
-This query combines the 30 primary software categories into one inventory review. It uses the same **124 product candidates and 160 exact labels** as the category queries.
+This query combines the 30 primary software categories into one inventory review. It uses the same **167 product/family candidates and 212 exact labels** as the category queries. The [coverage review](coverage.md) explains source evidence, family grouping and coverage gaps.
 
 ## When to use it
 
@@ -18,6 +18,6 @@ Output: `endpoint_name`, `platform`, `application_name`, `version`, `detected_pr
 
 Keep each product's labels consistent between the initial filter, its three conditional assignments, and its category query. For a new product, choose a stable ID and one primary category, then validate positive, mixed-case and near-match labels. Do not add generic keyword matching or overlapping ownership.
 
-The master has 124 sequential product-mapping stages. Compiler limits and resource use are unmeasured. If it is rejected or too expensive in your build, use the category queries rather than assuming an engine limit or silently dropping products.
+The master has 167 sequential product-mapping stages. Compiler limits and resource use are unmeasured. Prefer category queries; the expanded master is a convenience candidate, not a performance-tested fleet report. If it is rejected or too expensive in your build, use the category queries rather than assuming an engine limit or silently dropping products.
 
 Review date: **2026-10-16**. Offline mapping and consistency checks do not establish Cortex acceptance. Tenant schema, compilation and execution remain unverified; see [evidence and limitations](README.md#evidence-and-limitations) and [before running](README.md#before-running).

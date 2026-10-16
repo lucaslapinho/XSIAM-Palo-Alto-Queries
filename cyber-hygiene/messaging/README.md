@@ -2,23 +2,30 @@
 
 [Open query](detect-messaging-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 7 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **6 products / 8 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| Discord | `discord` | `discord` |
-| Microsoft Teams | `microsoft-teams` | `microsoft teams`; `microsoft teams classic` |
-| Signal Desktop | `signal-desktop` | `signal`; `signal desktop` |
-| Slack | `slack` | `slack` |
-| Telegram Desktop | `telegram-desktop` | `telegram desktop` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| Discord | `discord` | `discord` | [Inherited candidate](https://discord.com/) |
+| Microsoft Teams | `microsoft-teams` | `microsoft teams`; `microsoft teams classic` | [Inherited candidate](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software) |
+| Signal Desktop | `signal-desktop` | `signal`; `signal desktop` | [Inherited candidate](https://signal.org/download/) |
+| Slack | `slack` | `slack` | [Inherited candidate](https://slack.com/) |
+| Telegram Desktop | `telegram-desktop` | `telegram desktop` | [Inherited candidate](https://desktop.telegram.org/) |
+| Zoom Workplace | `zoom-workplace` | `zoom workplace` | [Product-name candidate](https://www.zoom.com/en/products/collaboration-tools/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Messaging and meetings; review external participants, retention, file sharing and organizational tenancy.
+
+Added Zoom Workplace. Classic Teams, VDI add-ins, machine-wide installers, web clients and per-user clients require separate handling. Current names do not automatically authorize historical brand aliases or prove account tenancy.
+
+- **Zoom Workplace**: Legacy Zoom labels and VDI plugins need separate evidence. Presence does not identify a meeting or account tenancy.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

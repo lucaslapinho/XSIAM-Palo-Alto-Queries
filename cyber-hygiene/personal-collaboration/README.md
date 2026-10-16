@@ -2,22 +2,29 @@
 
 [Open query](detect-personal-collaboration-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **4 products / 4 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 5 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| Evernote | `evernote` | `evernote` |
-| Joplin | `joplin` | `joplin` |
-| Notion | `notion` | `notion` |
-| Obsidian | `obsidian` | `obsidian` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| Evernote | `evernote` | `evernote` | [Inherited candidate](https://evernote.com/download) |
+| Joplin | `joplin` | `joplin` | [Inherited candidate](https://joplinapp.org/) |
+| Logseq | `logseq` | `logseq` | [Product-name candidate](https://github.com/logseq/logseq) |
+| Notion | `notion` | `notion` | [Inherited candidate](https://www.notion.com/desktop) |
+| Obsidian | `obsidian` | `obsidian` | [Inherited candidate](https://obsidian.md/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Notes and collaboration; review workspace ownership, guest sharing, retention and data location.
+
+Added Logseq via its first-party repository. Offline notes, cloud workspaces and web access differ; inventory cannot determine account tenancy, guest sharing, sync direction or data residency.
+
+- **Logseq**: Native, web and graph/database distributions may differ. No sharing or workspace ownership is established.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

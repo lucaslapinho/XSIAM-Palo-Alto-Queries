@@ -8,6 +8,7 @@ config case_sensitive = false timeframe = 30d
     "burp suite community edition",
     "burp suite professional",
     "metasploit framework",
+    "nessus",
     "nmap"
 )
 
@@ -56,6 +57,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "nmap",
             "nmap",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "nessus",
+            "Tenable Nessus",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "nessus",
+            "tenable-nessus",
             product_id
         )
 

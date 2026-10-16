@@ -7,7 +7,9 @@ config case_sensitive = false timeframe = 30d
     "aider",
     "claude code",
     "continue",
-    "cursor"
+    "cursor",
+    "devin desktop",
+    "windsurf"
 )
 
 | alter detected_product = "UNMAPPED",
@@ -55,6 +57,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "cursor",
             "cursor",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("devin desktop", "windsurf"),
+            "Windsurf / Devin Desktop family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("devin desktop", "windsurf"),
+            "windsurf-devin-desktop",
             product_id
         )
 

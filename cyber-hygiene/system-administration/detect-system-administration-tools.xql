@@ -6,6 +6,7 @@ config case_sensitive = false timeframe = 30d
 | filter application_name_normalized in (
     "microsoft powertoys",
     "pdq deploy",
+    "pdq inventory",
     "powertoys",
     "sysinternals suite",
     "windows admin center"
@@ -34,6 +35,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "pdq deploy",
             "pdq-deploy",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "pdq inventory",
+            "PDQ Inventory",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "pdq inventory",
+            "pdq-inventory",
             product_id
         )
 

@@ -4,16 +4,31 @@ config case_sensitive = false timeframe = 30d
 | fields endpoint_name, platform, application_name, version
 | alter application_name_normalized = lowercase(application_name)
 | filter application_name_normalized in (
+    "bitdefender endpoint security tools",
     "cortex xdr",
     "cortex xdr agent",
     "crowdstrike falcon sensor",
+    "elastic agent",
     "microsoft defender for endpoint",
-    "sentinelone agent"
+    "sentinelone agent",
+    "sophos endpoint agent",
+    "symantec endpoint protection"
 )
 
 | alter detected_product = "UNMAPPED",
         product_id = "UNMAPPED",
         tool_family = "EDR / Endpoint Security"
+
+| alter detected_product = if(
+            application_name_normalized = "bitdefender endpoint security tools",
+            "Bitdefender Endpoint Security Tools",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "bitdefender endpoint security tools",
+            "bitdefender-best",
+            product_id
+        )
 
 | alter detected_product = if(
             application_name_normalized in ("cortex xdr", "cortex xdr agent"),
@@ -38,6 +53,17 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "elastic agent",
+            "Elastic Agent",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "elastic agent",
+            "elastic-agent",
+            product_id
+        )
+
+| alter detected_product = if(
             application_name_normalized = "microsoft defender for endpoint",
             "Microsoft Defender for Endpoint",
             detected_product
@@ -56,6 +82,28 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "sentinelone agent",
             "sentinelone-agent",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "sophos endpoint agent",
+            "Sophos Endpoint Agent",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "sophos endpoint agent",
+            "sophos-endpoint-agent",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "symantec endpoint protection",
+            "Symantec Endpoint Protection",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "symantec endpoint protection",
+            "symantec-endpoint-protection",
             product_id
         )
 

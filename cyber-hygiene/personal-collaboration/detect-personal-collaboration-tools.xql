@@ -6,6 +6,7 @@ config case_sensitive = false timeframe = 30d
 | filter application_name_normalized in (
     "evernote",
     "joplin",
+    "logseq",
     "notion",
     "obsidian"
 )
@@ -33,6 +34,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "joplin",
             "joplin",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "logseq",
+            "Logseq",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "logseq",
+            "logseq",
             product_id
         )
 

@@ -2,22 +2,29 @@
 
 [Open query](detect-screen-capture-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **4 products / 5 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 6 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| Loom | `loom` | `loom` |
-| OBS Studio | `obs-studio` | `obs studio` |
-| ShareX | `sharex` | `sharex` |
-| Snagit | `snagit` | `snagit`; `techsmith snagit` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| Camtasia | `camtasia` | `camtasia` | [Product-name candidate](https://www.techsmith.com/camtasia/) |
+| Loom | `loom` | `loom` | [Inherited candidate](https://www.loom.com/) |
+| OBS Studio | `obs-studio` | `obs studio` | [Inherited candidate](https://obsproject.com/) |
+| ShareX | `sharex` | `sharex` | [Inherited candidate](https://getsharex.com/) |
+| Snagit | `snagit` | `snagit`; `techsmith snagit` | [Inherited candidate](https://www.techsmith.com/snagit/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Screen capture and recording; review sensitive-screen exposure, storage, sharing and consent policy.
+
+Added Camtasia. Version-suffixed labels and portable recorders need separate fixtures; OS/browser recording can have no app entry. Presence does not establish recording, captured data or sharing.
+
+- **Camtasia**: Version-suffixed installed labels need tenant fixtures; presence is not proof a recording occurred.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

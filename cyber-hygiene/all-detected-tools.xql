@@ -5,16 +5,23 @@ config case_sensitive = false timeframe = 30d
 | alter application_name_normalized = lowercase(application_name)
 | filter application_name_normalized in (
     "1password",
+    "advanced ip scanner",
     "aider",
+    "android studio",
     "angry ip scanner",
     "anydesk",
     "anythingllm",
     "anythingllm desktop",
     "autohotkey",
+    "autoit",
     "avast free antivirus",
     "avg antivirus free",
+    "avira security",
     "battle.net",
     "bitcoin core",
+    "bitdefender antivirus plus",
+    "bitdefender endpoint security tools",
+    "bitdefender total security",
     "bittorrent classic",
     "bitwarden",
     "blizzard battle.net",
@@ -23,8 +30,10 @@ config case_sensitive = false timeframe = 30d
     "bluestacks app player",
     "brave",
     "brave browser",
+    "bruno",
     "burp suite community edition",
     "burp suite professional",
+    "camtasia",
     "ccleaner",
     "chatgpt",
     "cisco anyconnect secure mobility client",
@@ -32,6 +41,8 @@ config case_sensitive = false timeframe = 30d
     "clamav",
     "claude",
     "claude code",
+    "cloudflare warp",
+    "cloudflare-warp",
     "connectwise control",
     "continue",
     "cortex xdr",
@@ -43,18 +54,28 @@ config case_sensitive = false timeframe = 30d
     "dbeaver",
     "dbeaver community",
     "deluge",
+    "devin desktop",
     "discord",
     "docker desktop",
     "dropbox",
+    "ea app",
+    "elastic agent",
     "electrum",
+    "emsisoft anti-malware home",
+    "enpass",
     "epic games launcher",
+    "eset endpoint antivirus",
+    "eset endpoint security",
     "eset nod32 antivirus",
     "evernote",
+    "f-secure total",
     "facebook",
     "fiddler everywhere",
     "filezilla",
     "filezilla client",
     "firefox",
+    "forticlient",
+    "forticlient vpn",
     "git",
     "git for windows",
     "github desktop",
@@ -75,12 +96,18 @@ config case_sensitive = false timeframe = 30d
     "iperf3",
     "jan",
     "joplin",
+    "kaspersky endpoint security for windows",
     "keepass password safe",
     "keepass password safe 2",
     "keepassxc",
     "llama.cpp",
     "lm studio",
+    "logseq",
     "loom",
+    "malwarebytes",
+    "malwarebytes premium",
+    "mcafee total protection",
+    "megasync",
     "metasploit framework",
     "microsoft defender for endpoint",
     "microsoft edge",
@@ -93,12 +120,18 @@ config case_sensitive = false timeframe = 30d
     "mobaxterm",
     "mobaxterm personal edition",
     "mobaxterm professional edition",
+    "monero gui wallet",
     "mozilla firefox",
+    "msty studio",
+    "mullvad browser",
     "mysql workbench",
+    "nessus",
     "ngrok",
     "nicehash miner",
     "nmap",
     "node.js",
+    "norton 360",
+    "norton 360 deluxe",
     "notion",
     "obs studio",
     "obsidian",
@@ -107,10 +140,16 @@ config case_sensitive = false timeframe = 30d
     "openssh client",
     "openssh server",
     "openvpn connect",
+    "oracle sql developer",
     "oracle virtualbox",
     "oracle vm virtualbox",
+    "orbstack",
+    "panda dome",
+    "panda dome free",
     "parallels desktop",
     "pdq deploy",
+    "pdq inventory",
+    "peazip",
     "pgadmin 4",
     "podman desktop",
     "postman",
@@ -135,14 +174,20 @@ config case_sensitive = false timeframe = 30d
     "rustdesk",
     "screenconnect",
     "screenconnect client",
+    "securecrt",
     "sentinelone agent",
     "sharex",
     "signal",
     "signal desktop",
     "slack",
+    "smartftp",
     "snagit",
+    "sophos endpoint agent",
+    "splashtop streamer",
+    "sql developer",
     "steam",
     "sublime text",
+    "symantec endpoint protection",
     "syncthing",
     "sysinternals suite",
     "tailscale",
@@ -153,17 +198,24 @@ config case_sensitive = false timeframe = 30d
     "telegram desktop",
     "termius",
     "tiktok",
+    "tixati",
     "tor browser",
     "transmission",
+    "trend micro maximum security",
+    "ubisoft connect",
     "veracrypt",
     "visual studio code",
+    "vivaldi",
+    "vmware fusion",
     "vmware workstation",
     "vmware workstation pro",
     "windows admin center",
+    "windsurf",
     "winscp",
     "wireguard",
     "wireshark",
-    "xmrig"
+    "xmrig",
+    "zoom workplace"
 )
 
 | alter detected_product = "UNMAPPED",
@@ -187,6 +239,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "advanced ip scanner",
+            "Advanced IP Scanner",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "advanced ip scanner",
+            "advanced-ip-scanner",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "advanced ip scanner",
+            "Network Utilities",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "aider",
             "Aider",
             detected_product
@@ -199,6 +267,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "aider",
             "AI Development Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "android studio",
+            "Android Studio",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "android studio",
+            "android-studio",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "android studio",
+            "Development Tools / IDEs",
             tool_family
         )
 
@@ -267,6 +351,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "autoit",
+            "AutoIt",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "autoit",
+            "autoit",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "autoit",
+            "Scripting / Automation Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "avast free antivirus",
             "Avast Free Antivirus",
             detected_product
@@ -294,6 +394,22 @@ config case_sensitive = false timeframe = 30d
         ),
         tool_family = if(
             application_name_normalized = "avg antivirus free",
+            "Antivirus",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "avira security",
+            "Avira Security",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "avira security",
+            "avira-security",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "avira security",
             "Antivirus",
             tool_family
         )
@@ -327,6 +443,38 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "bitcoin core",
             "Crypto / Mining Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("bitdefender antivirus plus", "bitdefender total security"),
+            "Bitdefender consumer security family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("bitdefender antivirus plus", "bitdefender total security"),
+            "bitdefender-consumer",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("bitdefender antivirus plus", "bitdefender total security"),
+            "Antivirus",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "bitdefender endpoint security tools",
+            "Bitdefender Endpoint Security Tools",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "bitdefender endpoint security tools",
+            "bitdefender-best",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "bitdefender endpoint security tools",
+            "EDR / Endpoint Security",
             tool_family
         )
 
@@ -411,6 +559,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "bruno",
+            "Bruno",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "bruno",
+            "bruno",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "bruno",
+            "Developer Utilities",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("burp suite community edition", "burp suite professional"),
             "Burp Suite",
             detected_product
@@ -423,6 +587,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized in ("burp suite community edition", "burp suite professional"),
             "Penetration Testing / Dual-Use Security Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "camtasia",
+            "Camtasia",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "camtasia",
+            "camtasia",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "camtasia",
+            "Screen Recording / Capture",
             tool_family
         )
 
@@ -519,6 +699,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "claude",
             "Artificial Intelligence Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("cloudflare warp", "cloudflare-warp"),
+            "Cloudflare WARP / One Client family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("cloudflare warp", "cloudflare-warp"),
+            "cloudflare-warp",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("cloudflare warp", "cloudflare-warp"),
+            "VPN / Tunneling / Proxy",
             tool_family
         )
 
@@ -699,6 +895,38 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "ea app",
+            "EA app",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "ea app",
+            "ea-app",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "ea app",
+            "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "elastic agent",
+            "Elastic Agent",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "elastic agent",
+            "elastic-agent",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "elastic agent",
+            "EDR / Endpoint Security",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "electrum",
             "Electrum",
             detected_product
@@ -715,6 +943,38 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "emsisoft anti-malware home",
+            "Emsisoft Anti-Malware Home",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "emsisoft anti-malware home",
+            "emsisoft-anti-malware",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "emsisoft anti-malware home",
+            "Antivirus",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "enpass",
+            "Enpass",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "enpass",
+            "enpass",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "enpass",
+            "Password Managers",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "epic games launcher",
             "Epic Games Launcher",
             detected_product
@@ -727,6 +987,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "epic games launcher",
             "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("eset endpoint antivirus", "eset endpoint security"),
+            "ESET endpoint protection family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("eset endpoint antivirus", "eset endpoint security"),
+            "eset-endpoint-protection",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("eset endpoint antivirus", "eset endpoint security"),
+            "Antivirus",
             tool_family
         )
 
@@ -759,6 +1035,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "evernote",
             "Personal Collaboration Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "f-secure total",
+            "F-Secure Total",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "f-secure total",
+            "f-secure-total",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "f-secure total",
+            "Antivirus",
             tool_family
         )
 
@@ -811,8 +1103,24 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized in ("forticlient", "forticlient vpn"),
+            "FortiClient family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("forticlient", "forticlient vpn"),
+            "forticlient",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("forticlient", "forticlient vpn"),
+            "VPN / Tunneling / Proxy",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("git", "git for windows"),
-            "Git for Windows",
+            "Git family",
             detected_product
         ),
         product_id = if(
@@ -1067,6 +1375,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "kaspersky endpoint security for windows",
+            "Kaspersky Endpoint Security for Windows",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "kaspersky endpoint security for windows",
+            "kaspersky-endpoint-windows",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "kaspersky endpoint security for windows",
+            "Antivirus",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("keepass password safe", "keepass password safe 2"),
             "KeePass Password Safe",
             detected_product
@@ -1131,6 +1455,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "logseq",
+            "Logseq",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "logseq",
+            "logseq",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "logseq",
+            "Personal Collaboration Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "loom",
             "Loom",
             detected_product
@@ -1143,6 +1483,54 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "loom",
             "Screen Recording / Capture",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("malwarebytes", "malwarebytes premium"),
+            "Malwarebytes consumer family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("malwarebytes", "malwarebytes premium"),
+            "malwarebytes-consumer",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("malwarebytes", "malwarebytes premium"),
+            "Antivirus",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "mcafee total protection",
+            "McAfee Total Protection",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "mcafee total protection",
+            "mcafee-total-protection",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "mcafee total protection",
+            "Antivirus",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "megasync",
+            "MEGAsync",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "megasync",
+            "megasync",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "megasync",
+            "Cloud Storage / File Synchronization",
             tool_family
         )
 
@@ -1275,6 +1663,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "monero gui wallet",
+            "Monero GUI Wallet",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "monero gui wallet",
+            "monero-gui-wallet",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "monero gui wallet",
+            "Crypto / Mining Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("firefox", "mozilla firefox"),
             "Mozilla Firefox",
             detected_product
@@ -1287,6 +1691,38 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized in ("firefox", "mozilla firefox"),
             "Browsers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "msty studio",
+            "Msty Studio",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "msty studio",
+            "msty-studio",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "msty studio",
+            "Local AI / LLM Runtimes",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "mullvad browser",
+            "Mullvad Browser",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "mullvad browser",
+            "mullvad-browser",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "mullvad browser",
+            "Privacy / Anonymization Tools",
             tool_family
         )
 
@@ -1367,6 +1803,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "node.js",
             "Scripting / Automation Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("norton 360", "norton 360 deluxe"),
+            "Norton 360 family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("norton 360", "norton 360 deluxe"),
+            "norton-360",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("norton 360", "norton 360 deluxe"),
+            "Antivirus",
             tool_family
         )
 
@@ -1467,6 +1919,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized in ("oracle sql developer", "sql developer"),
+            "Oracle SQL Developer",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("oracle sql developer", "sql developer"),
+            "oracle-sql-developer",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("oracle sql developer", "sql developer"),
+            "Database Clients",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("oracle virtualbox", "oracle vm virtualbox"),
             "Oracle VirtualBox",
             detected_product
@@ -1479,6 +1947,38 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized in ("oracle virtualbox", "oracle vm virtualbox"),
             "Virtualization",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "orbstack",
+            "OrbStack",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "orbstack",
+            "orbstack",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "orbstack",
+            "Containers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("panda dome", "panda dome free"),
+            "Panda Dome family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("panda dome", "panda dome free"),
+            "panda-dome",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("panda dome", "panda dome free"),
+            "Antivirus",
             tool_family
         )
 
@@ -1511,6 +2011,38 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "pdq deploy",
             "System Administration Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "pdq inventory",
+            "PDQ Inventory",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "pdq inventory",
+            "pdq-inventory",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "pdq inventory",
+            "System Administration Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "peazip",
+            "PeaZip",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "peazip",
+            "peazip",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "peazip",
+            "Other Corporate-Risk / Shadow-IT Applications",
             tool_family
         )
 
@@ -1771,6 +2303,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "securecrt",
+            "SecureCRT",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "securecrt",
+            "securecrt",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "securecrt",
+            "Remote Shell / SSH Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "sentinelone agent",
             "SentinelOne Agent",
             detected_product
@@ -1835,6 +2383,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "smartftp",
+            "SmartFTP",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "smartftp",
+            "smartftp",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "smartftp",
+            "File Transfer Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("snagit", "techsmith snagit"),
             "Snagit",
             detected_product
@@ -1847,6 +2411,38 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized in ("snagit", "techsmith snagit"),
             "Screen Recording / Capture",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "sophos endpoint agent",
+            "Sophos Endpoint Agent",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "sophos endpoint agent",
+            "sophos-endpoint-agent",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "sophos endpoint agent",
+            "EDR / Endpoint Security",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "splashtop streamer",
+            "Splashtop Streamer",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "splashtop streamer",
+            "splashtop-streamer",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "splashtop streamer",
+            "Remote Access / Remote Administration",
             tool_family
         )
 
@@ -1879,6 +2475,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "sublime text",
             "Development Tools / IDEs",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "symantec endpoint protection",
+            "Symantec Endpoint Protection",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "symantec endpoint protection",
+            "symantec-endpoint-protection",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "symantec endpoint protection",
+            "EDR / Endpoint Security",
             tool_family
         )
 
@@ -1963,6 +2575,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "nessus",
+            "Tenable Nessus",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "nessus",
+            "tenable-nessus",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "nessus",
+            "Penetration Testing / Dual-Use Security Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "termius",
             "Termius",
             detected_product
@@ -1991,6 +2619,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "tiktok",
             "Social Applications",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "tixati",
+            "Tixati",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "tixati",
+            "tixati",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "tixati",
+            "P2P / Torrent",
             tool_family
         )
 
@@ -2027,6 +2671,38 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "trend micro maximum security",
+            "Trend Micro Maximum Security",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "trend micro maximum security",
+            "trend-micro-maximum-security",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "trend micro maximum security",
+            "Antivirus",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "ubisoft connect",
+            "Ubisoft Connect",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "ubisoft connect",
+            "ubisoft-connect",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "ubisoft connect",
+            "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "veracrypt",
             "VeraCrypt",
             detected_product
@@ -2059,6 +2735,38 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "vivaldi",
+            "Vivaldi",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "vivaldi",
+            "vivaldi",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "vivaldi",
+            "Browsers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "vmware fusion",
+            "VMware Fusion",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "vmware fusion",
+            "vmware-fusion",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "vmware fusion",
+            "Virtualization",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("vmware workstation", "vmware workstation pro"),
             "VMware Workstation Pro",
             detected_product
@@ -2087,6 +2795,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "windows admin center",
             "System Administration Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("devin desktop", "windsurf"),
+            "Windsurf / Devin Desktop family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("devin desktop", "windsurf"),
+            "windsurf-devin-desktop",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("devin desktop", "windsurf"),
+            "AI Development Tools",
             tool_family
         )
 
@@ -2151,6 +2875,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "xmrig",
             "Crypto / Mining Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "zoom workplace",
+            "Zoom Workplace",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "zoom workplace",
+            "zoom-workplace",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "zoom workplace",
+            "Communication / Messaging",
             tool_family
         )
 

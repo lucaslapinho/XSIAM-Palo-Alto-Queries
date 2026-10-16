@@ -6,6 +6,7 @@ config case_sensitive = false timeframe = 30d
 | filter application_name_normalized in (
     "bitcoin core",
     "electrum",
+    "monero gui wallet",
     "nicehash miner",
     "xmrig"
 )
@@ -33,6 +34,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "electrum",
             "electrum",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "monero gui wallet",
+            "Monero GUI Wallet",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "monero gui wallet",
+            "monero-gui-wallet",
             product_id
         )
 

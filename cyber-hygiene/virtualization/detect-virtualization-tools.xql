@@ -8,6 +8,7 @@ config case_sensitive = false timeframe = 30d
     "oracle vm virtualbox",
     "parallels desktop",
     "qemu",
+    "vmware fusion",
     "vmware workstation",
     "vmware workstation pro"
 )
@@ -46,6 +47,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "qemu",
             "qemu",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "vmware fusion",
+            "VMware Fusion",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "vmware fusion",
+            "vmware-fusion",
             product_id
         )
 

@@ -6,6 +6,7 @@ config case_sensitive = false timeframe = 30d
 | filter application_name_normalized in (
     "cryptomator",
     "i2p",
+    "mullvad browser",
     "tor browser",
     "veracrypt"
 )
@@ -33,6 +34,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "i2p",
             "i2p",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "mullvad browser",
+            "Mullvad Browser",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "mullvad browser",
+            "mullvad-browser",
             product_id
         )
 

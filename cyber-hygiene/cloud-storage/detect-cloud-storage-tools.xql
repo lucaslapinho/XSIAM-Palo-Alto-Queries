@@ -7,6 +7,7 @@ config case_sensitive = false timeframe = 30d
     "dropbox",
     "google drive",
     "google drive for desktop",
+    "megasync",
     "microsoft onedrive",
     "syncthing"
 )
@@ -34,6 +35,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized in ("google drive", "google drive for desktop"),
             "google-drive-desktop",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "megasync",
+            "MEGAsync",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "megasync",
+            "megasync",
             product_id
         )
 

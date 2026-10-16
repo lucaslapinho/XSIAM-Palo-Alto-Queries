@@ -4,6 +4,7 @@ config case_sensitive = false timeframe = 30d
 | fields endpoint_name, platform, application_name, version
 | alter application_name_normalized = lowercase(application_name)
 | filter application_name_normalized in (
+    "advanced ip scanner",
     "angry ip scanner",
     "fiddler everywhere",
     "iperf3",
@@ -13,6 +14,17 @@ config case_sensitive = false timeframe = 30d
 | alter detected_product = "UNMAPPED",
         product_id = "UNMAPPED",
         tool_family = "Network Utilities"
+
+| alter detected_product = if(
+            application_name_normalized = "advanced ip scanner",
+            "Advanced IP Scanner",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "advanced ip scanner",
+            "advanced-ip-scanner",
+            product_id
+        )
 
 | alter detected_product = if(
             application_name_normalized = "angry ip scanner",

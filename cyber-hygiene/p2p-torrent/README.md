@@ -2,22 +2,29 @@
 
 [Open query](detect-p2p-torrent-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **4 products / 4 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 5 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| BitTorrent Classic | `bittorrent-classic` | `bittorrent classic` |
-| Deluge | `deluge` | `deluge` |
-| qBittorrent | `qbittorrent` | `qbittorrent` |
-| Transmission | `transmission` | `transmission` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| BitTorrent Classic | `bittorrent-classic` | `bittorrent classic` | [Inherited candidate](https://www.bittorrent.com/products/) |
+| Deluge | `deluge` | `deluge` | [Inherited candidate](https://github.com/deluge-torrent/deluge) |
+| qBittorrent | `qbittorrent` | `qbittorrent` | [Inherited candidate](https://www.qbittorrent.org/) |
+| Tixati | `tixati` | `tixati` | [Product-name candidate](https://tixati.com/) |
+| Transmission | `transmission` | `transmission` | [Inherited candidate](https://transmissionbt.com/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Peer-to-peer distribution; review content authorization, bandwidth and listening/network policy.
+
+Added Tixati. Do not broaden to generic torrent strings or assume every download manager is P2P. Installed-client evidence differs from protocol activity and content authorization.
+
+- **Tixati**: Presence is not evidence of peer connections, downloaded content or a policy breach.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

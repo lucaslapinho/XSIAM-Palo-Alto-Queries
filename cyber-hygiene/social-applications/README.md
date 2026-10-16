@@ -6,18 +6,24 @@ Find application-inventory rows whose complete name matches one of the labels be
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| Facebook | `facebook` | `facebook` |
-| Instagram | `instagram` | `instagram` |
-| Reddit | `reddit` | `reddit` |
-| TikTok | `tiktok` | `tiktok` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| Facebook | `facebook` | `facebook` | [Inherited candidate](https://www.facebook.com/) |
+| Instagram | `instagram` | `instagram` | [Inherited candidate](https://about.instagram.com/) |
+| Reddit | `reddit` | `reddit` | [Inherited candidate](https://www.redditinc.com/) |
+| TikTok | `tiktok` | `tiktok` | [Inherited candidate](https://www.tiktok.com/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Social publishing and community access; review account ownership, external sharing and business purpose.
+
+No new label enabled. Existing Reddit/TikTok/Instagram/Facebook entries remain inherited, weak name candidates: store apps, PWAs and browser use vary. Their product websites do not substantiate a universal desktop inventory label. Use independently validated browser/network telemetry for web-use questions.
+
+
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

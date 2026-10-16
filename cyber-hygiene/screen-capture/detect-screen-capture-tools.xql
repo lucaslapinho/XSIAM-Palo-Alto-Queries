@@ -4,6 +4,7 @@ config case_sensitive = false timeframe = 30d
 | fields endpoint_name, platform, application_name, version
 | alter application_name_normalized = lowercase(application_name)
 | filter application_name_normalized in (
+    "camtasia",
     "loom",
     "obs studio",
     "sharex",
@@ -14,6 +15,17 @@ config case_sensitive = false timeframe = 30d
 | alter detected_product = "UNMAPPED",
         product_id = "UNMAPPED",
         tool_family = "Screen Recording / Capture"
+
+| alter detected_product = if(
+            application_name_normalized = "camtasia",
+            "Camtasia",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "camtasia",
+            "camtasia",
+            product_id
+        )
 
 | alter detected_product = if(
             application_name_normalized = "loom",

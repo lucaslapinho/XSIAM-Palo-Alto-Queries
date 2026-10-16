@@ -2,22 +2,29 @@
 
 [Open query](detect-other-shadow-it-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **4 products / 6 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 7 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| BlueStacks | `bluestacks` | `bluestacks`; `bluestacks app player` |
-| CCleaner | `ccleaner` | `ccleaner` |
-| Internet Download Manager | `internet-download-manager` | `internet download manager` |
-| Revo Uninstaller | `revo-uninstaller` | `revo uninstaller`; `revo uninstaller pro` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| BlueStacks | `bluestacks` | `bluestacks`; `bluestacks app player` | [Inherited candidate](https://www.bluestacks.com/) |
+| CCleaner | `ccleaner` | `ccleaner` | [Inherited candidate](https://www.ccleaner.com/ccleaner) |
+| Internet Download Manager | `internet-download-manager` | `internet download manager` | [Inherited candidate](https://www.internetdownloadmanager.com/) |
+| PeaZip | `peazip` | `peazip` | [Product-name candidate](https://peazip.github.io/) |
+| Revo Uninstaller | `revo-uninstaller` | `revo uninstaller`; `revo uninstaller pro` | [Inherited candidate](https://www.revouninstaller.com/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Additional policy review candidates; category membership never establishes that an application is unauthorized.
+
+Added PeaZip as a general utility candidate. This is a curated utility bucket, not an automatic fallback for all unmatched software. Shadow IT requires missing/negative organizational approval evidence; unmatched software remains unclassified.
+
+- **PeaZip**: A general archiver is not inherently shadow IT; approval depends on organizational policy.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

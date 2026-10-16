@@ -2,22 +2,29 @@
 
 [Open query](detect-virtualization-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **4 products / 6 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 7 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| Oracle VirtualBox | `virtualbox` | `oracle virtualbox`; `oracle vm virtualbox` |
-| Parallels Desktop | `parallels-desktop` | `parallels desktop` |
-| QEMU | `qemu` | `qemu` |
-| VMware Workstation Pro | `vmware-workstation` | `vmware workstation`; `vmware workstation pro` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| Oracle VirtualBox | `virtualbox` | `oracle virtualbox`; `oracle vm virtualbox` | [Inherited candidate](https://www.oracle.com/virtualization/virtualbox/) |
+| Parallels Desktop | `parallels-desktop` | `parallels desktop` | [Inherited candidate](https://www.parallels.com/products/desktop/) |
+| QEMU | `qemu` | `qemu` | [Inherited candidate](https://www.qemu.org/) |
+| VMware Fusion | `vmware-fusion` | `vmware fusion` | [Product-name candidate](https://knowledge.broadcom.com/external/article/368734/support.broadcom.com) |
+| VMware Workstation Pro | `vmware-workstation` | `vmware workstation`; `vmware workstation pro` | [Inherited candidate](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Guest environments; review guest patching, virtual networking, images and asset visibility.
+
+Added VMware Fusion with current vendor download guidance. Hyper-V/WSL are OS features rather than guaranteed application entries. Guest images, running VMs and guest-installed software require separate collection.
+
+- **VMware Fusion**: Host application presence says nothing about guest inventory or running virtual machines.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

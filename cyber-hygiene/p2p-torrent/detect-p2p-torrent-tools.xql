@@ -7,6 +7,7 @@ config case_sensitive = false timeframe = 30d
     "bittorrent classic",
     "deluge",
     "qbittorrent",
+    "tixati",
     "transmission"
 )
 
@@ -44,6 +45,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "qbittorrent",
             "qbittorrent",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "tixati",
+            "Tixati",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "tixati",
+            "tixati",
             product_id
         )
 

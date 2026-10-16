@@ -2,22 +2,29 @@
 
 [Open query](detect-crypto-mining-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **4 products / 4 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 5 labels**.
 
 ## Products and matching labels
 
-| Product candidate | Product ID | Exact labels, ignoring case |
-|---|---|---|
-| Bitcoin Core | `bitcoin-core` | `bitcoin core` |
-| Electrum | `electrum` | `electrum` |
-| NiceHash Miner | `nicehash-miner` | `nicehash miner` |
-| XMRig | `xmrig` | `xmrig` |
+| Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
+|---|---|---|---|
+| Bitcoin Core | `bitcoin-core` | `bitcoin core` | [Inherited candidate](https://bitcoincore.org/) |
+| Electrum | `electrum` | `electrum` | [Inherited candidate](https://electrum.org/) |
+| Monero GUI Wallet | `monero-gui-wallet` | `monero gui wallet` | [Product-name candidate](https://www.getmonero.org/downloads/) |
+| NiceHash Miner | `nicehash-miner` | `nicehash miner` | [Inherited candidate](https://www.nicehash.com/mining) |
+| XMRig | `xmrig` | `xmrig` | [Inherited candidate](https://xmrig.com/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
+
+Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Wallets and resource-intensive mining; review business purpose, custody, resource allocation and policy.
+
+Added a Monero wallet candidate and clarified wallet versus miner roles. Neither a wallet nor generic crypto-related software proves resource mining. Portable, browser and container miners can bypass installed-app inventory.
+
+- **Monero GUI Wallet**: A wallet is not a miner. No mining activity, transaction or custody claim follows from this label.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

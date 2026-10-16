@@ -5,6 +5,7 @@ config case_sensitive = false timeframe = 30d
 | alter application_name_normalized = lowercase(application_name)
 | filter application_name_normalized in (
     "autohotkey",
+    "autoit",
     "node.js",
     "powershell",
     "powershell 7",
@@ -23,6 +24,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "autohotkey",
             "autohotkey",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "autoit",
+            "AutoIt",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "autoit",
+            "autoit",
             product_id
         )
 
