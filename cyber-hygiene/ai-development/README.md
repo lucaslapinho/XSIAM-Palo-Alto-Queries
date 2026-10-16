@@ -2,7 +2,7 @@
 
 [Open query](detect-ai-development-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **12 product/family candidates / 16 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **14 product/family candidates / 19 labels**.
 
 Related coverage: [general-purpose AI assistants](../ai-tools/README.md).
 
@@ -12,6 +12,7 @@ Related coverage: [general-purpose AI assistants](../ai-tools/README.md).
 |---|---|---|---|
 | Aider | `aider` | `aider` | [Inherited candidate](https://aider.chat/) |
 | Claude Code | `claude-code` | `claude code` | [Inherited candidate](https://code.claude.com/docs/en/overview) |
+| Codex Monitor (third-party) | `codex-monitor` | `codex monitor` | [Upstream packaging name](https://github.com/Dimillian/CodexMonitor/blob/dd61b9abd37de5ded86e82b9fe8a83fd49d46fa5/src-tauri/tauri.conf.json) |
 | Continue | `continue` | `continue` | [Inherited candidate](https://www.continue.dev/) |
 | Cursor | `cursor` | `cursor` | [Inherited candidate](https://cursor.com/) |
 | Google Antigravity | `google-antigravity` | `antigravity`; `google antigravity` | [Product-name candidate](https://antigravity.google/download) |
@@ -19,19 +20,22 @@ Related coverage: [general-purpose AI assistants](../ai-tools/README.md).
 | OpenAI Codex CLI | `openai-codex-cli` | `@openai/codex`; `codex cli` | [Package/CLI candidate](https://github.com/openai/codex) |
 | OpenCode family | `opencode` | `opencode`; `opencode desktop` | [Product-name candidate](https://opencode.ai/download) |
 | Qoder | `qoder` | `qoder` | [Product-name candidate](https://qoder.com/download) |
+| T3 Code desktop family | `t3-code` | `t3 code`; `t3 code (nightly)` | [Upstream packaging name](https://github.com/pingdotgg/t3code/blob/cfafb4bb54d244e4612f5681aad3832ea64cb0fb/scripts/build-desktop-artifact.ts) |
 | TRAE | `trae` | `trae` | [Product-name candidate](https://www.trae.ai/download) |
 | Windsurf / Devin Desktop family | `windsurf-devin-desktop` | `devin desktop`; `windsurf` | [Documented rename candidate](https://devin.ai/download) |
 | Zed | `zed` | `zed` | [Product-name candidate](https://zed.dev/download) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
 
-Evidence labels distinguish product-name candidates, package/CLI identifiers, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
+Evidence labels distinguish product-name candidates, package/CLI identifiers, vendor-installed-app labels, documented renames, upstream packaging names, community manifest declarations and inherited entries. A configured packaging name is not an observed installed label; a community manifest is not a vendor assertion. Every enabled name remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 AI-assisted engineering; review repository access, generated changes, agent privileges and data handling.
 
 Expanded standalone agent/editor clients plus a separately identified Codex CLI/package candidate. IDE extensions such as GitHub Copilot, Cline or Amazon Q are not inferred from the host editor. Zed can be used without AI; CLI/portable installations may produce no inventory row. Product installation is not repository access, prompt transmission or agent execution.
+
+Source-backed follow-up adds T3 Code desktop/nightly configured names and the separate third-party Codex Monitor packaging name. These are not provider CLIs, OpenAI desktop coverage, agent execution or source-code transfer evidence. GPTScript, TabbyML and the newly listed GitHub Copilot desktop environment remain deferred pending inventory-specific identity work.
 
 - **Windsurf / Devin Desktop family**: The current download page explicitly describes the Windsurf-to-Devin Desktop rename. Neither label is a tenant observation; do not match generic Devin or IDE plugins.
 - **Kiro**: IDE product-name candidate. Installation does not prove a coding agent ran, credentials were used or source code was uploaded.
@@ -41,6 +45,8 @@ Expanded standalone agent/editor clients plus a separately identified Codex CLI/
 - **OpenCode family**: The vendor offers Desktop and CLI channels. A matched product label does not identify the channel; portable CLI copies can be absent.
 - **OpenAI Codex CLI**: The first-party README documents Codex CLI and the @openai/codex npm package. A package identifier is not an application display name, and npm or standalone installs may produce no preset row. No separate Codex desktop-app coverage is claimed.
 - **Zed**: AI-capable editor candidate. An installation can be used without AI; do not infer an enabled assistant or executed agent.
+- **T3 Code desktop family**: Pinned first-party packaging selects the T3 Code fallback name and T3 Code (Nightly) branch; these are configured names, not runtime observations. The older Scoop beta shortcut was not promoted as an installed label. Installed child/provider CLIs and actual agent activity are separate; no generic T3, Codex or Copilot label is enabled. [Additional reference](https://github.com/microsoft/winget-pkgs/blob/7e1c45b2bf03d0c8ef7547a92822d1ef7c9def44/manifests/t/T3Tools/T3Code/0.0.45/T3Tools.T3Code.installer.yaml).
+- **Codex Monitor (third-party)**: Pinned upstream Tauri configuration explicitly sets productName Codex Monitor and identifier com.dimillian.codexmonitor. This is a third-party project, not OpenAI Codex CLI or a first-party OpenAI app. Build configuration does not prove an installer or inventory entry; bare Codex and daemon/executable names are not enabled as application labels. [Additional reference](https://github.com/Dimillian/CodexMonitor/blob/dd61b9abd37de5ded86e82b9fe8a83fd49d46fa5/README.md).
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

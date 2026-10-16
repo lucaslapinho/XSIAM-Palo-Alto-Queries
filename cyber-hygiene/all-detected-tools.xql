@@ -23,6 +23,7 @@ config case_sensitive = false timeframe = 30d
     "avg antivirus free",
     "avira security",
     "backyard ai",
+    "basilisk",
     "battle.net",
     "bitcoin core",
     "bitdefender antivirus plus",
@@ -42,6 +43,7 @@ config case_sensitive = false timeframe = 30d
     "burp suite professional",
     "camtasia",
     "ccleaner",
+    "chatall",
     "chatbox",
     "chatbox ai",
     "chatgpt",
@@ -56,6 +58,7 @@ config case_sensitive = false timeframe = 30d
     "cloudflare warp",
     "cloudflare-warp",
     "codex cli",
+    "codex monitor",
     "comet",
     "comfy desktop",
     "comfyui",
@@ -109,6 +112,7 @@ config case_sensitive = false timeframe = 30d
     "github desktop",
     "globalprotect",
     "gog galaxy",
+    "goodsync",
     "google antigravity",
     "google chrome",
     "google drive",
@@ -118,6 +122,7 @@ config case_sensitive = false timeframe = 30d
     "hashcat",
     "heidisql",
     "heroic games launcher",
+    "hoptodesk",
     "i2p",
     "insomnia",
     "instagram",
@@ -139,6 +144,7 @@ config case_sensitive = false timeframe = 30d
     "librewolf",
     "llama.cpp",
     "lm studio",
+    "localsend",
     "logmein resolve",
     "logseq",
     "loom",
@@ -167,8 +173,10 @@ config case_sensitive = false timeframe = 30d
     "mobaxterm personal edition",
     "mobaxterm professional edition",
     "monero gui wallet",
+    "moonlight",
     "mountain duck",
     "mozilla firefox",
+    "mremoteng",
     "msty studio",
     "mullvad browser",
     "mysql workbench",
@@ -186,6 +194,7 @@ config case_sensitive = false timeframe = 30d
     "obs studio",
     "obsidian",
     "ollama",
+    "onionshare",
     "opencode",
     "opencode desktop",
     "openssh",
@@ -198,6 +207,7 @@ config case_sensitive = false timeframe = 30d
     "oracle virtualbox",
     "oracle vm virtualbox",
     "orbstack",
+    "pale moon",
     "panda dome",
     "panda dome free",
     "parallels desktop",
@@ -234,6 +244,8 @@ config case_sensitive = false timeframe = 30d
     "reddit",
     "remote utilities host",
     "remote utilities viewer",
+    "resilio sync",
+    "resilio sync service",
     "revo uninstaller",
     "revo uninstaller pro",
     "riot client",
@@ -258,9 +270,12 @@ config case_sensitive = false timeframe = 30d
     "stability matrix",
     "steam",
     "sublime text",
+    "sunshine",
     "symantec endpoint protection",
     "syncthing",
     "sysinternals suite",
+    "t3 code",
+    "t3 code (nightly)",
     "tailscale",
     "teamviewer",
     "teamviewer host",
@@ -268,6 +283,7 @@ config case_sensitive = false timeframe = 30d
     "techsmith snagit",
     "telegram desktop",
     "termius",
+    "thorium (portable)",
     "tightvnc",
     "tiktok",
     "tixati",
@@ -279,11 +295,14 @@ config case_sensitive = false timeframe = 30d
     "ubisoft connect",
     "ultravnc",
     "veracrypt",
+    "veyon",
     "visual studio code",
     "vivaldi",
     "vmware fusion",
     "vmware workstation",
     "vmware workstation pro",
+    "vscodium",
+    "vscodium (user)",
     "waterfox",
     "windows admin center",
     "windsurf",
@@ -560,6 +579,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "basilisk",
+            "Basilisk",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "basilisk",
+            "basilisk-browser",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "basilisk",
+            "Browsers",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("battle.net", "blizzard battle.net"),
             "Battle.net",
             detected_product
@@ -784,6 +819,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "chatall",
+            "ChatALL",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "chatall",
+            "chatall",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "chatall",
+            "Artificial Intelligence Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("chatbox", "chatbox ai"),
             "Chatbox AI",
             detected_product
@@ -940,6 +991,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized in ("cloudflare warp", "cloudflare-warp"),
             "VPN / Tunneling / Proxy",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "codex monitor",
+            "Codex Monitor (third-party)",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "codex monitor",
+            "codex-monitor",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "codex monitor",
+            "AI Development Tools",
             tool_family
         )
 
@@ -1600,6 +1667,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "goodsync",
+            "GoodSync",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "goodsync",
+            "goodsync",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "goodsync",
+            "File Transfer Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("antigravity", "google antigravity"),
             "Google Antigravity",
             detected_product
@@ -1708,6 +1791,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "heroic games launcher",
             "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "hoptodesk",
+            "HopToDesk",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "hoptodesk",
+            "hoptodesk",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "hoptodesk",
+            "Remote Access / Remote Administration",
             tool_family
         )
 
@@ -1980,6 +2079,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "lm studio",
             "Local AI / LLM Runtimes",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "localsend",
+            "LocalSend",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "localsend",
+            "localsend",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "localsend",
+            "File Transfer Tools",
             tool_family
         )
 
@@ -2320,6 +2435,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "moonlight",
+            "Moonlight streaming client",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "moonlight",
+            "moonlight-streaming",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "moonlight",
+            "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "mountain duck",
             "Mountain Duck",
             detected_product
@@ -2348,6 +2479,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized in ("firefox", "mozilla firefox"),
             "Browsers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "mremoteng",
+            "mRemoteNG",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "mremoteng",
+            "mremoteng",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "mremoteng",
+            "Remote Access / Remote Administration",
             tool_family
         )
 
@@ -2576,6 +2723,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "onionshare",
+            "OnionShare",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "onionshare",
+            "onionshare",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "onionshare",
+            "File Transfer Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("@openai/codex", "codex cli"),
             "OpenAI Codex CLI",
             detected_product
@@ -2700,6 +2863,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "orbstack",
             "Containers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "pale moon",
+            "Pale Moon",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "pale moon",
+            "pale-moon",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "pale moon",
+            "Browsers",
             tool_family
         )
 
@@ -3152,6 +3331,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized in ("resilio sync", "resilio sync service"),
+            "Resilio Sync client / service family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("resilio sync", "resilio sync service"),
+            "resilio-sync",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("resilio sync", "resilio sync service"),
+            "File Transfer Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("revo uninstaller", "revo uninstaller pro"),
             "Revo Uninstaller",
             detected_product
@@ -3472,6 +3667,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "sunshine",
+            "Sunshine streaming host",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "sunshine",
+            "sunshine-streaming-host",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "sunshine",
+            "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "symantec endpoint protection",
             "Symantec Endpoint Protection",
             detected_product
@@ -3516,6 +3727,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "sysinternals suite",
             "System Administration Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("t3 code", "t3 code (nightly)"),
+            "T3 Code desktop family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("t3 code", "t3 code (nightly)"),
+            "t3-code",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("t3 code", "t3 code (nightly)"),
+            "AI Development Tools",
             tool_family
         )
 
@@ -3596,6 +3823,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "termius",
             "Remote Shell / SSH Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "thorium (portable)",
+            "Thorium browser",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "thorium (portable)",
+            "thorium-browser",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "thorium (portable)",
+            "Browsers",
             tool_family
         )
 
@@ -3776,6 +4019,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "veyon",
+            "Veyon",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "veyon",
+            "veyon",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "veyon",
+            "Remote Access / Remote Administration",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("microsoft visual studio code", "visual studio code"),
             "Visual Studio Code",
             detected_product
@@ -3836,6 +4095,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized in ("vmware workstation", "vmware workstation pro"),
             "Virtualization",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("vscodium", "vscodium (user)"),
+            "VSCodium",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("vscodium", "vscodium (user)"),
+            "vscodium",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("vscodium", "vscodium (user)"),
+            "Development Tools / IDEs",
             tool_family
         )
 

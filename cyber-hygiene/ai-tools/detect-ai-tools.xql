@@ -7,6 +7,7 @@ config case_sensitive = false timeframe = 30d
     "anythingllm",
     "anythingllm desktop",
     "boltai",
+    "chatall",
     "chatbox",
     "chatbox ai",
     "chatgpt",
@@ -44,6 +45,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "boltai",
             "boltai",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "chatall",
+            "ChatALL",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "chatall",
+            "chatall",
             product_id
         )
 

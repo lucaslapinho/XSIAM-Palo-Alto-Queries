@@ -2,7 +2,7 @@
 
 [Open query](detect-browsers-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **16 product/family candidates / 19 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **19 product/family candidates / 22 labels**.
 
 Related coverage: [Tor Browser and Mullvad Browser](../privacy-anonymization/README.md).
 
@@ -11,6 +11,7 @@ Related coverage: [Tor Browser and Mullvad Browser](../privacy-anonymization/REA
 | Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
 |---|---|---|---|
 | Arc browser | `arc-browser` | `arc` | [Product-name candidate](https://arc.net/download) |
+| Basilisk | `basilisk-browser` | `basilisk` | [Product-name candidate](https://www.basilisk-browser.org/download.shtml) |
 | Brave Browser | `brave-browser` | `brave`; `brave browser` | [Inherited candidate](https://brave.com/) |
 | Chromium | `chromium` | `chromium` | [Product-name candidate](https://www.chromium.org/getting-involved/download-chromium/) |
 | Comet browser | `comet-browser` | `comet` | [Product-name candidate](https://www.perplexity.ai/comet) |
@@ -22,20 +23,24 @@ Related coverage: [Tor Browser and Mullvad Browser](../privacy-anonymization/REA
 | Microsoft Edge | `microsoft-edge` | `microsoft edge` | [Inherited candidate](https://www.microsoft.com/en-us/edge) |
 | Mozilla Firefox | `mozilla-firefox` | `firefox`; `mozilla firefox` | [Inherited candidate](https://www.mozilla.org/firefox/) |
 | Opera browser family | `opera-browser` | `opera`; `opera gx` | [Product-name candidate](https://www.opera.com/download) |
+| Pale Moon | `pale-moon` | `pale moon` | [Product-name candidate](https://www.palemoon.org/download.shtml) |
 | Safari | `apple-safari` | `safari` | [Product-name candidate](https://support.apple.com/en-us/102665) |
+| Thorium browser | `thorium-browser` | `thorium (portable)` | [Community manifest app label](https://github.com/microsoft/winget-pkgs/blob/7e1c45b2bf03d0c8ef7547a92822d1ef7c9def44/manifests/a/Alex313031/Thorium/138.0.7204.303/Alex313031.Thorium.installer.yaml) |
 | Vivaldi | `vivaldi` | `vivaldi` | [Product-name candidate](https://vivaldi.com/) |
 | Waterfox | `waterfox` | `waterfox` | [Product-name candidate](https://www.waterfox.com/download/) |
 | Zen Browser | `zen-browser` | `zen browser` | [Product-name candidate](https://zen-browser.app/download/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
 
-Evidence labels distinguish product-name candidates, package/CLI identifiers, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
+Evidence labels distinguish product-name candidates, package/CLI identifiers, vendor-installed-app labels, documented renames, upstream packaging names, community manifest declarations and inherited entries. A configured packaging name is not an observed installed label; a community manifest is not a vendor assertion. Every enabled name remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Web access; review update ownership, extensions, profile management and enterprise configuration.
 
 Expanded browser families, including AI-capable browsers. Safari can be OS-bundled; Chromium and portable builds can lack app entries. Tor Browser and Mullvad Browser retain primary ownership in privacy-anonymization. Short labels such as Arc, Dia and Comet require identity corroboration; bare Zen is deliberately held. Installation does not establish AI use, profiles, extensions or visited sites.
+
+Source-backed follow-up adds Pale Moon and Basilisk product-name candidates plus only the manifest-declared Thorium (Portable) label. Bare Thorium and Thorium Reader are not aliases. ungoogled-chromium attribution from Chromium/chrome.exe and the stale Falkon recipe remain deferred; a download listing is not current security/support evidence.
 
 - **Vivaldi**: Profiles, extensions, managed enrollment and visited sites are outside application inventory.
 - **Opera browser family**: Related browser editions share one review family. No generic opera substring or guessed version/channel suffix is enabled.
@@ -49,6 +54,9 @@ Expanded browser families, including AI-capable browsers. Safari can be OS-bundl
 - **Dia browser**: AI-capable browser candidate. A short label can be shared by unrelated software and does not prove assistant use.
 - **Comet browser**: Browser product-name candidate, separate from the Perplexity desktop client. A short label does not authenticate identity or prove agent activity.
 - **Safari**: Apple documents Safari as part of the OS update path. Built-in/system-app coverage varies; zero rows cannot establish Safari is absent.
+- **Pale Moon**: First-party Windows distribution supports the product-name candidate; the sampled WinGet recipe does not declare a DisplayName. Chocolatey's Pale Moon* softwareName is a wildcard and was not copied into XQL. Version/architecture-suffixed names and portable builds remain gaps. [Additional reference](https://github.com/microsoft/winget-pkgs/blob/7e1c45b2bf03d0c8ef7547a92822d1ef7c9def44/manifests/m/MoonchildProductions/PaleMoon/35.0.2/MoonchildProductions.PaleMoon.installer.yaml).
+- **Basilisk**: First-party Windows distribution plus a pinned installer manifest support this browser candidate. No installed-label or current-security/support guarantee follows from a download page. Bare product-name collisions require independent publisher/package corroboration. [Additional reference](https://github.com/microsoft/winget-pkgs/blob/7e1c45b2bf03d0c8ef7547a92822d1ef7c9def44/manifests/b/Basilisk/Basilisk/52.9.2026.09.24/Basilisk.Basilisk.installer.yaml).
+- **Thorium browser**: Only the literal Thorium (Portable) entry declared for the WinGet ZIP/portable channel is enabled. It is not an observed Cortex row. Bare Thorium, Thorium Reader, chrome.exe and generic Chromium labels are not attributed to this family; other Thorium installation channels remain outside this exact label. [Additional reference](https://thorium.rocks/).
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

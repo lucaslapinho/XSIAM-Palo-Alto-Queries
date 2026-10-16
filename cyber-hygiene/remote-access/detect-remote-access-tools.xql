@@ -8,9 +8,11 @@ config case_sensitive = false timeframe = 30d
     "connectwise control",
     "dwagent",
     "goto resolve",
+    "hoptodesk",
     "logmein resolve",
     "meshagent",
     "meshcentral agent",
+    "mremoteng",
     "nomachine",
     "parsec",
     "realvnc connect",
@@ -27,6 +29,7 @@ config case_sensitive = false timeframe = 30d
     "teamviewer quicksupport",
     "tightvnc",
     "ultravnc",
+    "veyon",
     "zoho assist"
 )
 
@@ -57,6 +60,17 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "hoptodesk",
+            "HopToDesk",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "hoptodesk",
+            "hoptodesk",
+            product_id
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("goto resolve", "logmein resolve"),
             "LogMeIn Resolve / GoTo Resolve family",
             detected_product
@@ -75,6 +89,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized in ("meshagent", "meshcentral agent"),
             "meshcentral-agent",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "mremoteng",
+            "mRemoteNG",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "mremoteng",
+            "mremoteng",
             product_id
         )
 
@@ -185,6 +210,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "ultravnc",
             "ultravnc",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "veyon",
+            "Veyon",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "veyon",
+            "veyon",
             product_id
         )
 

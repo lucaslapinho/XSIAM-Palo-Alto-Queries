@@ -2,7 +2,7 @@
 
 [Open query](detect-ai-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **12 product/family candidates / 15 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **13 product/family candidates / 16 labels**.
 
 Related coverage: [AI development clients](../ai-development/README.md) and [local AI tools](../local-ai/README.md).
 
@@ -12,6 +12,7 @@ Related coverage: [AI development clients](../ai-development/README.md) and [loc
 |---|---|---|---|
 | AnythingLLM Desktop | `anythingllm` | `anythingllm`; `anythingllm desktop` | [Inherited candidate](https://anythingllm.com/) |
 | BoltAI | `boltai` | `boltai` | [Product-name candidate](https://boltai.com/) |
+| ChatALL | `chatall` | `chatall` | [Upstream packaging name](https://github.com/sunner/ChatALL/blob/6d089c2ab72dde2ba1010cc1e910ceb766458546/vue.config.js) |
 | Chatbox AI | `chatbox` | `chatbox`; `chatbox ai` | [Product-name candidate](https://chatboxai.app/en) |
 | ChatGPT desktop app | `chatgpt-desktop` | `chatgpt` | [Inherited candidate](https://chatgpt.com/download/) |
 | ChatWise | `chatwise` | `chatwise` | [Product-name candidate](https://chatwise.app/) |
@@ -25,7 +26,7 @@ Related coverage: [AI development clients](../ai-development/README.md) and [loc
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
 
-Evidence labels distinguish product-name candidates, package/CLI identifiers, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
+Evidence labels distinguish product-name candidates, package/CLI identifiers, vendor-installed-app labels, documented renames, upstream packaging names, community manifest declarations and inherited entries. A configured packaging name is not an observed installed label; a community manifest is not a vendor assertion. Every enabled name remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
@@ -33,7 +34,9 @@ AI assistance; review account tenancy, submitted data, retention and approved co
 
 Expanded native multi-provider assistants and the now-substantiated Perplexity desktop candidate. Microsoft documents a Copilot productivity-app rename; that app does not prove a paid AI entitlement. Cloud chat services, browser/PWA use, local clients and model providers are different surfaces; no generic Copilot or AI keyword match is enabled.
 
-- **Microsoft Copilot app family**: Microsoft documents the Microsoft 365 Copilot app rename. This can identify a productivity shell, not a paid Copilot entitlement or AI use. Bare Copilot is excluded to avoid mixing unrelated assistants. [Additional primary source](https://support.microsoft.com/en-us/microsoft-365-copilot/access-microsoft-365-copilot-on-windows).
+Source-backed follow-up adds ChatALL using its pinned upstream Electron productName/Windows packaging. Browser integrations and provider functionality are not validated. LibreChat and other self-hosted web/container services remain outside this application-only expansion.
+
+- **Microsoft Copilot app family**: Microsoft documents the Microsoft 365 Copilot app rename. This can identify a productivity shell, not a paid Copilot entitlement or AI use. Bare Copilot is excluded to avoid mixing unrelated assistants. [Additional reference](https://support.microsoft.com/en-us/microsoft-365-copilot/access-microsoft-365-copilot-on-windows).
 - **Poe desktop**: The official download page lists desktop distribution. A short brand label needs independent publisher/package corroboration.
 - **Cherry Studio**: Desktop client candidate; model providers, connectors and submitted content are outside inventory evidence.
 - **Chatbox AI**: Two product-name forms are candidates. Generic third-party clients can share labels; verify package/publisher identity.
@@ -41,6 +44,7 @@ Expanded native multi-provider assistants and the now-substantiated Perplexity d
 - **MindMac**: macOS client candidate; a product label does not establish API key ownership, account tenancy or prompt transmission.
 - **BoltAI**: Native Mac client candidate; do not infer connector permissions, inference location or AI activity.
 - **Perplexity desktop**: The official April 2026 changelog substantiates a Mac desktop app. The string remains an inventory candidate, not proof of native versus PWA packaging or feature availability. Comet has a separate browser record.
+- **ChatALL**: Pinned first-party Electron packaging explicitly configures productName ChatALL and Windows NSIS builds. It is a configured packaging name, not an observed uninstall/Cortex label. Provider integrations and current service compatibility are not validated; installation does not prove prompt transmission or account usage. [Additional reference](https://github.com/sunner/ChatALL/blob/6d089c2ab72dde2ba1010cc1e910ceb766458546/README.md).
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

@@ -12,11 +12,13 @@ config case_sensitive = false timeframe = 30d
     "heroic games launcher",
     "itch",
     "lutris",
+    "moonlight",
     "playnite",
     "prism launcher",
     "riot client",
     "rockstar games launcher",
     "steam",
+    "sunshine",
     "ubisoft connect"
 )
 
@@ -102,6 +104,17 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "moonlight",
+            "Moonlight streaming client",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "moonlight",
+            "moonlight-streaming",
+            product_id
+        )
+
+| alter detected_product = if(
             application_name_normalized = "playnite",
             "Playnite",
             detected_product
@@ -153,6 +166,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "steam",
             "steam",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "sunshine",
+            "Sunshine streaming host",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "sunshine",
+            "sunshine-streaming-host",
             product_id
         )
 

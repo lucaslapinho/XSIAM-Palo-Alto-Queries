@@ -5,6 +5,7 @@ config case_sensitive = false timeframe = 30d
 | alter application_name_normalized = lowercase(application_name)
 | filter application_name_normalized in (
     "arc",
+    "basilisk",
     "brave",
     "brave browser",
     "chromium",
@@ -19,7 +20,9 @@ config case_sensitive = false timeframe = 30d
     "mozilla firefox",
     "opera",
     "opera gx",
+    "pale moon",
     "safari",
+    "thorium (portable)",
     "vivaldi",
     "waterfox",
     "zen browser"
@@ -37,6 +40,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "arc",
             "arc-browser",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "basilisk",
+            "Basilisk",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "basilisk",
+            "basilisk-browser",
             product_id
         )
 
@@ -162,6 +176,17 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "pale moon",
+            "Pale Moon",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "pale moon",
+            "pale-moon",
+            product_id
+        )
+
+| alter detected_product = if(
             application_name_normalized = "safari",
             "Safari",
             detected_product
@@ -169,6 +194,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "safari",
             "apple-safari",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "thorium (portable)",
+            "Thorium browser",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "thorium (portable)",
+            "thorium-browser",
             product_id
         )
 

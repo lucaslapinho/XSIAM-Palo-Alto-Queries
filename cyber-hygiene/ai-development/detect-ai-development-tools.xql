@@ -9,6 +9,7 @@ config case_sensitive = false timeframe = 30d
     "antigravity",
     "claude code",
     "codex cli",
+    "codex monitor",
     "continue",
     "cursor",
     "devin desktop",
@@ -17,6 +18,8 @@ config case_sensitive = false timeframe = 30d
     "opencode",
     "opencode desktop",
     "qoder",
+    "t3 code",
+    "t3 code (nightly)",
     "trae",
     "windsurf",
     "zed"
@@ -45,6 +48,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "claude code",
             "claude-code",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "codex monitor",
+            "Codex Monitor (third-party)",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "codex monitor",
+            "codex-monitor",
             product_id
         )
 
@@ -122,6 +136,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "qoder",
             "qoder",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("t3 code", "t3 code (nightly)"),
+            "T3 Code desktop family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("t3 code", "t3 code (nightly)"),
+            "t3-code",
             product_id
         )
 

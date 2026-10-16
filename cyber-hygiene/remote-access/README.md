@@ -2,7 +2,7 @@
 
 [Open query](detect-remote-access-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **15 product/family candidates / 24 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **18 product/family candidates / 27 labels**.
 
 Related coverage: [remote shell / SSH clients](../remote-shell-ssh/README.md).
 
@@ -12,8 +12,10 @@ Related coverage: [remote shell / SSH clients](../remote-shell-ssh/README.md).
 |---|---|---|---|
 | AnyDesk | `anydesk` | `anydesk` | [Inherited candidate](https://anydesk.com/) |
 | DWAgent | `dwagent` | `dwagent` | [Product-name candidate](https://docs.dwservice.net/docs/site/basic-definitions/install-the-agent/) |
+| HopToDesk | `hoptodesk` | `hoptodesk` | [Community manifest app label](https://github.com/microsoft/winget-pkgs/blob/7e1c45b2bf03d0c8ef7547a92822d1ef7c9def44/manifests/h/HopToDesk/HopToDesk/1.46.55/HopToDesk.HopToDesk.installer.yaml) |
 | LogMeIn Resolve / GoTo Resolve family | `logmein-resolve` | `goto resolve`; `logmein resolve` | [Documented rename candidate](https://www.logmein.com/products/resolve) |
 | MeshCentral Agent family | `meshcentral-agent` | `meshagent`; `meshcentral agent` | [Product-name candidate](https://github.com/Ylianst/MeshAgent) |
+| mRemoteNG | `mremoteng` | `mremoteng` | [Product-name candidate](https://github.com/mRemoteNG/mRemoteNG/blob/7a6dda4b1ede0120039a09d1b1c8bd0c00a9baab/README.md) |
 | NoMachine | `nomachine` | `nomachine` | [Product-name candidate](https://download.nomachine.com/) |
 | Parsec | `parsec` | `parsec` | [Product-name candidate](https://parsec.app/downloads) |
 | RealVNC Connect | `realvnc-connect` | `realvnc connect`; `realvnc server`; `realvnc viewer` | [Inherited candidate](https://www.realvnc.com/en/connect/) |
@@ -24,17 +26,20 @@ Related coverage: [remote shell / SSH clients](../remote-shell-ssh/README.md).
 | TeamViewer Remote | `teamviewer` | `teamviewer`; `teamviewer host`; `teamviewer quicksupport` | [Inherited candidate](https://www.teamviewer.com/en/products/remote/) |
 | TightVNC | `tightvnc` | `tightvnc` | [Product-name candidate](https://www.tightvnc.com/download/) |
 | UltraVNC | `ultravnc` | `ultravnc` | [Product-name candidate](https://uvnc.com/) |
+| Veyon | `veyon` | `veyon` | [Product-name candidate](https://docs.veyon.io/en/latest/admin/installation.html) |
 | Zoho Assist | `zoho-assist` | `zoho assist` | [Product-name candidate](https://www.zoho.com/assist/unattended-remote-access.html) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
 
-Evidence labels distinguish product-name candidates, package/CLI identifiers, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
+Evidence labels distinguish product-name candidates, package/CLI identifiers, vendor-installed-app labels, documented renames, upstream packaging names, community manifest declarations and inherited entries. A configured packaging name is not an observed installed label; a community manifest is not a vendor assertion. Every enabled name remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Support and administration; review access ownership, unattended access, authentication and session logging.
 
 Expanded VNC families, support agents, remote desktops and endpoint-management families. Host, Viewer, server and run-only modes have distinct semantics; the name match does not establish an active listener or session. Custom MeshCentral/ScreenConnect branding, transient agents and operator web clients remain gaps. No generic remote, agent, host, viewer or VNC substring is enabled.
+
+Source-backed follow-up adds manifest-declared HopToDesk, first-party mRemoteNG desktop distribution and Veyon classroom-management candidates. Viewer, host, unattended service, support session and classroom roles remain distinct. Discovery-only gateways/RMM metadata and the Tabby basename collision are not promoted.
 
 - **Splashtop Streamer**: Streamer and operator-side Business App are distinct components. Do not infer an active remote session.
 - **NoMachine**: Remote desktop family candidate; client/server role, service state and active sessions remain unknown.
@@ -46,6 +51,9 @@ Expanded VNC families, support agents, remote desktops and endpoint-management f
 - **Zoho Assist**: Support/unattended-access family candidate. Technician web use, custom agent packages and run-only sessions may be absent.
 - **LogMeIn Resolve / GoTo Resolve family**: The vendor explicitly links the old and new names. Endpoint-management presence does not prove every optional remote-access capability is enabled.
 - **Remote Utilities Host / Viewer family**: Vendor docs distinguish Host, Viewer and run-only Agent. Whole product-name candidates do not establish their installed display strings; generic Host/Viewer/Agent labels are excluded.
+- **HopToDesk**: Pinned WinGet AppsAndFeaturesEntries explicitly declares HopToDesk and its publisher for version 1.46.55. This is a community manifest assertion, not a vendor or Cortex observation. Portable copies can leave no application entry; no unattended service, connection or approval is inferred. [Additional reference](https://www.hoptodesk.com/).
+- **mRemoteNG**: The first-party project and a pinned MSI distribution support this desktop connection-manager candidate. No AppsAndFeatures DisplayName was declared in the sampled manifest. Connection-manager presence does not establish an installed server, listener or remote session. [Additional reference](https://github.com/microsoft/winget-pkgs/blob/7e1c45b2bf03d0c8ef7547a92822d1ef7c9def44/manifests/m/mRemoteNG/mRemoteNG/1.76.20.24615/mRemoteNG.mRemoteNG.installer.yaml).
+- **Veyon**: First-party installation guidance describes the computer-monitoring/classroom-management package. The whole product name is a candidate, not a captured uninstall label. Component selection, service state, teacher/student role and authorized classroom scope remain separate questions.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

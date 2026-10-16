@@ -13,7 +13,9 @@ config case_sensitive = false timeframe = 30d
     "pycharm community edition",
     "pycharm professional edition",
     "sublime text",
-    "visual studio code"
+    "visual studio code",
+    "vscodium",
+    "vscodium (user)"
 )
 
 | alter detected_product = "UNMAPPED",
@@ -72,6 +74,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized in ("microsoft visual studio code", "visual studio code"),
             "visual-studio-code",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("vscodium", "vscodium (user)"),
+            "VSCodium",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("vscodium", "vscodium (user)"),
+            "vscodium",
             product_id
         )
 

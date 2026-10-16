@@ -1,6 +1,6 @@
 # Cyber Hygiene XQL Queries
 
-Community queries for reviewing software reported by Cortex application inventory: **30 category queries, one consolidated query, 233 product/family candidates and 293 exact labels**.
+Community queries for reviewing software reported by Cortex application inventory: **30 category queries, one consolidated query, 249 product/family candidates and 312 exact labels**.
 
 Start with a category below. Use [all-detected-tools.xql](all-detected-tools.xql) for a combined view; its [guide](all-detected-tools.md) explains the larger query. Every query is self-contained and read-only.
 
@@ -10,20 +10,20 @@ Read the [coverage review](coverage.md) for the category-by-category research, s
 
 | Category | Products | Query |
 |---|---:|---|
-| [AI Development Tools](ai-development/README.md) | 12 | [XQL](ai-development/detect-ai-development-tools.xql) |
+| [AI Development Tools](ai-development/README.md) | 14 | [XQL](ai-development/detect-ai-development-tools.xql) |
 | [Antivirus](antivirus/README.md) | 15 | [XQL](antivirus/detect-antivirus-tools.xql) |
-| [Artificial Intelligence Tools](ai-tools/README.md) | 12 | [XQL](ai-tools/detect-ai-tools.xql) |
-| [Browsers](browsers/README.md) | 16 | [XQL](browsers/detect-browsers-tools.xql) |
+| [Artificial Intelligence Tools](ai-tools/README.md) | 13 | [XQL](ai-tools/detect-ai-tools.xql) |
+| [Browsers](browsers/README.md) | 19 | [XQL](browsers/detect-browsers-tools.xql) |
 | [Cloud Storage / File Synchronization](cloud-storage/README.md) | 5 | [XQL](cloud-storage/detect-cloud-storage-tools.xql) |
 | [Communication / Messaging](messaging/README.md) | 6 | [XQL](messaging/detect-messaging-tools.xql) |
 | [Containers](containers/README.md) | 5 | [XQL](containers/detect-containers-tools.xql) |
 | [Crypto / Mining Tools](crypto-mining/README.md) | 5 | [XQL](crypto-mining/detect-crypto-mining-tools.xql) |
 | [Database Clients](database-clients/README.md) | 5 | [XQL](database-clients/detect-database-clients-tools.xql) |
 | [Developer Utilities](developer-utilities/README.md) | 5 | [XQL](developer-utilities/detect-developer-utilities-tools.xql) |
-| [Development Tools / IDEs](development-ides/README.md) | 5 | [XQL](development-ides/detect-development-ides-tools.xql) |
+| [Development Tools / IDEs](development-ides/README.md) | 6 | [XQL](development-ides/detect-development-ides-tools.xql) |
 | [EDR / Endpoint Security](endpoint-security/README.md) | 8 | [XQL](endpoint-security/detect-endpoint-security-tools.xql) |
-| [File Transfer Tools](file-transfer/README.md) | 13 | [XQL](file-transfer/detect-file-transfer-tools.xql) |
-| [Gaming Platforms](gaming/README.md) | 13 | [XQL](gaming/detect-gaming-tools.xql) |
+| [File Transfer Tools](file-transfer/README.md) | 17 | [XQL](file-transfer/detect-file-transfer-tools.xql) |
+| [Gaming Platforms](gaming/README.md) | 15 | [XQL](gaming/detect-gaming-tools.xql) |
 | [Local AI / LLM Runtimes](local-ai/README.md) | 13 | [XQL](local-ai/detect-local-ai-tools.xql) |
 | [Network Utilities](network-utilities/README.md) | 5 | [XQL](network-utilities/detect-network-utilities-tools.xql) |
 | [Other Corporate-Risk / Shadow-IT Applications](other-shadow-it/README.md) | 5 | [XQL](other-shadow-it/detect-other-shadow-it-tools.xql) |
@@ -32,7 +32,7 @@ Read the [coverage review](coverage.md) for the category-by-category research, s
 | [Penetration Testing / Dual-Use Security Tools](penetration-testing/README.md) | 13 | [XQL](penetration-testing/detect-penetration-testing-tools.xql) |
 | [Personal Collaboration Tools](personal-collaboration/README.md) | 5 | [XQL](personal-collaboration/detect-personal-collaboration-tools.xql) |
 | [Privacy / Anonymization Tools](privacy-anonymization/README.md) | 5 | [XQL](privacy-anonymization/detect-privacy-anonymization-tools.xql) |
-| [Remote Access / Remote Administration](remote-access/README.md) | 15 | [XQL](remote-access/detect-remote-access-tools.xql) |
+| [Remote Access / Remote Administration](remote-access/README.md) | 18 | [XQL](remote-access/detect-remote-access-tools.xql) |
 | [Remote Shell / SSH Tools](remote-shell-ssh/README.md) | 5 | [XQL](remote-shell-ssh/detect-remote-shell-ssh-tools.xql) |
 | [Screen Recording / Capture](screen-capture/README.md) | 5 | [XQL](screen-capture/detect-screen-capture-tools.xql) |
 | [Scripting / Automation Tools](scripting-automation/README.md) | 5 | [XQL](scripting-automation/detect-scripting-automation-tools.xql) |
@@ -87,7 +87,7 @@ Category membership is review context, not a risk score or policy verdict. These
 
 ## Maintenance and review
 
-Use lowercase whole labels, one entry per line in the admission list, a stable product ID and a single primary category. Add a name only after checking sanitized inventory evidence. Update the category and master together, then check positive, mixed-case, near-match and null cases. Keep descriptive notes in the adjacent English guide.
+Use lowercase whole labels, one entry per line in the admission list, a stable product ID and a single primary category. Research candidates require a cited identity/distribution or literal packaging/manifest source and an explicit evidence label. Before claiming tenant-validated coverage, capture sanitized inventory rows and corroborated product identity. Never derive an application label automatically from a package ID or executable basename. Update the category and master together, then check positive, mixed-case, near-match and null cases. Keep descriptive notes in the adjacent English guide.
 
 The initial October 16 cleanup removed YAML metadata and the auxiliary project structure and standardized seven output columns. This coverage round retains those columns, the original 160 labels, 30-day window, 1,000-row cap and duplicate-row behavior while adding documented candidate families. The existing `git-for-windows` ID now displays **Git family** because a bare Git label cannot establish Windows packaging. See [coverage changes](coverage.md#changes-and-validation). No tenant equivalence or speedup is claimed.
 

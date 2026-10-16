@@ -13,8 +13,13 @@ config case_sensitive = false timeframe = 30d
     "filezilla server",
     "forklift",
     "freefilesync",
+    "goodsync",
+    "localsend",
     "mountain duck",
+    "onionshare",
     "rclone",
+    "resilio sync",
+    "resilio sync service",
     "securefx",
     "smartftp",
     "transmit",
@@ -103,6 +108,28 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "goodsync",
+            "GoodSync",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "goodsync",
+            "goodsync",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "localsend",
+            "LocalSend",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "localsend",
+            "localsend",
+            product_id
+        )
+
+| alter detected_product = if(
             application_name_normalized = "mountain duck",
             "Mountain Duck",
             detected_product
@@ -114,6 +141,17 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "onionshare",
+            "OnionShare",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "onionshare",
+            "onionshare",
+            product_id
+        )
+
+| alter detected_product = if(
             application_name_normalized = "rclone",
             "rclone",
             detected_product
@@ -121,6 +159,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "rclone",
             "rclone",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("resilio sync", "resilio sync service"),
+            "Resilio Sync client / service family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("resilio sync", "resilio sync service"),
+            "resilio-sync",
             product_id
         )
 
