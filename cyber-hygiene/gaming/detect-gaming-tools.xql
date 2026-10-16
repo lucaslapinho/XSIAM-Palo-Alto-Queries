@@ -9,6 +9,13 @@ config case_sensitive = false timeframe = 30d
     "ea app",
     "epic games launcher",
     "gog galaxy",
+    "heroic games launcher",
+    "itch",
+    "lutris",
+    "playnite",
+    "prism launcher",
+    "riot client",
+    "rockstar games launcher",
     "steam",
     "ubisoft connect"
 )
@@ -58,6 +65,83 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "gog galaxy",
             "gog-galaxy",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "heroic games launcher",
+            "Heroic Games Launcher",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "heroic games launcher",
+            "heroic-games-launcher",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "itch",
+            "itch desktop app",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "itch",
+            "itch-desktop",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "lutris",
+            "Lutris",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "lutris",
+            "lutris",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "playnite",
+            "Playnite",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "playnite",
+            "playnite",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "prism launcher",
+            "Prism Launcher",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "prism launcher",
+            "prism-launcher",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "riot client",
+            "Riot Client",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "riot client",
+            "riot-client",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "rockstar games launcher",
+            "Rockstar Games Launcher",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "rockstar games launcher",
+            "rockstar-games-launcher",
             product_id
         )
 

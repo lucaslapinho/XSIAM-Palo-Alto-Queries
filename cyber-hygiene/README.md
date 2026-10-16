@@ -1,6 +1,6 @@
 # Cyber Hygiene XQL Queries
 
-Community queries for reviewing software reported by Cortex application inventory: **30 category queries, one consolidated query, 167 product/family candidates and 212 exact labels**.
+Community queries for reviewing software reported by Cortex application inventory: **30 category queries, one consolidated query, 233 product/family candidates and 293 exact labels**.
 
 Start with a category below. Use [all-detected-tools.xql](all-detected-tools.xql) for a combined view; its [guide](all-detected-tools.md) explains the larger query. Every query is self-contained and read-only.
 
@@ -10,10 +10,10 @@ Read the [coverage review](coverage.md) for the category-by-category research, s
 
 | Category | Products | Query |
 |---|---:|---|
-| [AI Development Tools](ai-development/README.md) | 5 | [XQL](ai-development/detect-ai-development-tools.xql) |
+| [AI Development Tools](ai-development/README.md) | 12 | [XQL](ai-development/detect-ai-development-tools.xql) |
 | [Antivirus](antivirus/README.md) | 15 | [XQL](antivirus/detect-antivirus-tools.xql) |
-| [Artificial Intelligence Tools](ai-tools/README.md) | 4 | [XQL](ai-tools/detect-ai-tools.xql) |
-| [Browsers](browsers/README.md) | 5 | [XQL](browsers/detect-browsers-tools.xql) |
+| [Artificial Intelligence Tools](ai-tools/README.md) | 12 | [XQL](ai-tools/detect-ai-tools.xql) |
+| [Browsers](browsers/README.md) | 16 | [XQL](browsers/detect-browsers-tools.xql) |
 | [Cloud Storage / File Synchronization](cloud-storage/README.md) | 5 | [XQL](cloud-storage/detect-cloud-storage-tools.xql) |
 | [Communication / Messaging](messaging/README.md) | 6 | [XQL](messaging/detect-messaging-tools.xql) |
 | [Containers](containers/README.md) | 5 | [XQL](containers/detect-containers-tools.xql) |
@@ -22,17 +22,17 @@ Read the [coverage review](coverage.md) for the category-by-category research, s
 | [Developer Utilities](developer-utilities/README.md) | 5 | [XQL](developer-utilities/detect-developer-utilities-tools.xql) |
 | [Development Tools / IDEs](development-ides/README.md) | 5 | [XQL](development-ides/detect-development-ides-tools.xql) |
 | [EDR / Endpoint Security](endpoint-security/README.md) | 8 | [XQL](endpoint-security/detect-endpoint-security-tools.xql) |
-| [File Transfer Tools](file-transfer/README.md) | 5 | [XQL](file-transfer/detect-file-transfer-tools.xql) |
-| [Gaming Platforms](gaming/README.md) | 6 | [XQL](gaming/detect-gaming-tools.xql) |
-| [Local AI / LLM Runtimes](local-ai/README.md) | 5 | [XQL](local-ai/detect-local-ai-tools.xql) |
+| [File Transfer Tools](file-transfer/README.md) | 13 | [XQL](file-transfer/detect-file-transfer-tools.xql) |
+| [Gaming Platforms](gaming/README.md) | 13 | [XQL](gaming/detect-gaming-tools.xql) |
+| [Local AI / LLM Runtimes](local-ai/README.md) | 13 | [XQL](local-ai/detect-local-ai-tools.xql) |
 | [Network Utilities](network-utilities/README.md) | 5 | [XQL](network-utilities/detect-network-utilities-tools.xql) |
 | [Other Corporate-Risk / Shadow-IT Applications](other-shadow-it/README.md) | 5 | [XQL](other-shadow-it/detect-other-shadow-it-tools.xql) |
 | [P2P / Torrent](p2p-torrent/README.md) | 5 | [XQL](p2p-torrent/detect-p2p-torrent-tools.xql) |
 | [Password Managers](password-managers/README.md) | 5 | [XQL](password-managers/detect-password-managers-tools.xql) |
-| [Penetration Testing / Dual-Use Security Tools](penetration-testing/README.md) | 5 | [XQL](penetration-testing/detect-penetration-testing-tools.xql) |
+| [Penetration Testing / Dual-Use Security Tools](penetration-testing/README.md) | 13 | [XQL](penetration-testing/detect-penetration-testing-tools.xql) |
 | [Personal Collaboration Tools](personal-collaboration/README.md) | 5 | [XQL](personal-collaboration/detect-personal-collaboration-tools.xql) |
 | [Privacy / Anonymization Tools](privacy-anonymization/README.md) | 5 | [XQL](privacy-anonymization/detect-privacy-anonymization-tools.xql) |
-| [Remote Access / Remote Administration](remote-access/README.md) | 6 | [XQL](remote-access/detect-remote-access-tools.xql) |
+| [Remote Access / Remote Administration](remote-access/README.md) | 15 | [XQL](remote-access/detect-remote-access-tools.xql) |
 | [Remote Shell / SSH Tools](remote-shell-ssh/README.md) | 5 | [XQL](remote-shell-ssh/detect-remote-shell-ssh-tools.xql) |
 | [Screen Recording / Capture](screen-capture/README.md) | 5 | [XQL](screen-capture/detect-screen-capture-tools.xql) |
 | [Scripting / Automation Tools](scripting-automation/README.md) | 5 | [XQL](scripting-automation/detect-scripting-automation-tools.xql) |

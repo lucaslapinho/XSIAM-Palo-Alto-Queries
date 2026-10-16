@@ -5,18 +5,24 @@ config case_sensitive = false timeframe = 30d
 | alter application_name_normalized = lowercase(application_name)
 | filter application_name_normalized in (
     "1password",
+    "@openai/codex",
+    "acunetix",
     "advanced ip scanner",
     "aider",
+    "alpaca",
     "android studio",
     "angry ip scanner",
+    "antigravity",
     "anydesk",
     "anythingllm",
     "anythingllm desktop",
+    "arc",
     "autohotkey",
     "autoit",
     "avast free antivirus",
     "avg antivirus free",
     "avira security",
+    "backyard ai",
     "battle.net",
     "bitcoin core",
     "bitdefender antivirus plus",
@@ -28,6 +34,7 @@ config case_sensitive = false timeframe = 30d
     "bloodhound community edition",
     "bluestacks",
     "bluestacks app player",
+    "boltai",
     "brave",
     "brave browser",
     "bruno",
@@ -35,7 +42,12 @@ config case_sensitive = false timeframe = 30d
     "burp suite professional",
     "camtasia",
     "ccleaner",
+    "chatbox",
+    "chatbox ai",
     "chatgpt",
+    "chatwise",
+    "cherry studio",
+    "chromium",
     "cisco anyconnect secure mobility client",
     "cisco secure client",
     "clamav",
@@ -43,21 +55,31 @@ config case_sensitive = false timeframe = 30d
     "claude code",
     "cloudflare warp",
     "cloudflare-warp",
+    "codex cli",
+    "comet",
+    "comfy desktop",
+    "comfyui",
     "connectwise control",
     "continue",
+    "core ftp le",
+    "core ftp pro",
     "cortex xdr",
     "cortex xdr agent",
     "crowdstrike falcon sensor",
     "cryptomator",
     "cursor",
+    "cuteftp",
     "cyberduck",
     "dbeaver",
     "dbeaver community",
     "deluge",
     "devin desktop",
+    "dia",
     "discord",
     "docker desktop",
     "dropbox",
+    "duckduckgo",
+    "dwagent",
     "ea app",
     "elastic agent",
     "electrum",
@@ -70,22 +92,32 @@ config case_sensitive = false timeframe = 30d
     "evernote",
     "f-secure total",
     "facebook",
+    "faraday",
     "fiddler everywhere",
     "filezilla",
     "filezilla client",
+    "filezilla server",
     "firefox",
+    "floorp",
+    "forklift",
     "forticlient",
     "forticlient vpn",
+    "freechat",
+    "freefilesync",
     "git",
     "git for windows",
     "github desktop",
     "globalprotect",
     "gog galaxy",
+    "google antigravity",
     "google chrome",
     "google drive",
     "google drive for desktop",
+    "goto resolve",
     "gpt4all",
+    "hashcat",
     "heidisql",
+    "heroic games launcher",
     "i2p",
     "insomnia",
     "instagram",
@@ -93,22 +125,34 @@ config case_sensitive = false timeframe = 30d
     "intellij idea community edition",
     "intellij idea ultimate edition",
     "internet download manager",
+    "invicti standard",
+    "invicti web + api",
     "iperf3",
+    "itch",
     "jan",
     "joplin",
     "kaspersky endpoint security for windows",
     "keepass password safe",
     "keepass password safe 2",
     "keepassxc",
+    "kiro",
+    "librewolf",
     "llama.cpp",
     "lm studio",
+    "logmein resolve",
     "logseq",
     "loom",
+    "lutris",
+    "maltego",
     "malwarebytes",
     "malwarebytes premium",
     "mcafee total protection",
     "megasync",
+    "meshagent",
+    "meshcentral agent",
     "metasploit framework",
+    "microsoft 365 copilot",
+    "microsoft copilot",
     "microsoft defender for endpoint",
     "microsoft edge",
     "microsoft onedrive",
@@ -116,30 +160,40 @@ config case_sensitive = false timeframe = 30d
     "microsoft teams",
     "microsoft teams classic",
     "microsoft visual studio code",
+    "mindmac",
     "minikube",
+    "mitmproxy",
     "mobaxterm",
     "mobaxterm personal edition",
     "mobaxterm professional edition",
     "monero gui wallet",
+    "mountain duck",
     "mozilla firefox",
     "msty studio",
     "mullvad browser",
     "mysql workbench",
     "nessus",
+    "netsparker standard",
     "ngrok",
     "nicehash miner",
+    "nikto",
     "nmap",
     "node.js",
+    "nomachine",
     "norton 360",
     "norton 360 deluxe",
     "notion",
     "obs studio",
     "obsidian",
     "ollama",
+    "opencode",
+    "opencode desktop",
     "openssh",
     "openssh client",
     "openssh server",
     "openvpn connect",
+    "opera",
+    "opera gx",
     "oracle sql developer",
     "oracle virtualbox",
     "oracle vm virtualbox",
@@ -147,15 +201,22 @@ config case_sensitive = false timeframe = 30d
     "panda dome",
     "panda dome free",
     "parallels desktop",
+    "parsec",
     "pdq deploy",
     "pdq inventory",
     "peazip",
+    "perplexity",
     "pgadmin 4",
+    "pinokio",
+    "playnite",
     "podman desktop",
+    "poe",
     "postman",
     "powershell",
     "powershell 7",
     "powertoys",
+    "prism launcher",
+    "private llm",
     "putty",
     "pycharm",
     "pycharm community edition",
@@ -163,18 +224,26 @@ config case_sensitive = false timeframe = 30d
     "python",
     "qbittorrent",
     "qemu",
+    "qoder",
     "rancher desktop",
     "rclone",
     "realvnc connect",
     "realvnc server",
     "realvnc viewer",
+    "recursechat",
     "reddit",
+    "remote utilities host",
+    "remote utilities viewer",
     "revo uninstaller",
     "revo uninstaller pro",
+    "riot client",
+    "rockstar games launcher",
     "rustdesk",
+    "safari",
     "screenconnect",
     "screenconnect client",
     "securecrt",
+    "securefx",
     "sentinelone agent",
     "sharex",
     "signal",
@@ -185,6 +254,8 @@ config case_sensitive = false timeframe = 30d
     "sophos endpoint agent",
     "splashtop streamer",
     "sql developer",
+    "sqlmap",
+    "stability matrix",
     "steam",
     "sublime text",
     "symantec endpoint protection",
@@ -197,24 +268,34 @@ config case_sensitive = false timeframe = 30d
     "techsmith snagit",
     "telegram desktop",
     "termius",
+    "tightvnc",
     "tiktok",
     "tixati",
     "tor browser",
+    "trae",
     "transmission",
+    "transmit",
     "trend micro maximum security",
     "ubisoft connect",
+    "ultravnc",
     "veracrypt",
     "visual studio code",
     "vivaldi",
     "vmware fusion",
     "vmware workstation",
     "vmware workstation pro",
+    "waterfox",
     "windows admin center",
     "windsurf",
     "winscp",
     "wireguard",
     "wireshark",
     "xmrig",
+    "zap",
+    "zed",
+    "zed attack proxy",
+    "zen browser",
+    "zoho assist",
     "zoom workplace"
 )
 
@@ -235,6 +316,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "1password",
             "Password Managers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("acunetix", "invicti web + api"),
+            "Acunetix / Invicti Web + API family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("acunetix", "invicti web + api"),
+            "acunetix-invicti-web",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("acunetix", "invicti web + api"),
+            "Penetration Testing / Dual-Use Security Tools",
             tool_family
         )
 
@@ -267,6 +364,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "aider",
             "AI Development Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "alpaca",
+            "Alpaca",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "alpaca",
+            "alpaca",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "alpaca",
+            "Local AI / LLM Runtimes",
             tool_family
         )
 
@@ -331,6 +444,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized in ("anythingllm", "anythingllm desktop"),
             "Artificial Intelligence Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "arc",
+            "Arc browser",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "arc",
+            "arc-browser",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "arc",
+            "Browsers",
             tool_family
         )
 
@@ -411,6 +540,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "avira security",
             "Antivirus",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("backyard ai", "faraday"),
+            "Backyard AI / Faraday legacy desktop family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("backyard ai", "faraday"),
+            "backyard-ai-legacy",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("backyard ai", "faraday"),
+            "Local AI / LLM Runtimes",
             tool_family
         )
 
@@ -543,6 +688,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "boltai",
+            "BoltAI",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "boltai",
+            "boltai",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "boltai",
+            "Artificial Intelligence Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("brave", "brave browser"),
             "Brave Browser",
             detected_product
@@ -623,6 +784,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized in ("chatbox", "chatbox ai"),
+            "Chatbox AI",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("chatbox", "chatbox ai"),
+            "chatbox",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("chatbox", "chatbox ai"),
+            "Artificial Intelligence Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "chatgpt",
             "ChatGPT desktop app",
             detected_product
@@ -635,6 +812,54 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "chatgpt",
             "Artificial Intelligence Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "chatwise",
+            "ChatWise",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "chatwise",
+            "chatwise",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "chatwise",
+            "Artificial Intelligence Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "cherry studio",
+            "Cherry Studio",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "cherry studio",
+            "cherry-studio",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "cherry studio",
+            "Artificial Intelligence Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "chromium",
+            "Chromium",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "chromium",
+            "chromium",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "chromium",
+            "Browsers",
             tool_family
         )
 
@@ -719,6 +944,38 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "comet",
+            "Comet browser",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "comet",
+            "comet-browser",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "comet",
+            "Browsers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("comfy desktop", "comfyui"),
+            "ComfyUI / Comfy Desktop family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("comfy desktop", "comfyui"),
+            "comfyui-desktop",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("comfy desktop", "comfyui"),
+            "Local AI / LLM Runtimes",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "continue",
             "Continue",
             detected_product
@@ -731,6 +988,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "continue",
             "AI Development Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("core ftp le", "core ftp pro"),
+            "Core FTP client family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("core ftp le", "core ftp pro"),
+            "core-ftp-client",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("core ftp le", "core ftp pro"),
+            "File Transfer Tools",
             tool_family
         )
 
@@ -799,6 +1072,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "cuteftp",
+            "CuteFTP",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "cuteftp",
+            "cuteftp",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "cuteftp",
+            "File Transfer Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "cyberduck",
             "Cyberduck",
             detected_product
@@ -847,6 +1136,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "dia",
+            "Dia browser",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "dia",
+            "dia-browser",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "dia",
+            "Browsers",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "discord",
             "Discord",
             detected_product
@@ -891,6 +1196,38 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "dropbox",
             "Cloud Storage / File Synchronization",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "duckduckgo",
+            "DuckDuckGo browser",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "duckduckgo",
+            "duckduckgo-browser",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "duckduckgo",
+            "Browsers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "dwagent",
+            "DWAgent",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "dwagent",
+            "dwagent",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "dwagent",
+            "Remote Access / Remote Administration",
             tool_family
         )
 
@@ -1103,6 +1440,54 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "filezilla server",
+            "FileZilla Server",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "filezilla server",
+            "filezilla-server",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "filezilla server",
+            "File Transfer Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "floorp",
+            "Floorp",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "floorp",
+            "floorp",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "floorp",
+            "Browsers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "forklift",
+            "ForkLift",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "forklift",
+            "forklift",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "forklift",
+            "File Transfer Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("forticlient", "forticlient vpn"),
             "FortiClient family",
             detected_product
@@ -1115,6 +1500,38 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized in ("forticlient", "forticlient vpn"),
             "VPN / Tunneling / Proxy",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "freechat",
+            "FreeChat",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "freechat",
+            "freechat",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "freechat",
+            "Local AI / LLM Runtimes",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "freefilesync",
+            "FreeFileSync",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "freefilesync",
+            "freefilesync",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "freefilesync",
+            "File Transfer Tools",
             tool_family
         )
 
@@ -1183,6 +1600,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized in ("antigravity", "google antigravity"),
+            "Google Antigravity",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("antigravity", "google antigravity"),
+            "google-antigravity",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("antigravity", "google antigravity"),
+            "AI Development Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "google chrome",
             "Google Chrome",
             detected_product
@@ -1231,6 +1664,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "hashcat",
+            "hashcat",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "hashcat",
+            "hashcat",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "hashcat",
+            "Penetration Testing / Dual-Use Security Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "heidisql",
             "HeidiSQL",
             detected_product
@@ -1243,6 +1692,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "heidisql",
             "Database Clients",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "heroic games launcher",
+            "Heroic Games Launcher",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "heroic games launcher",
+            "heroic-games-launcher",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "heroic games launcher",
+            "Gaming Platforms",
             tool_family
         )
 
@@ -1327,6 +1792,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized in ("invicti standard", "netsparker standard"),
+            "Invicti Standard / Netsparker Standard family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("invicti standard", "netsparker standard"),
+            "invicti-standard",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("invicti standard", "netsparker standard"),
+            "Penetration Testing / Dual-Use Security Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "iperf3",
             "iperf3",
             detected_product
@@ -1339,6 +1820,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "iperf3",
             "Network Utilities",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "itch",
+            "itch desktop app",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "itch",
+            "itch-desktop",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "itch",
+            "Gaming Platforms",
             tool_family
         )
 
@@ -1423,6 +1920,38 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "kiro",
+            "Kiro",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "kiro",
+            "kiro",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "kiro",
+            "AI Development Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "librewolf",
+            "LibreWolf",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "librewolf",
+            "librewolf",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "librewolf",
+            "Browsers",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "llama.cpp",
             "llama.cpp",
             detected_product
@@ -1455,6 +1984,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized in ("goto resolve", "logmein resolve"),
+            "LogMeIn Resolve / GoTo Resolve family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("goto resolve", "logmein resolve"),
+            "logmein-resolve",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("goto resolve", "logmein resolve"),
+            "Remote Access / Remote Administration",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "logseq",
             "Logseq",
             detected_product
@@ -1483,6 +2028,38 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "loom",
             "Screen Recording / Capture",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "lutris",
+            "Lutris",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "lutris",
+            "lutris",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "lutris",
+            "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "maltego",
+            "Maltego",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "maltego",
+            "maltego",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "maltego",
+            "Penetration Testing / Dual-Use Security Tools",
             tool_family
         )
 
@@ -1535,6 +2112,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized in ("meshagent", "meshcentral agent"),
+            "MeshCentral Agent family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("meshagent", "meshcentral agent"),
+            "meshcentral-agent",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("meshagent", "meshcentral agent"),
+            "Remote Access / Remote Administration",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "metasploit framework",
             "Metasploit Framework",
             detected_product
@@ -1547,6 +2140,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "metasploit framework",
             "Penetration Testing / Dual-Use Security Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("microsoft 365 copilot", "microsoft copilot"),
+            "Microsoft Copilot app family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("microsoft 365 copilot", "microsoft copilot"),
+            "microsoft-copilot-app",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("microsoft 365 copilot", "microsoft copilot"),
+            "Artificial Intelligence Tools",
             tool_family
         )
 
@@ -1631,6 +2240,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "mindmac",
+            "MindMac",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "mindmac",
+            "mindmac",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "mindmac",
+            "Artificial Intelligence Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "minikube",
             "minikube",
             detected_product
@@ -1643,6 +2268,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "minikube",
             "Containers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "mitmproxy",
+            "mitmproxy",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "mitmproxy",
+            "mitmproxy",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "mitmproxy",
+            "Penetration Testing / Dual-Use Security Tools",
             tool_family
         )
 
@@ -1675,6 +2316,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "monero gui wallet",
             "Crypto / Mining Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "mountain duck",
+            "Mountain Duck",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "mountain duck",
+            "mountain-duck",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "mountain duck",
+            "File Transfer Tools",
             tool_family
         )
 
@@ -1775,6 +2432,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "nikto",
+            "Nikto",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "nikto",
+            "nikto",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "nikto",
+            "Penetration Testing / Dual-Use Security Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "nmap",
             "Nmap",
             detected_product
@@ -1803,6 +2476,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "node.js",
             "Scripting / Automation Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "nomachine",
+            "NoMachine",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "nomachine",
+            "nomachine",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "nomachine",
+            "Remote Access / Remote Administration",
             tool_family
         )
 
@@ -1887,6 +2576,38 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized in ("@openai/codex", "codex cli"),
+            "OpenAI Codex CLI",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("@openai/codex", "codex cli"),
+            "openai-codex-cli",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("@openai/codex", "codex cli"),
+            "AI Development Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("opencode", "opencode desktop"),
+            "OpenCode family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("opencode", "opencode desktop"),
+            "opencode",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("opencode", "opencode desktop"),
+            "AI Development Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("openssh", "openssh client", "openssh server"),
             "OpenSSH",
             detected_product
@@ -1915,6 +2636,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "openvpn connect",
             "VPN / Tunneling / Proxy",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("opera", "opera gx"),
+            "Opera browser family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("opera", "opera gx"),
+            "opera-browser",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("opera", "opera gx"),
+            "Browsers",
             tool_family
         )
 
@@ -1999,6 +2736,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "parsec",
+            "Parsec",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "parsec",
+            "parsec",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "parsec",
+            "Remote Access / Remote Administration",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "pdq deploy",
             "PDQ Deploy",
             detected_product
@@ -2047,6 +2800,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "perplexity",
+            "Perplexity desktop",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "perplexity",
+            "perplexity-desktop",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "perplexity",
+            "Artificial Intelligence Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "pgadmin 4",
             "pgAdmin 4",
             detected_product
@@ -2063,6 +2832,38 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "pinokio",
+            "Pinokio",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "pinokio",
+            "pinokio",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "pinokio",
+            "Local AI / LLM Runtimes",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "playnite",
+            "Playnite",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "playnite",
+            "playnite",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "playnite",
+            "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "podman desktop",
             "Podman Desktop",
             detected_product
@@ -2075,6 +2876,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "podman desktop",
             "Containers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "poe",
+            "Poe desktop",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "poe",
+            "poe",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "poe",
+            "Artificial Intelligence Tools",
             tool_family
         )
 
@@ -2107,6 +2924,38 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized in ("powershell", "powershell 7"),
             "Scripting / Automation Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "prism launcher",
+            "Prism Launcher",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "prism launcher",
+            "prism-launcher",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "prism launcher",
+            "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "private llm",
+            "Private LLM",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "private llm",
+            "private-llm",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "private llm",
+            "Local AI / LLM Runtimes",
             tool_family
         )
 
@@ -2191,6 +3040,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "qoder",
+            "Qoder",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "qoder",
+            "qoder",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "qoder",
+            "AI Development Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "rancher desktop",
             "Rancher Desktop",
             detected_product
@@ -2239,6 +3104,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "recursechat",
+            "RecurseChat",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "recursechat",
+            "recursechat",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "recursechat",
+            "Local AI / LLM Runtimes",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "reddit",
             "Reddit",
             detected_product
@@ -2251,6 +3132,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "reddit",
             "Social Applications",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("remote utilities host", "remote utilities viewer"),
+            "Remote Utilities Host / Viewer family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("remote utilities host", "remote utilities viewer"),
+            "remote-utilities",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("remote utilities host", "remote utilities viewer"),
+            "Remote Access / Remote Administration",
             tool_family
         )
 
@@ -2271,6 +3168,38 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "riot client",
+            "Riot Client",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "riot client",
+            "riot-client",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "riot client",
+            "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "rockstar games launcher",
+            "Rockstar Games Launcher",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "rockstar games launcher",
+            "rockstar-games-launcher",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "rockstar games launcher",
+            "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "rustdesk",
             "RustDesk",
             detected_product
@@ -2283,6 +3212,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "rustdesk",
             "Remote Access / Remote Administration",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "safari",
+            "Safari",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "safari",
+            "apple-safari",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "safari",
+            "Browsers",
             tool_family
         )
 
@@ -2315,6 +3260,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "securecrt",
             "Remote Shell / SSH Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "securefx",
+            "SecureFX",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "securefx",
+            "securefx",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "securefx",
+            "File Transfer Tools",
             tool_family
         )
 
@@ -2443,6 +3404,38 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "splashtop streamer",
             "Remote Access / Remote Administration",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "sqlmap",
+            "sqlmap",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "sqlmap",
+            "sqlmap",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "sqlmap",
+            "Penetration Testing / Dual-Use Security Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "stability matrix",
+            "Stability Matrix",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "stability matrix",
+            "stability-matrix",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "stability matrix",
+            "Local AI / LLM Runtimes",
             tool_family
         )
 
@@ -2607,6 +3600,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "tightvnc",
+            "TightVNC",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "tightvnc",
+            "tightvnc",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "tightvnc",
+            "Remote Access / Remote Administration",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "tiktok",
             "TikTok",
             detected_product
@@ -2655,6 +3664,22 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "trae",
+            "TRAE",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "trae",
+            "trae",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "trae",
+            "AI Development Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
             application_name_normalized = "transmission",
             "Transmission",
             detected_product
@@ -2667,6 +3692,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "transmission",
             "P2P / Torrent",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "transmit",
+            "Transmit",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "transmit",
+            "transmit",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "transmit",
+            "File Transfer Tools",
             tool_family
         )
 
@@ -2699,6 +3740,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "ubisoft connect",
             "Gaming Platforms",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "ultravnc",
+            "UltraVNC",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "ultravnc",
+            "ultravnc",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "ultravnc",
+            "Remote Access / Remote Administration",
             tool_family
         )
 
@@ -2779,6 +3836,22 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized in ("vmware workstation", "vmware workstation pro"),
             "Virtualization",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "waterfox",
+            "Waterfox",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "waterfox",
+            "waterfox",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "waterfox",
+            "Browsers",
             tool_family
         )
 
@@ -2875,6 +3948,70 @@ config case_sensitive = false timeframe = 30d
         tool_family = if(
             application_name_normalized = "xmrig",
             "Crypto / Mining Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("zap", "zed attack proxy"),
+            "ZAP / Zed Attack Proxy family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("zap", "zed attack proxy"),
+            "zap",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized in ("zap", "zed attack proxy"),
+            "Penetration Testing / Dual-Use Security Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "zed",
+            "Zed",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "zed",
+            "zed",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "zed",
+            "AI Development Tools",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "zen browser",
+            "Zen Browser",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "zen browser",
+            "zen-browser",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "zen browser",
+            "Browsers",
+            tool_family
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "zoho assist",
+            "Zoho Assist",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "zoho assist",
+            "zoho-assist",
+            product_id
+        ),
+        tool_family = if(
+            application_name_normalized = "zoho assist",
+            "Remote Access / Remote Administration",
             tool_family
         )
 

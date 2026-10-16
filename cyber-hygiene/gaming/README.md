@@ -2,7 +2,9 @@
 
 [Open query](detect-gaming-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **6 products / 7 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **13 product/family candidates / 14 labels**.
+
+Related coverage: [Parsec and other remote-access tools](../remote-access/README.md).
 
 ## Products and matching labels
 
@@ -12,21 +14,35 @@ Find application-inventory rows whose complete name matches one of the labels be
 | EA app | `ea-app` | `ea app` | [Product-name candidate](https://www.ea.com/ea-app) |
 | Epic Games Launcher | `epic-games-launcher` | `epic games launcher` | [Inherited candidate](https://store.epicgames.com/download) |
 | GOG GALAXY | `gog-galaxy` | `gog galaxy` | [Inherited candidate](https://www.gog.com/galaxy) |
+| Heroic Games Launcher | `heroic-games-launcher` | `heroic games launcher` | [Product-name candidate](https://heroicgameslauncher.com/) |
+| itch desktop app | `itch-desktop` | `itch` | [Product-name candidate](https://itch.io/app) |
+| Lutris | `lutris` | `lutris` | [Product-name candidate](https://lutris.net/) |
+| Playnite | `playnite` | `playnite` | [Product-name candidate](https://playnite.link/) |
+| Prism Launcher | `prism-launcher` | `prism launcher` | [Product-name candidate](https://prismlauncher.org/) |
+| Riot Client | `riot-client` | `riot client` | [Product-name candidate](https://support.riotgames.com/en-us/riot/account/logging-into-the-riot-client-with-a-qr-code) |
+| Rockstar Games Launcher | `rockstar-games-launcher` | `rockstar games launcher` | [Product-name candidate](https://support.rockstargames.com/articles/4extB4aITvMKdDEZzsFAwE/rockstar-games-launcher-download) |
 | Steam | `steam` | `steam` | [Inherited candidate](https://store.steampowered.com/about/) |
 | Ubisoft Connect | `ubisoft-connect` | `ubisoft connect` | [Product-name candidate](https://www.ubisoft.com/en-us/ubisoft-connect) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
 
-Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
+Evidence labels distinguish product-name candidates, package/CLI identifiers, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Gaming and distribution; assess business justification, background updates and resource consumption.
 
-Added Ubisoft Connect and EA app. Generic EA and historical Origin aliases are not automatically enabled. Launchers, individual games and web/cloud gaming have different coverage; a legitimate inventory match is not a policy violation.
+Expanded launchers and library managers across desktop platforms. Do not infer Riot Vanguard or individual games from Riot Client. Portable launchers, managed instances, web/cloud gaming and per-user packaging are coverage gaps. A launcher match is not gameplay or a corporate policy violation.
 
 - **Ubisoft Connect**: Launcher presence is not proof a game ran or that corporate policy prohibits it.
 - **EA app**: Do not enable the generic string EA or treat historical Origin as an automatic alias.
+- **Riot Client**: PC/Mac client candidate. Do not equate it with Riot Vanguard, Riot Mobile or individual games.
+- **Rockstar Games Launcher**: Launcher name is documented by vendor support. It does not establish game execution or account ownership.
+- **itch desktop app**: Desktop distribution is documented. The short brand label needs identity corroboration; web access is a separate coverage surface.
+- **Heroic Games Launcher**: Third-party launcher candidate. It does not prove a particular store account, game installation or execution.
+- **Lutris**: Linux game-management platform candidate; runners and games are not enumerated by this application label.
+- **Playnite**: Library-manager candidate; portable mode can leave no installed-app entry. A library listing is not gameplay evidence.
+- **Prism Launcher**: Minecraft launcher candidate; managed game instances and modpacks are not automatically separate inventory records.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

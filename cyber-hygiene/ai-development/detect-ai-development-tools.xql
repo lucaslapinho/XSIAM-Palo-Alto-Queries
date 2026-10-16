@@ -4,12 +4,22 @@ config case_sensitive = false timeframe = 30d
 | fields endpoint_name, platform, application_name, version
 | alter application_name_normalized = lowercase(application_name)
 | filter application_name_normalized in (
+    "@openai/codex",
     "aider",
+    "antigravity",
     "claude code",
+    "codex cli",
     "continue",
     "cursor",
     "devin desktop",
-    "windsurf"
+    "google antigravity",
+    "kiro",
+    "opencode",
+    "opencode desktop",
+    "qoder",
+    "trae",
+    "windsurf",
+    "zed"
 )
 
 | alter detected_product = "UNMAPPED",
@@ -61,6 +71,72 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized in ("antigravity", "google antigravity"),
+            "Google Antigravity",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("antigravity", "google antigravity"),
+            "google-antigravity",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "kiro",
+            "Kiro",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "kiro",
+            "kiro",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("@openai/codex", "codex cli"),
+            "OpenAI Codex CLI",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("@openai/codex", "codex cli"),
+            "openai-codex-cli",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("opencode", "opencode desktop"),
+            "OpenCode family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("opencode", "opencode desktop"),
+            "opencode",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "qoder",
+            "Qoder",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "qoder",
+            "qoder",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "trae",
+            "TRAE",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "trae",
+            "trae",
+            product_id
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("devin desktop", "windsurf"),
             "Windsurf / Devin Desktop family",
             detected_product
@@ -68,6 +144,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized in ("devin desktop", "windsurf"),
             "windsurf-devin-desktop",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "zed",
+            "Zed",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "zed",
+            "zed",
             product_id
         )
 

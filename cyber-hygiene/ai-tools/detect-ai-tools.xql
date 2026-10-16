@@ -6,9 +6,19 @@ config case_sensitive = false timeframe = 30d
 | filter application_name_normalized in (
     "anythingllm",
     "anythingllm desktop",
+    "boltai",
+    "chatbox",
+    "chatbox ai",
     "chatgpt",
+    "chatwise",
+    "cherry studio",
     "claude",
-    "jan"
+    "jan",
+    "microsoft 365 copilot",
+    "microsoft copilot",
+    "mindmac",
+    "perplexity",
+    "poe"
 )
 
 | alter detected_product = "UNMAPPED",
@@ -27,6 +37,28 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "boltai",
+            "BoltAI",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "boltai",
+            "boltai",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("chatbox", "chatbox ai"),
+            "Chatbox AI",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("chatbox", "chatbox ai"),
+            "chatbox",
+            product_id
+        )
+
+| alter detected_product = if(
             application_name_normalized = "chatgpt",
             "ChatGPT desktop app",
             detected_product
@@ -34,6 +66,28 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "chatgpt",
             "chatgpt-desktop",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "chatwise",
+            "ChatWise",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "chatwise",
+            "chatwise",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "cherry studio",
+            "Cherry Studio",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "cherry studio",
+            "cherry-studio",
             product_id
         )
 
@@ -56,6 +110,50 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "jan",
             "jan",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("microsoft 365 copilot", "microsoft copilot"),
+            "Microsoft Copilot app family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("microsoft 365 copilot", "microsoft copilot"),
+            "microsoft-copilot-app",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "mindmac",
+            "MindMac",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "mindmac",
+            "mindmac",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "perplexity",
+            "Perplexity desktop",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "perplexity",
+            "perplexity-desktop",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "poe",
+            "Poe desktop",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "poe",
+            "poe",
             product_id
         )
 

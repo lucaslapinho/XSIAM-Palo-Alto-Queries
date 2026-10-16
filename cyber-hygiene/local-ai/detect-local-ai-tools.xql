@@ -4,16 +4,70 @@ config case_sensitive = false timeframe = 30d
 | fields endpoint_name, platform, application_name, version
 | alter application_name_normalized = lowercase(application_name)
 | filter application_name_normalized in (
+    "alpaca",
+    "backyard ai",
+    "comfy desktop",
+    "comfyui",
+    "faraday",
+    "freechat",
     "gpt4all",
     "llama.cpp",
     "lm studio",
     "msty studio",
-    "ollama"
+    "ollama",
+    "pinokio",
+    "private llm",
+    "recursechat",
+    "stability matrix"
 )
 
 | alter detected_product = "UNMAPPED",
         product_id = "UNMAPPED",
         tool_family = "Local AI / LLM Runtimes"
+
+| alter detected_product = if(
+            application_name_normalized = "alpaca",
+            "Alpaca",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "alpaca",
+            "alpaca",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("backyard ai", "faraday"),
+            "Backyard AI / Faraday legacy desktop family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("backyard ai", "faraday"),
+            "backyard-ai-legacy",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("comfy desktop", "comfyui"),
+            "ComfyUI / Comfy Desktop family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("comfy desktop", "comfyui"),
+            "comfyui-desktop",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "freechat",
+            "FreeChat",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "freechat",
+            "freechat",
+            product_id
+        )
 
 | alter detected_product = if(
             application_name_normalized = "gpt4all",
@@ -67,6 +121,50 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized = "ollama",
             "ollama",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "pinokio",
+            "Pinokio",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "pinokio",
+            "pinokio",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "private llm",
+            "Private LLM",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "private llm",
+            "private-llm",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "recursechat",
+            "RecurseChat",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "recursechat",
+            "recursechat",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "stability matrix",
+            "Stability Matrix",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "stability matrix",
+            "stability-matrix",
             product_id
         )
 

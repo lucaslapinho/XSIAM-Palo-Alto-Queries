@@ -2,30 +2,50 @@
 
 [Open query](detect-remote-access-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **6 products / 12 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **15 product/family candidates / 24 labels**.
+
+Related coverage: [remote shell / SSH clients](../remote-shell-ssh/README.md).
 
 ## Products and matching labels
 
 | Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
 |---|---|---|---|
 | AnyDesk | `anydesk` | `anydesk` | [Inherited candidate](https://anydesk.com/) |
+| DWAgent | `dwagent` | `dwagent` | [Product-name candidate](https://docs.dwservice.net/docs/site/basic-definitions/install-the-agent/) |
+| LogMeIn Resolve / GoTo Resolve family | `logmein-resolve` | `goto resolve`; `logmein resolve` | [Documented rename candidate](https://www.logmein.com/products/resolve) |
+| MeshCentral Agent family | `meshcentral-agent` | `meshagent`; `meshcentral agent` | [Product-name candidate](https://github.com/Ylianst/MeshAgent) |
+| NoMachine | `nomachine` | `nomachine` | [Product-name candidate](https://download.nomachine.com/) |
+| Parsec | `parsec` | `parsec` | [Product-name candidate](https://parsec.app/downloads) |
 | RealVNC Connect | `realvnc-connect` | `realvnc connect`; `realvnc server`; `realvnc viewer` | [Inherited candidate](https://www.realvnc.com/en/connect/) |
+| Remote Utilities Host / Viewer family | `remote-utilities` | `remote utilities host`; `remote utilities viewer` | [Product-name candidate](https://www.remoteutilities.com/download/) |
 | RustDesk | `rustdesk` | `rustdesk` | [Inherited candidate](https://rustdesk.com/) |
 | ScreenConnect | `screenconnect` | `connectwise control`; `screenconnect`; `screenconnect client` | [Inherited candidate](https://www.screenconnect.com/) |
 | Splashtop Streamer | `splashtop-streamer` | `splashtop streamer` | [Product-name candidate](https://www.splashtop.com/downloads) |
 | TeamViewer Remote | `teamviewer` | `teamviewer`; `teamviewer host`; `teamviewer quicksupport` | [Inherited candidate](https://www.teamviewer.com/en/products/remote/) |
+| TightVNC | `tightvnc` | `tightvnc` | [Product-name candidate](https://www.tightvnc.com/download/) |
+| UltraVNC | `ultravnc` | `ultravnc` | [Product-name candidate](https://uvnc.com/) |
+| Zoho Assist | `zoho-assist` | `zoho assist` | [Product-name candidate](https://www.zoho.com/assist/unattended-remote-access.html) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
 
-Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
+Evidence labels distinguish product-name candidates, package/CLI identifiers, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Support and administration; review access ownership, unattended access, authentication and session logging.
 
-Added a distinct Splashtop Streamer candidate. Operator apps, host services and custom tenant-branded ScreenConnect clients need separate identities. Whole-name filters intentionally miss customer-specific names; avoid generic remote or control substrings.
+Expanded VNC families, support agents, remote desktops and endpoint-management families. Host, Viewer, server and run-only modes have distinct semantics; the name match does not establish an active listener or session. Custom MeshCentral/ScreenConnect branding, transient agents and operator web clients remain gaps. No generic remote, agent, host, viewer or VNC substring is enabled.
 
 - **Splashtop Streamer**: Streamer and operator-side Business App are distinct components. Do not infer an active remote session.
+- **NoMachine**: Remote desktop family candidate; client/server role, service state and active sessions remain unknown.
+- **TightVNC**: VNC package candidate; server/viewer component selection, listener exposure and connections require separate evidence.
+- **UltraVNC**: VNC family candidate. Do not use generic VNC substring matching or infer an installed component is active.
+- **DWAgent**: Vendor docs distinguish Run and Install modes. Run-only copies can have no installed-app entry; no remote session or approval is established.
+- **MeshCentral Agent family**: Agent project-name candidates. Custom branding and installed-name suffixes are intentionally not guessed; the MeshCentral web server is a different component.
+- **Parsec**: Remote-access client/host family candidate; game-related use does not change primary category or establish an active session.
+- **Zoho Assist**: Support/unattended-access family candidate. Technician web use, custom agent packages and run-only sessions may be absent.
+- **LogMeIn Resolve / GoTo Resolve family**: The vendor explicitly links the old and new names. Endpoint-management presence does not prove every optional remote-access capability is enabled.
+- **Remote Utilities Host / Viewer family**: Vendor docs distinguish Host, Viewer and run-only Agent. Whole product-name candidates do not establish their installed display strings; generic Host/Viewer/Agent labels are excluded.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

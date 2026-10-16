@@ -2,29 +2,53 @@
 
 [Open query](detect-browsers-tools.xql) · [All categories and usage](../README.md)
 
-Find application-inventory rows whose complete name matches one of the labels below. This query covers **5 products / 7 labels**.
+Find application-inventory rows whose complete name matches one of the labels below. This query covers **16 product/family candidates / 19 labels**.
+
+Related coverage: [Tor Browser and Mullvad Browser](../privacy-anonymization/README.md).
 
 ## Products and matching labels
 
 | Product candidate | Product ID | Exact labels, ignoring case | Name evidence |
 |---|---|---|---|
+| Arc browser | `arc-browser` | `arc` | [Product-name candidate](https://arc.net/download) |
 | Brave Browser | `brave-browser` | `brave`; `brave browser` | [Inherited candidate](https://brave.com/) |
+| Chromium | `chromium` | `chromium` | [Product-name candidate](https://www.chromium.org/getting-involved/download-chromium/) |
+| Comet browser | `comet-browser` | `comet` | [Product-name candidate](https://www.perplexity.ai/comet) |
+| Dia browser | `dia-browser` | `dia` | [Product-name candidate](https://www.diabrowser.com/) |
+| DuckDuckGo browser | `duckduckgo-browser` | `duckduckgo` | [Product-name candidate](https://duckduckgo.com/app) |
+| Floorp | `floorp` | `floorp` | [Product-name candidate](https://floorp.app/download) |
 | Google Chrome | `google-chrome` | `google chrome` | [Inherited candidate](https://www.google.com/chrome/) |
+| LibreWolf | `librewolf` | `librewolf` | [Product-name candidate](https://librewolf.net/installation/) |
 | Microsoft Edge | `microsoft-edge` | `microsoft edge` | [Inherited candidate](https://www.microsoft.com/en-us/edge) |
 | Mozilla Firefox | `mozilla-firefox` | `firefox`; `mozilla firefox` | [Inherited candidate](https://www.mozilla.org/firefox/) |
+| Opera browser family | `opera-browser` | `opera`; `opera gx` | [Product-name candidate](https://www.opera.com/download) |
+| Safari | `apple-safari` | `safari` | [Product-name candidate](https://support.apple.com/en-us/102665) |
 | Vivaldi | `vivaldi` | `vivaldi` | [Product-name candidate](https://vivaldi.com/) |
+| Waterfox | `waterfox` | `waterfox` | [Product-name candidate](https://www.waterfox.com/download/) |
+| Zen Browser | `zen-browser` | `zen browser` | [Product-name candidate](https://zen-browser.app/download/) |
 
 Labels are curated candidates, not display names captured from a Cortex tenant. Extra versions, suffixes, prefixes, whitespace and unlisted editions do not match. Preserve `application_name` as the original evidence when confirming a product.
 
-Evidence labels distinguish product-name candidates, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
+Evidence labels distinguish product-name candidates, package/CLI identifiers, vendor-installed-app labels, documented renames and inherited entries. Even a vendor-installed-app label remains unobserved in Cortex. Inherited references retain their original research status/date; a link alone is not a fresh retrieval claim. See the [coverage review](../coverage.md#name-evidence).
 
 ## Review focus
 
 Web access; review update ownership, extensions, profile management and enterprise configuration.
 
-Added Vivaldi. Browsers do not identify profile policy, account tenancy, extensions or visited destinations. Version/channel names and portable copies need specific label evidence; privacy browsers retain their existing primary category to avoid duplicates.
+Expanded browser families, including AI-capable browsers. Safari can be OS-bundled; Chromium and portable builds can lack app entries. Tor Browser and Mullvad Browser retain primary ownership in privacy-anonymization. Short labels such as Arc, Dia and Comet require identity corroboration; bare Zen is deliberately held. Installation does not establish AI use, profiles, extensions or visited sites.
 
 - **Vivaldi**: Profiles, extensions, managed enrollment and visited sites are outside application inventory.
+- **Opera browser family**: Related browser editions share one review family. No generic opera substring or guessed version/channel suffix is enabled.
+- **Chromium**: Development builds and portable archives may not register as installed apps. Chromium-based applications are not automatically Chromium browser matches.
+- **Waterfox**: Native browser candidate; edition/version suffixes and portable copies need separate label evidence.
+- **LibreWolf**: Distribution packages and portable copies differ; do not infer a profile, privacy configuration or browsing destination.
+- **Floorp**: Browser family candidate. AI features, extensions and visited sites are not established by installation.
+- **Zen Browser**: Only the full browser-name candidate is enabled. Bare Zen is held because it can name unrelated software; actual platform labels are still needed.
+- **DuckDuckGo browser**: Desktop distribution is documented, but a matched brand label does not establish web search use or a specific app packaging channel.
+- **Arc browser**: A short brand label needs corroboration. Check release/support status separately; a download page is not a maintenance guarantee.
+- **Dia browser**: AI-capable browser candidate. A short label can be shared by unrelated software and does not prove assistant use.
+- **Comet browser**: Browser product-name candidate, separate from the Perplexity desktop client. A short label does not authenticate identity or prove agent activity.
+- **Safari**: Apple documents Safari as part of the OS update path. Built-in/system-app coverage varies; zero rows cannot establish Safari is absent.
 
 A match does not establish execution, current installation, approval, exposure or a security incident. Browser extensions, portable tools, web applications and unregistered packages can be absent from application inventory.
 

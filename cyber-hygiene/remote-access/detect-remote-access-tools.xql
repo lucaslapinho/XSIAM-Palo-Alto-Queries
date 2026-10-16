@@ -6,16 +6,28 @@ config case_sensitive = false timeframe = 30d
 | filter application_name_normalized in (
     "anydesk",
     "connectwise control",
+    "dwagent",
+    "goto resolve",
+    "logmein resolve",
+    "meshagent",
+    "meshcentral agent",
+    "nomachine",
+    "parsec",
     "realvnc connect",
     "realvnc server",
     "realvnc viewer",
+    "remote utilities host",
+    "remote utilities viewer",
     "rustdesk",
     "screenconnect",
     "screenconnect client",
     "splashtop streamer",
     "teamviewer",
     "teamviewer host",
-    "teamviewer quicksupport"
+    "teamviewer quicksupport",
+    "tightvnc",
+    "ultravnc",
+    "zoho assist"
 )
 
 | alter detected_product = "UNMAPPED",
@@ -34,6 +46,61 @@ config case_sensitive = false timeframe = 30d
         )
 
 | alter detected_product = if(
+            application_name_normalized = "dwagent",
+            "DWAgent",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "dwagent",
+            "dwagent",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("goto resolve", "logmein resolve"),
+            "LogMeIn Resolve / GoTo Resolve family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("goto resolve", "logmein resolve"),
+            "logmein-resolve",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("meshagent", "meshcentral agent"),
+            "MeshCentral Agent family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("meshagent", "meshcentral agent"),
+            "meshcentral-agent",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "nomachine",
+            "NoMachine",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "nomachine",
+            "nomachine",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "parsec",
+            "Parsec",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "parsec",
+            "parsec",
+            product_id
+        )
+
+| alter detected_product = if(
             application_name_normalized in ("realvnc connect", "realvnc server", "realvnc viewer"),
             "RealVNC Connect",
             detected_product
@@ -41,6 +108,17 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized in ("realvnc connect", "realvnc server", "realvnc viewer"),
             "realvnc-connect",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized in ("remote utilities host", "remote utilities viewer"),
+            "Remote Utilities Host / Viewer family",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized in ("remote utilities host", "remote utilities viewer"),
+            "remote-utilities",
             product_id
         )
 
@@ -85,6 +163,39 @@ config case_sensitive = false timeframe = 30d
         product_id = if(
             application_name_normalized in ("teamviewer", "teamviewer host", "teamviewer quicksupport"),
             "teamviewer",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "tightvnc",
+            "TightVNC",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "tightvnc",
+            "tightvnc",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "ultravnc",
+            "UltraVNC",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "ultravnc",
+            "ultravnc",
+            product_id
+        )
+
+| alter detected_product = if(
+            application_name_normalized = "zoho assist",
+            "Zoho Assist",
+            detected_product
+        ),
+        product_id = if(
+            application_name_normalized = "zoho assist",
+            "zoho-assist",
             product_id
         )
 
